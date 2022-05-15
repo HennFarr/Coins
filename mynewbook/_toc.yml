@@ -3,7 +3,7 @@
 
 format: jb-book
 root: intro
-chapters: Inhalt
+chapters: 
 - file: 1 Data Exploration
 - file: 2 Model Building
 - file: 3 Dashboard Deployment
