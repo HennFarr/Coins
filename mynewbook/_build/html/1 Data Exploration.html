@@ -257,10 +257,10 @@ const thebe_selector_output = ".output, .cell_output"
     <span class="n">validation_split</span><span class="o">=</span><span class="mf">0.20</span><span class="p">)</span>
 
 <span class="n">batch_size</span><span class="o">=</span><span class="mi">64</span>   
-<span class="n">data_dir</span> <span class="o">=</span> <span class="s1">&#39;new_extended_dataset/origin&#39;</span>
+<span class="n">data_dir</span> <span class="o">=</span> <span class="s1">&#39;new_extended_dataset/original&#39;</span>
 <span class="n">target_size</span> <span class="o">=</span> <span class="mi">200</span>
 
-<span class="n">train_data</span> <span class="o">=</span> <span class="n">datagen</span><span class="o">.</span><span class="n">flow_from_directory</span><span class="p">(</span><span class="s2">&quot;new_extended_dataset/origin&quot;</span><span class="p">,</span>
+<span class="n">train_data</span> <span class="o">=</span> <span class="n">datagen</span><span class="o">.</span><span class="n">flow_from_directory</span><span class="p">(</span><span class="n">data_dir</span><span class="p">,</span>
     <span class="n">target_size</span><span class="o">=</span><span class="p">(</span><span class="n">target_size</span><span class="p">,</span><span class="n">target_size</span><span class="p">),</span>
     <span class="n">class_mode</span><span class="o">=</span><span class="s2">&quot;categorical&quot;</span><span class="p">,</span> 
     <span class="n">batch_size</span><span class="o">=</span><span class="n">batch_size</span><span class="p">,</span> 
@@ -275,37 +275,8 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>---------------------------------------------------------------------------
-FileNotFoundError                         Traceback (most recent call last)
-~\AppData\Local\Temp\ipykernel_25888\320874881.py in &lt;cell line: 8&gt;()
-      6 target_size = 200
-      7 
-----&gt; 8 train_data = datagen.flow_from_directory(&quot;new_extended_dataset/origin&quot;,
-      9     target_size=(target_size,target_size),
-     10     class_mode=&quot;categorical&quot;,
-
-c:\Users\henni\anaconda3\envs\tf\lib\site-packages\keras\preprocessing\image.py in flow_from_directory(self, directory, target_size, color_mode, classes, class_mode, batch_size, shuffle, seed, save_to_dir, save_prefix, save_format, follow_links, subset, interpolation)
-    974             and `y` is a numpy array of corresponding labels.
-    975     &quot;&quot;&quot;
---&gt; 976     return DirectoryIterator(
-    977         directory,
-    978         self,
-
-c:\Users\henni\anaconda3\envs\tf\lib\site-packages\keras\preprocessing\image.py in __init__(self, directory, image_data_generator, target_size, color_mode, classes, class_mode, batch_size, shuffle, seed, data_format, save_to_dir, save_prefix, save_format, follow_links, subset, interpolation, dtype)
-    392         dtype = backend.floatx()
-    393       kwargs[&#39;dtype&#39;] = dtype
---&gt; 394     super(DirectoryIterator, self).__init__(
-    395         directory, image_data_generator,
-    396         target_size=target_size,
-
-c:\Users\henni\anaconda3\envs\tf\lib\site-packages\keras_preprocessing\image\directory_iterator.py in __init__(self, directory, image_data_generator, target_size, color_mode, classes, class_mode, batch_size, shuffle, seed, data_format, save_to_dir, save_prefix, save_format, follow_links, subset, interpolation, dtype)
-    113         if not classes:
-    114             classes = []
---&gt; 115             for subdir in sorted(os.listdir(directory)):
-    116                 if os.path.isdir(os.path.join(directory, subdir)):
-    117                     classes.append(subdir)
-
-FileNotFoundError: [WinError 3] Das System kann den angegebenen Pfad nicht finden: &#39;new_extended_dataset/origin&#39;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Found 7734 images belonging to 8 classes.
+Found 1930 images belonging to 8 classes.
 </pre></div>
 </div>
 </div>
@@ -340,6 +311,18 @@ FileNotFoundError: [WinError 3] Das System kann den angegebenen Pfad nicht finde
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(64, 200, 200, 3) float32
+(64, 200, 200, 3) float32
+(64, 8)
+(64, 8)
+(64,)
+(64,)
+[12  5  8 10  6 10  5  8]
+[ 8 11 11 11  5  4  5  9]
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -353,6 +336,9 @@ FileNotFoundError: [WinError 3] Das System kann den angegebenen Pfad nicht finde
     <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">train_labels</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/1 Data Exploration_4_0.png" src="_images/1 Data Exploration_4_0.png" />
 </div>
 </div>
 </div>

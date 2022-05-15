@@ -11,17 +11,17 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-# In[7]:
+# In[2]:
 
 
 datagen=ImageDataGenerator(rescale=1./255,
     validation_split=0.20)
 
 batch_size=64   
-data_dir = 'new_extended_dataset/origin'
+data_dir = 'new_extended_dataset/original'
 target_size = 200
 
-train_data = datagen.flow_from_directory("new_extended_dataset/origin",
+train_data = datagen.flow_from_directory(data_dir,
     target_size=(target_size,target_size),
     class_mode="categorical", 
     batch_size=batch_size, 
@@ -34,7 +34,7 @@ val_data = datagen.flow_from_directory(data_dir,
     subset="validation")
 
 
-# In[ ]:
+# In[3]:
 
 
 train_images, train_labels = train_data.next()
@@ -64,7 +64,7 @@ print(np.bincount(train_labels_shaped))
 print(np.bincount(val_labels_shaped))
 
 
-# In[ ]:
+# In[4]:
 
 
 fig1 = plt.figure(figsize=(20,10))
