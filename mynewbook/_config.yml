@@ -2,7 +2,7 @@
 # Learn more at https://jupyterbook.org/customize/config.html
 
 title: Coin-Recognition
-author: Henning Farren (hf019) & Kim Rautenberg (...)
+author: Henning Farren (hf019) & Kim Rautenberg (kr056)
 logo: logo.png
 
 # Force re-execution of notebooks on each build.
