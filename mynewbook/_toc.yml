@@ -6,5 +6,6 @@ root: intro
 chapters: 
 - file: 1 Data Exploration
 - file: 2 Model Building
-- file: 3 Dashboard Deployment
+- file: 3 Explainable AI
+- file: 4 Dashboard Deployment
  
