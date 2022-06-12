@@ -14,7 +14,7 @@ import numpy as np
 # ## Datensatze
 # ### "Extended"
 
-# In[15]:
+# In[2]:
 
 
 #rescale nötig für graphische Darstellung
@@ -45,7 +45,7 @@ extended_data = datagen.flow_from_directory(data_dir,
 # 
 # Für den "Extended"-Datensatz wurden die Bilder auf denen die "Kopf"-Seite der Münze zu sehen war entfernt.
 
-# In[16]:
+# In[3]:
 
 
 small_data = datagen.flow_from_directory("small data set/classified/train",
@@ -53,7 +53,7 @@ small_data = datagen.flow_from_directory("small data set/classified/train",
     subset="training")
 
 
-# In[25]:
+# In[4]:
 
 
 small_data_images, small_data_labels = small_data.next()
@@ -70,7 +70,7 @@ for i, img in enumerate(small_data_images[:15]):
 
 # ### "Big"
 
-# In[18]:
+# In[5]:
 
 
 big_data = datagen.flow_from_directory("big data set/original",
@@ -78,7 +78,7 @@ big_data = datagen.flow_from_directory("big data set/original",
     subset="training")
 
 
-# In[26]:
+# In[6]:
 
 
 big_data_images, big_data_labels = big_data.next()
@@ -93,7 +93,7 @@ for i, img in enumerate(big_data_images[:15]):
     plt.title(np.argmax(big_data_labels[i]))
 
 
-# In[22]:
+# In[7]:
 
 
 extended_data_images, extended_data_labels = extended_data.next()
@@ -101,7 +101,7 @@ print(extended_data_images.shape, extended_data_images.dtype)
 print(extended_data_labels.shape, extended_data_labels.dtype)
 
 
-# In[23]:
+# In[8]:
 
 
 fig1 = plt.figure(figsize=(20,10))
