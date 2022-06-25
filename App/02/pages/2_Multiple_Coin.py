@@ -11,15 +11,10 @@ from PIL import Image
 import cv2
 import matplotlib.pyplot as plt
 
-#bildhochladen vs. webcam ansteuern!!
-#https://docs.streamlit.io/library/api-reference/widgets/st.camera_input
-#https://docs.streamlit.io/library/api-reference/widgets/st.camera_input#tensorflow
-def load_image_file():
-    uploaded_file = slit.file_uploader(label='Pick an image')
-    return uploaded_file
 
-def load_image(uploaded_file):
-    # uploaded_file = slit.file_uploader(label='Pick an image')
+
+def load_image():
+    uploaded_file = slit.file_uploader(label='Pick an image')
     if uploaded_file is not None:
         image_data = uploaded_file.getvalue()
         slit.image(image_data)
@@ -36,22 +31,6 @@ def load_model():
     model_path = '/Users/Kim/Library/Mobile Documents/com~apple~CloudDocs/UNI/HdM/Semester6/DataScience&MLOps/Coins/Models/Tuned/tuned_model'
     model = keras.models.load_model(model_path)
     return model
-
-#predict to uploaded picture tensorflow komponenten
-def predict_one_Coin (model, image):
-    img = Image.open(image)
-    test_image = img.resize((200,200))
-    input_arr = tf.keras.preprocessing.image.img_to_array(test_image)
-
-    test_image = np.expand_dims(input_arr, axis=0)
-
-    prediction = model.predict(test_image)
-    class_names=["1c", "2c", "5c", "10c", "20c", "50c", "1e", "2e"]
-
-    slit.write(f"{class_names[np.argmax(prediction)]} with a { (100 * np.max(prediction)).round(2) } % prediction.")
-    file_name = str(class_names[np.argmax(prediction)])
-    return file_name
-
 
 def adjust_gamma(image, gamma=1.0):
    invGamma = 1.0 / gamma
@@ -114,18 +93,9 @@ def predict_more_Coin (model, image):
 #image upload
 def main():
     slit.title('Image upload')
-    uploaded_file = load_image_file()
-    image = load_image(uploaded_file)
+    image = load_image()
     model = load_model()
-    result = slit.button('Image with one Coin')
-    if result:
-        slit.write('Calculating results...')
-        predicted = predict_one_Coin(model, image)
-        img = Image.open(image)
-        img.save('/Users/Kim/Library/Mobile Documents/com~apple~CloudDocs/UNI/HdM/Semester6/DataScience&MLOps/my_airflow_directory/dags/'+predicted+'.jpg')
-        slit.success('File Saved')
-    result_more_Coins = slit.button('Image with more Coins')
-    if result_more_Coins:
+    if image != None:
         slit.write('Calculating results...')
         predicted = predict_more_Coin(model, image)
 
