@@ -4,11 +4,11 @@
 format: jb-book
 root: intro
 chapters:
-- url: last hope
+- file: last hope
   sections:
-  - url: last hope
+  - url: last%20hope.html#setup
     title: Setup
     anchor: Setup
-  - url: last hope
+  - url: last%20hope.html#Visualisierung
     title: Visualisierung
     anchor: Visualisierung
