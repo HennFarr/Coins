@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Daten, Modelling und Evaluierung &#8212; Für europäische Münzen</title>
+    <title>Last Hope and all Tasks &#8212; Für europäische Münzen</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -97,7 +97,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Daten, Modelling und Evaluierung
+   Last Hope and all Tasks
   </a>
  </li>
 </ul>
@@ -210,23 +210,18 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#local-or-google-colab">
-     Local or Google Colab
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#data">
-     Data
+    <a class="reference internal nav-link" href="#daten">
+     Daten
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#clear-data">
-       Clear Data
+      <a class="reference internal nav-link" href="#datenbereinigung">
+       Datenbereinigung
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#get-data">
-       Get Data
+      <a class="reference internal nav-link" href="#datensatze">
+       Datensätze
       </a>
      </li>
     </ul>
@@ -249,14 +244,21 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#model-layers">
-     Model &amp; Layers
+    <a class="reference internal nav-link" href="#layers-compiling">
+     Layers &amp; Compiling
     </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#compiling">
-     Compiling
-    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#layers">
+       Layers:
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#compiling">
+       Compiling
+      </a>
+     </li>
+    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#callback">
@@ -266,19 +268,26 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#model-tuning-training">
-   Model Tuning / Training
+  <a class="reference internal nav-link" href="#model-training">
+   Model Training
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#training-history">
-     Training history
+    <a class="reference internal nav-link" href="#tuning">
+     Tuning
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#loading-model">
-     Loading Model
+    <a class="reference internal nav-link" href="#training">
+     Training
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#history">
+       History
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -288,9 +297,21 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#test-split">
-     Test Split
+    <a class="reference internal nav-link" href="#loading-model">
+     Loading Model
     </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Visualisierung
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#test-split">
+       Test-Split
+      </a>
+     </li>
+    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#real-test-images">
@@ -300,13 +321,13 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#explainable-ai">
-   Explainable AI
+  <a class="reference internal nav-link" href="#explainable-ai-fur-cnn">
+   “Explainable AI” für CNN
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#cnn-filters">
-     CNN Filters
+    <a class="reference internal nav-link" href="#filter">
+     Filter
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -322,8 +343,8 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#multiple-coins">
-   Multiple Coins
+  <a class="reference internal nav-link" href="#mehrer-munzen">
+   Mehrer Münzen
   </a>
  </li>
 </ul>
@@ -336,7 +357,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Daten, Modelling und Evaluierung</h1>
+                <h1>Last Hope and all Tasks</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -352,23 +373,18 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#local-or-google-colab">
-     Local or Google Colab
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#data">
-     Data
+    <a class="reference internal nav-link" href="#daten">
+     Daten
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#clear-data">
-       Clear Data
+      <a class="reference internal nav-link" href="#datenbereinigung">
+       Datenbereinigung
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#get-data">
-       Get Data
+      <a class="reference internal nav-link" href="#datensatze">
+       Datensätze
       </a>
      </li>
     </ul>
@@ -391,14 +407,21 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#model-layers">
-     Model &amp; Layers
+    <a class="reference internal nav-link" href="#layers-compiling">
+     Layers &amp; Compiling
     </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#compiling">
-     Compiling
-    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#layers">
+       Layers:
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#compiling">
+       Compiling
+      </a>
+     </li>
+    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#callback">
@@ -408,19 +431,26 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#model-tuning-training">
-   Model Tuning / Training
+  <a class="reference internal nav-link" href="#model-training">
+   Model Training
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#training-history">
-     Training history
+    <a class="reference internal nav-link" href="#tuning">
+     Tuning
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#loading-model">
-     Loading Model
+    <a class="reference internal nav-link" href="#training">
+     Training
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#history">
+       History
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -430,9 +460,21 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#test-split">
-     Test Split
+    <a class="reference internal nav-link" href="#loading-model">
+     Loading Model
     </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Visualisierung
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#test-split">
+       Test-Split
+      </a>
+     </li>
+    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#real-test-images">
@@ -442,13 +484,13 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#explainable-ai">
-   Explainable AI
+  <a class="reference internal nav-link" href="#explainable-ai-fur-cnn">
+   “Explainable AI” für CNN
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#cnn-filters">
-     CNN Filters
+    <a class="reference internal nav-link" href="#filter">
+     Filter
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -464,8 +506,8 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#multiple-coins">
-   Multiple Coins
+  <a class="reference internal nav-link" href="#mehrer-munzen">
+   Mehrer Münzen
   </a>
  </li>
 </ul>
@@ -477,10 +519,11 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="daten-modelling-und-evaluierung">
-<h1>Daten, Modelling und Evaluierung<a class="headerlink" href="#daten-modelling-und-evaluierung" title="Permalink to this headline">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="last-hope-and-all-tasks">
+<h1>Last Hope and all Tasks<a class="headerlink" href="#last-hope-and-all-tasks" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="setup">
 <h2>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h2>
+<p>Da wir aufgrund der Größe des Modells viel in Google Colab gearbeitet haben mussten wir als erstes unser Git-Reposetory klonen um auch in Google Colab zugriff auf unsere Datensätze zu haben. Deswegen werden die meisten Pfade, die zur Umsetzung wichtig waren sowohl für die Lokale, als auch für die Colab Umgebung, gespeichert.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Für Colab</span>
@@ -497,7 +540,6 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="kn">import</span> <span class="nn">tensorflow_datasets</span> <span class="k">as</span> <span class="nn">tfds</span>
 <span class="kn">from</span> <span class="nn">tensorboard.plugins.hparams</span> <span class="kn">import</span> <span class="n">api</span> <span class="k">as</span> <span class="n">hp</span>
 <span class="kn">from</span> <span class="nn">tensorflow</span> <span class="kn">import</span> <span class="n">keras</span>
-
 
 <span class="kn">from</span> <span class="nn">keras</span> <span class="kn">import</span> <span class="n">layers</span>
 <span class="kn">import</span> <span class="nn">keras_tuner</span> <span class="k">as</span> <span class="nn">kt</span>
@@ -526,8 +568,6 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<div class="section" id="local-or-google-colab">
-<h3>Local or Google Colab<a class="headerlink" href="#local-or-google-colab" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">local_data_dir</span><span class="o">=</span><span class="s2">&quot;new_extended_dataset/original&quot;</span>
@@ -536,11 +576,11 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="data">
-<h3>Data<a class="headerlink" href="#data" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="clear-data">
-<h4>Clear Data<a class="headerlink" href="#clear-data" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="daten">
+<h3>Daten<a class="headerlink" href="#daten" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="datenbereinigung">
+<h4>Datenbereinigung<a class="headerlink" href="#datenbereinigung" title="Permalink to this headline">¶</a></h4>
+<p>Standard Filter für schlecht kodierte Bilddateien ohne “JFIF”. Der Code stammt aus der Übung <a class="reference external" href="https://kirenz.github.io/deep-learning/docs/image_classification_from_scratch.html">Image classification from scratch</a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num_skipped</span> <span class="o">=</span> <span class="mi">0</span>
@@ -570,8 +610,23 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<div class="section" id="get-data">
-<h4>Get Data<a class="headerlink" href="#get-data" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="datensatze">
+<h4>Datensätze<a class="headerlink" href="#datensatze" title="Permalink to this headline">¶</a></h4>
+<p>Der gesamte Datensatz besteht aus zwei unterschiedlichen Datensätzen. Beide beinhalten Bilder von 1 Cent bis 2 Euro Münzen. Für das Modell wurden die Bilder mit Kopf-Seiten aus dem ersten Datensatz manuell entfernt. Den gesamten Datensatz finden sie <a class="reference external" href="https://github.com/HennFarr/Coins/tree/master/new_extended_dataset/original">hier</a>.</p>
+<p>Datensatz Nr. 1 von <a class="reference external" href="https://github.com/kaa/coins-dataset">“kaa”</a>:</p>
+<ul class="simple">
+<li><p>1288 Bildern</p></li>
+<li><p>Kopf- und Zahl-Seite</p></li>
+<li><p>unterschiedliche Hintergründe und Winkel</p></li>
+</ul>
+<p>Datensatz Nr. 2 von <a class="reference external" href="https://github.com/Pitrified/coin-dataset">“Pitrified”</a>:</p>
+<ul class="simple">
+<li><p>8425 Bilder</p></li>
+<li><p>Nur Zahl-Seite</p></li>
+<li><p>Einfarbige Hintergründe</p></li>
+<li><p>5-12 Bilder pro Münze mit unterschiedlichen Rotationen/Helligkeiten</p></li>
+</ul>
+<p>Die Daten wurden in einen Trainings- (75%), Validierungs- (12,5%) und Test-Split (12,5%) aufgeteilt. Um die Visualisierung und Evaluation möglichst einfach zu machen werden die Daten als Integers und in größer werdender Reihenfolge kodiert. Alle Bilder wärden mit 200x200px gespeichert.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">batch_size</span><span class="o">=</span><span class="mi">64</span>   
@@ -643,6 +698,7 @@ Using 2416 files for validation.
 </div>
 <div class="section" id="visualisierung">
 <h2>Visualisierung<a class="headerlink" href="#visualisierung" title="Permalink to this headline">¶</a></h2>
+<p>Die Visualisierung dient zur groben überprüfung der Daten und ob beide Datensätze vertreten sind. Die unterschiede der Bilder sind leicht zu erkennen. Gleichzeitig werden die Bilder in Daten und Label unterteilt, da dies für die Analyse mit <a class="reference external" href="#shap">SHAP</a> und <a class="reference external" href="#model-evaluation">Visualisierung der Evaluation</a> erforderlich ist.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">class_names</span> <span class="o">=</span> <span class="n">train_ds</span><span class="o">.</span><span class="n">class_names</span>
@@ -666,7 +722,7 @@ Using 2416 files for validation.
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/Daten, Modelling und Evaluierung_16_0.png" src="_images/Daten, Modelling und Evaluierung_16_0.png" />
+<img alt="_images/Daten, Modelling und Evaluierung_15_0.png" src="_images/Daten, Modelling und Evaluierung_15_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -685,7 +741,7 @@ Using 2416 files for validation.
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/Daten, Modelling und Evaluierung_17_0.png" src="_images/Daten, Modelling und Evaluierung_17_0.png" />
+<img alt="_images/Daten, Modelling und Evaluierung_16_0.png" src="_images/Daten, Modelling und Evaluierung_16_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -704,7 +760,7 @@ Using 2416 files for validation.
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/Daten, Modelling und Evaluierung_18_0.png" src="_images/Daten, Modelling und Evaluierung_18_0.png" />
+<img alt="_images/Daten, Modelling und Evaluierung_17_0.png" src="_images/Daten, Modelling und Evaluierung_17_0.png" />
 </div>
 </div>
 </div>
@@ -720,6 +776,7 @@ Using 2416 files for validation.
 </div>
 <div class="section" id="data-augmentation">
 <h3>Data Augmentation<a class="headerlink" href="#data-augmentation" title="Permalink to this headline">¶</a></h3>
+<p>Data Augmentation dient dazu den Datensatz zu erweitern und den Bildern mehr Variationen zu geben. Dies ist hauptsächlich für den kleineren Datensatz sinnvoll. Die Bilder werden dabei zufällig horizontal und vertikal gespiegelt, rotiert und/oder der Kontrast wird zufällig verändert.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_augmentation</span> <span class="o">=</span> <span class="n">keras</span><span class="o">.</span><span class="n">Sequential</span><span class="p">([</span>
@@ -732,17 +789,23 @@ Using 2416 files for validation.
 </div>
 </div>
 </div>
-<div class="section" id="model-layers">
-<h3>Model &amp; Layers<a class="headerlink" href="#model-layers" title="Permalink to this headline">¶</a></h3>
-<blockquote>
-<div><p>specific comments missing</p>
-</div></blockquote>
+<div class="section" id="layers-compiling">
+<h3>Layers &amp; Compiling<a class="headerlink" href="#layers-compiling" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="layers">
+<h4>Layers:<a class="headerlink" href="#layers" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Input-Layer für 200x200x3 Tensoren</p></li>
+<li><p>Data Augmentation</p></li>
+<li><p>Standard CNN Layers mit steigender Filteranzahl</p></li>
+<li><p>Residual Block</p></li>
+<li><p>Tuning-Layer GAP2D vs. Flatten</p></li>
+</ul>
 </div>
 <div class="section" id="compiling">
-<h3>Compiling<a class="headerlink" href="#compiling" title="Permalink to this headline">¶</a></h3>
+<h4>Compiling<a class="headerlink" href="#compiling" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
-<li><p>‘categorical_crossentropy’ works on one-hot encoded label</p></li>
-<li><p>‘sparse_categorical_crossentropy’ works on integer label</p></li>
+<li><p>‘categorical_crossentropy’ für One-Hot kodierte Label (False)</p></li>
+<li><p>‘sparse_categorical_crossentropy’ für Integer kodierte Label (True)</p></li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -803,7 +866,8 @@ Using 2416 files for validation.
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">build_model</span><span class="p">(</span><span class="n">kt</span><span class="o">.</span><span class="n">HyperParameters</span><span class="p">())</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Function test</span>
+<span class="n">build_model</span><span class="p">(</span><span class="n">kt</span><span class="o">.</span><span class="n">HyperParameters</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
@@ -813,20 +877,11 @@ Using 2416 files for validation.
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#keras.utils.plot_model(model, show_shapes=True)</span>
-</pre></div>
-</div>
-</div>
 </div>
 </div>
 <div class="section" id="callback">
 <h3>Callback<a class="headerlink" href="#callback" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><p>Saving best Model</p></li>
-<li><p>Early Stopping not suitable (s. history below)</p></li>
-</ul>
+<p>Es wird immer nur das am besten abschneidende Modell gespeichert. “Early Stopping” hat sich leider nicht als Hilfreich herausgestellt, da es immer wieder Einbrüch in “val_loss” gab (s. <a class="reference external" href="#history">History</a>) und wir daher “patience” so hoch einstellen hätten müssen, dass es auch keinen Effekt mehr gehabt hätte.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">local_model_dir</span> <span class="o">=</span> <span class="s2">&quot;Models/Tuned/tuned_model&quot;</span>
@@ -847,11 +902,10 @@ Using 2416 files for validation.
 </div>
 </div>
 </div>
-<div class="section" id="model-tuning-training">
-<h2>Model Tuning / Training<a class="headerlink" href="#model-tuning-training" title="Permalink to this headline">¶</a></h2>
-<blockquote>
-<div><p>Needs to be done in Google Colab</p>
-</div></blockquote>
+<div class="section" id="model-training">
+<h2>Model Training<a class="headerlink" href="#model-training" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tuning">
+<h3>Tuning<a class="headerlink" href="#tuning" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tuner</span> <span class="o">=</span> <span class="n">kt</span><span class="o">.</span><span class="n">RandomSearch</span><span class="p">(</span>
@@ -898,6 +952,9 @@ INFO:tensorflow:Oracle triggered exit
 </div>
 </div>
 </div>
+</div>
+<div class="section" id="training">
+<h3>Training<a class="headerlink" href="#training" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">best_hps</span><span class="o">=</span><span class="n">tuner</span><span class="o">.</span><span class="n">get_best_hyperparameters</span><span class="p">(</span><span class="n">num_trials</span><span class="o">=</span><span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
@@ -1155,8 +1212,8 @@ Epoch 50/50
 </div>
 </div>
 </div>
-<div class="section" id="training-history">
-<h3>Training history<a class="headerlink" href="#training-history" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="history">
+<h4>History<a class="headerlink" href="#history" title="Permalink to this headline">¶</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">epochs_range</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
@@ -1171,15 +1228,17 @@ Epoch 50/50
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/Daten, Modelling und Evaluierung_36_0.png" src="_images/Daten, Modelling und Evaluierung_36_0.png" />
+<img alt="_images/Daten, Modelling und Evaluierung_35_0.png" src="_images/Daten, Modelling und Evaluierung_35_0.png" />
 </div>
 </div>
 </div>
+</div>
+</div>
+<div class="section" id="model-evaluation">
+<h2>Model Evaluation<a class="headerlink" href="#model-evaluation" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="loading-model">
 <h3>Loading Model<a class="headerlink" href="#loading-model" title="Permalink to this headline">¶</a></h3>
-<blockquote>
-<div><p>Loading Model in local environment for later evaluation</p>
-</div></blockquote>
+<p>Um die Evaluation auch Lokal machen zu können laden wir das so eben gespeicherte Modell in “model_loaded”. Dabei zeigt das Modell bei den Testdaten eine Accuracy von 99.51%</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model_loaded</span> <span class="o">=</span> <span class="n">keras</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">load_model</span><span class="p">(</span><span class="n">colab_model_dir</span><span class="p">)</span>
@@ -1200,11 +1259,11 @@ Epoch 50/50
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="model-evaluation">
-<h2>Model Evaluation<a class="headerlink" href="#model-evaluation" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>Visualisierung<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="test-split">
-<h3>Test Split<a class="headerlink" href="#test-split" title="Permalink to this headline">¶</a></h3>
+<h4>Test-Split<a class="headerlink" href="#test-split" title="Permalink to this headline">¶</a></h4>
+<p>Für die Visualisierung der Evaluation greifen wir auf die Funktion <code class="docutils literal notranslate"><span class="pre">plot_image</span></code> aus der Vorlesung zurück (<a class="reference external" href="https://kirenz.github.io/deep-learning/docs/fashion-mnist.html">TF MNIST II</a>)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">predictions</span> <span class="o">=</span> <span class="n">model_loaded</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x_test</span><span class="p">)</span>
@@ -1269,12 +1328,14 @@ Epoch 50/50
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/Daten, Modelling und Evaluierung_44_0.png" src="_images/Daten, Modelling und Evaluierung_44_0.png" />
+<img alt="_images/Daten, Modelling und Evaluierung_43_0.png" src="_images/Daten, Modelling und Evaluierung_43_0.png" />
+</div>
 </div>
 </div>
 </div>
 <div class="section" id="real-test-images">
 <h3>Real Test Images<a class="headerlink" href="#real-test-images" title="Permalink to this headline">¶</a></h3>
+<p>Bei tatsächlichen Test Daten schneidet das Modell etwas schlechter ab. Wie zu erwarten, da die Varianz der Aufnahmen in den Trainingsdaten sehr gering ist. Mit besseren Trainingsdaten könnte man wahrscheinlich eine noch höhere Accuracy für neue Bilder erhalten. Auffällig ist außerdem, dass sich das Modell im Vergleich zum Test-Split seltener “sicher” bei der Prediction ist.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">local_t_data</span> <span class="o">=</span> <span class="s2">&quot;real_test_data/one&quot;</span>
@@ -1311,17 +1372,17 @@ Epoch 50/50
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/Daten, Modelling und Evaluierung_47_0.png" src="_images/Daten, Modelling und Evaluierung_47_0.png" />
-<img alt="_images/Daten, Modelling und Evaluierung_47_1.png" src="_images/Daten, Modelling und Evaluierung_47_1.png" />
-<img alt="_images/Daten, Modelling und Evaluierung_47_2.png" src="_images/Daten, Modelling und Evaluierung_47_2.png" />
-<img alt="_images/Daten, Modelling und Evaluierung_47_3.png" src="_images/Daten, Modelling und Evaluierung_47_3.png" />
-<img alt="_images/Daten, Modelling und Evaluierung_47_4.png" src="_images/Daten, Modelling und Evaluierung_47_4.png" />
+<img alt="_images/Daten, Modelling und Evaluierung_46_0.png" src="_images/Daten, Modelling und Evaluierung_46_0.png" />
+<img alt="_images/Daten, Modelling und Evaluierung_46_1.png" src="_images/Daten, Modelling und Evaluierung_46_1.png" />
+<img alt="_images/Daten, Modelling und Evaluierung_46_2.png" src="_images/Daten, Modelling und Evaluierung_46_2.png" />
+<img alt="_images/Daten, Modelling und Evaluierung_46_3.png" src="_images/Daten, Modelling und Evaluierung_46_3.png" />
+<img alt="_images/Daten, Modelling und Evaluierung_46_4.png" src="_images/Daten, Modelling und Evaluierung_46_4.png" />
 </div>
 </div>
 </div>
 </div>
-<div class="section" id="explainable-ai">
-<h2>Explainable AI<a class="headerlink" href="#explainable-ai" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="explainable-ai-fur-cnn">
+<h2>“Explainable AI” für CNN<a class="headerlink" href="#explainable-ai-fur-cnn" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">img_path_colab</span><span class="o">=</span><span class="s1">&#39;/content/Coins/big data set/original/2e/IMG_20190611_130947_0.jpg&#39;</span>
@@ -1330,8 +1391,11 @@ Epoch 50/50
 </div>
 </div>
 </div>
-<div class="section" id="cnn-filters">
-<h3>CNN Filters<a class="headerlink" href="#cnn-filters" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="filter">
+<h3>Filter<a class="headerlink" href="#filter" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Die Filter vom ersten Convolutional Layer</p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">conv2_16</span> <span class="o">=</span> <span class="n">model_loaded</span><span class="o">.</span><span class="n">layers</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
@@ -1366,20 +1430,23 @@ Epoch 50/50
 Red
 </pre></div>
 </div>
-<img alt="_images/Daten, Modelling und Evaluierung_51_1.png" src="_images/Daten, Modelling und Evaluierung_51_1.png" />
+<img alt="_images/Daten, Modelling und Evaluierung_50_1.png" src="_images/Daten, Modelling und Evaluierung_50_1.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Green
 </pre></div>
 </div>
-<img alt="_images/Daten, Modelling und Evaluierung_51_3.png" src="_images/Daten, Modelling und Evaluierung_51_3.png" />
+<img alt="_images/Daten, Modelling und Evaluierung_50_3.png" src="_images/Daten, Modelling und Evaluierung_50_3.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Blue
 </pre></div>
 </div>
-<img alt="_images/Daten, Modelling und Evaluierung_51_5.png" src="_images/Daten, Modelling und Evaluierung_51_5.png" />
+<img alt="_images/Daten, Modelling und Evaluierung_50_5.png" src="_images/Daten, Modelling und Evaluierung_50_5.png" />
 </div>
 </div>
 </div>
 <div class="section" id="feature-maps">
 <h3>Feature Maps<a class="headerlink" href="#feature-maps" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Die Feature Maps vom ersten Convolutional Layer</p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;conv2_16&quot;</span><span class="p">)</span>
@@ -1424,7 +1491,7 @@ Red
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>invalid value encountered in true_divide
 </pre></div>
 </div>
-<img alt="_images/Daten, Modelling und Evaluierung_53_2.png" src="_images/Daten, Modelling und Evaluierung_53_2.png" />
+<img alt="_images/Daten, Modelling und Evaluierung_52_2.png" src="_images/Daten, Modelling und Evaluierung_52_2.png" />
 </div>
 </div>
 </div>
@@ -1500,7 +1567,8 @@ Red
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">pre_t</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">]]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Rangfolge der Predictions</span>
+<span class="p">[</span><span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">pre_t</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">]]</span>
 </pre></div>
 </div>
 </div>
@@ -1518,25 +1586,25 @@ Red
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">shap_values</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">shap</span><span class="o">.</span><span class="n">image_plot</span><span class="p">([</span><span class="n">shap_values</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">)],</span> <span class="n">np_x_test</span><span class="p">[</span><span class="mi">20</span><span class="p">:</span><span class="mi">25</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#startet mit der höchsten Prediction</span>
+<span class="n">shap</span><span class="o">.</span><span class="n">image_plot</span><span class="p">([</span><span class="n">shap_values</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">)],</span> <span class="n">np_x_test</span><span class="p">[</span><span class="mi">20</span><span class="p">:</span><span class="mi">25</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/Daten, Modelling und Evaluierung_64_0.png" src="_images/Daten, Modelling und Evaluierung_64_0.png" />
+<img alt="_images/Daten, Modelling und Evaluierung_62_0.png" src="_images/Daten, Modelling und Evaluierung_62_0.png" />
 </div>
 </div>
 </div>
 </div>
-<div class="section" id="multiple-coins">
-<h2>Multiple Coins<a class="headerlink" href="#multiple-coins" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="mehrer-munzen">
+<h2>Mehrer Münzen<a class="headerlink" href="#mehrer-munzen" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">loadImage</span></code> und <code class="docutils literal notranslate"><span class="pre">findCoins</span></code> von <a class="reference external" href="https://github.com/kaa/coins-dataset">“kaa”</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">findCoins</span></code> findet Kreise im Bild</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">adjust_gamma</span></code> kann je nach Bild bei der Identifizierung der Kreise helfen.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">i,(x,y,r)</span> <span class="pre">in</span> <span class="pre">enumerate(coins)</span></code> iteriert durch die gefunden Kreise und kategorisiert jede Münze (ausgeschnittenen Kreis)</p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">loadImage</span><span class="p">(</span><span class="n">src</span><span class="p">):</span>
@@ -1651,8 +1719,8 @@ Red
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/Daten, Modelling und Evaluierung_72_0.png" src="_images/Daten, Modelling und Evaluierung_72_0.png" />
-<img alt="_images/Daten, Modelling und Evaluierung_72_1.png" src="_images/Daten, Modelling und Evaluierung_72_1.png" />
+<img alt="_images/Daten, Modelling und Evaluierung_70_0.png" src="_images/Daten, Modelling und Evaluierung_70_0.png" />
+<img alt="_images/Daten, Modelling und Evaluierung_70_1.png" src="_images/Daten, Modelling und Evaluierung_70_1.png" />
 </div>
 </div>
 </div>

@@ -1,9 +1,11 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Daten, Modelling und Evaluierung
+# # Last Hope and all Tasks
 
 # ## Setup
+# 
+# Da wir aufgrund der Größe des Modells viel in Google Colab gearbeitet haben mussten wir als erstes unser Git-Reposetory klonen um auch in Google Colab zugriff auf unsere Datensätze zu haben. Deswegen werden die meisten Pfade, die zur Umsetzung wichtig waren sowohl für die Lokale, als auch für die Colab Umgebung, gespeichert. 
 
 # In[1]:
 
@@ -22,7 +24,6 @@ import tensorflow_datasets as tfds
 from tensorboard.plugins.hparams import api as hp
 from tensorflow import keras
 
-
 from keras import layers
 import keras_tuner as kt
 from keras.preprocessing.image import ImageDataGenerator, img_to_array,load_img
@@ -36,8 +37,6 @@ import shap
 import cv2
 
 
-# ### Local or Google Colab 
-
 # In[3]:
 
 
@@ -45,9 +44,11 @@ local_data_dir="new_extended_dataset/original"
 colab_data_dir="/content/Coins/new_extended_dataset/original"
 
 
-# ### Data
+# ### Daten
 
-# #### Clear Data
+# #### Datenbereinigung
+# 
+# Standard Filter für schlecht kodierte Bilddateien ohne "JFIF". Der Code stammt aus der Übung [Image classification from scratch](https://kirenz.github.io/deep-learning/docs/image_classification_from_scratch.html).
 
 # In[4]:
 
@@ -71,7 +72,22 @@ for folder_name in ("1c", "1e", "2c", "2e", "5c", "10c", "20c","50c"):
 print("Deleted %d images" % num_skipped)
 
 
-# #### Get Data
+# #### Datensätze
+# 
+# Der gesamte Datensatz besteht aus zwei unterschiedlichen Datensätzen. Beide beinhalten Bilder von 1 Cent bis 2 Euro Münzen. Für das Modell wurden die Bilder mit Kopf-Seiten aus dem ersten Datensatz manuell entfernt. Den gesamten Datensatz finden sie [hier](https://github.com/HennFarr/Coins/tree/master/new_extended_dataset/original).
+#  
+# Datensatz Nr. 1 von ["kaa"](https://github.com/kaa/coins-dataset):
+# - 1288 Bildern
+# - Kopf- und Zahl-Seite
+# - unterschiedliche Hintergründe und Winkel
+# 
+# Datensatz Nr. 2 von ["Pitrified"](https://github.com/Pitrified/coin-dataset):
+# - 8425 Bilder
+# - Nur Zahl-Seite
+# - Einfarbige Hintergründe
+# - 5-12 Bilder pro Münze mit unterschiedlichen Rotationen/Helligkeiten
+# 
+# Die Daten wurden in einen Trainings- (75%), Validierungs- (12,5%) und Test-Split (12,5%) aufgeteilt. Um die Visualisierung und Evaluation möglichst einfach zu machen werden die Daten als Integers und in größer werdender Reihenfolge kodiert. Alle Bilder wärden mit 200x200px gespeichert.
 
 # In[5]:
 
@@ -124,6 +140,8 @@ val_ds = val_ds.skip(19)
 
 
 # ## Visualisierung 
+# 
+# Die Visualisierung dient zur groben überprüfung der Daten und ob beide Datensätze vertreten sind. Die unterschiede der Bilder sind leicht zu erkennen. Gleichzeitig werden die Bilder in Daten und Label unterteilt, da dies für die Analyse mit [SHAP](#shap) und [Visualisierung der Evaluation](#model-evaluation) erforderlich ist.
 
 # In[9]:
 
@@ -186,6 +204,8 @@ val_ds = val_ds.prefetch(buffer_size=64)
 
 
 # ### Data Augmentation 
+# 
+# Data Augmentation dient dazu den Datensatz zu erweitern und den Bildern mehr Variationen zu geben. Dies ist hauptsächlich für den kleineren Datensatz sinnvoll. Die Bilder werden dabei zufällig horizontal und vertikal gespiegelt, rotiert und/oder der Kontrast wird zufällig verändert.
 
 # In[ ]:
 
@@ -197,11 +217,18 @@ data_augmentation = keras.Sequential([
 ])
 
 
-# ### Model & Layers
-# >specific comments missing
-# ### Compiling
-# - 'categorical_crossentropy' works on one-hot encoded label
-# - 'sparse_categorical_crossentropy' works on integer label
+# ### Layers & Compiling
+# 
+# #### Layers:
+# - Input-Layer für 200x200x3 Tensoren
+# - Data Augmentation
+# - Standard CNN Layers mit steigender Filteranzahl
+# - Residual Block
+# - Tuning-Layer GAP2D vs. Flatten
+# 
+# #### Compiling
+# - 'categorical_crossentropy' für One-Hot kodierte Label (False)
+# - 'sparse_categorical_crossentropy' für Integer kodierte Label (True)
 # 
 
 # In[ ]:
@@ -263,18 +290,13 @@ def build_model(hp):
 # In[ ]:
 
 
+#Function test
 build_model(kt.HyperParameters())
 
 
-# In[ ]:
-
-
-#keras.utils.plot_model(model, show_shapes=True)
-
-
 # ### Callback
-# - Saving best Model 
-# - Early Stopping not suitable (s. history below)
+# 
+# Es wird immer nur das am besten abschneidende Modell gespeichert. "Early Stopping" hat sich leider nicht als Hilfreich herausgestellt, da es immer wieder Einbrüch in "val_loss" gab (s. [History](#history)) und wir daher "patience" so hoch einstellen hätten müssen, dass es auch keinen Effekt mehr gehabt hätte.
 
 # In[13]:
 
@@ -292,8 +314,10 @@ callbacks = [
 ]
 
 
-# ## Model Tuning / Training
-# >Needs to be done in Google Colab
+# ## Model Training
+# 
+# ### Tuning
+# 
 
 # In[ ]:
 
@@ -321,6 +345,8 @@ tuner.search(
 )
 
 
+# ### Training
+
 # In[ ]:
 
 
@@ -341,7 +367,7 @@ history = model.fit(
 )
 
 
-# ### Training history
+# #### History
 
 # In[ ]:
 
@@ -356,8 +382,11 @@ plt.legend(loc='lower right')
 plt.show()
 
 
+# ## Model Evaluation
+
 # ### Loading Model
-# > Loading Model in local environment for later evaluation
+# 
+# Um die Evaluation auch Lokal machen zu können laden wir das so eben gespeicherte Modell in "model_loaded". Dabei zeigt das Modell bei den Testdaten eine Accuracy von 99.51%
 
 # In[14]:
 
@@ -371,9 +400,9 @@ model_loaded = keras.models.load_model(colab_model_dir)
 test_loss, test_acc = model_loaded.evaluate(test_ds)
 
 
-# ## Model Evaluation
-
-# ### Test Split
+# ### Visualisierung
+# #### Test-Split
+# Für die Visualisierung der Evaluation greifen wir auf die Funktion `plot_image` aus der Vorlesung zurück ([TF MNIST II](https://kirenz.github.io/deep-learning/docs/fashion-mnist.html))
 
 # In[ ]:
 
@@ -437,6 +466,8 @@ plt.show()
 
 
 # ### Real Test Images
+# 
+# Bei tatsächlichen Test Daten schneidet das Modell etwas schlechter ab. Wie zu erwarten, da die Varianz der Aufnahmen in den Trainingsdaten sehr gering ist. Mit besseren Trainingsdaten könnte man wahrscheinlich eine noch höhere Accuracy für neue Bilder erhalten. Auffällig ist außerdem, dass sich das Modell im Vergleich zum Test-Split seltener "sicher" bei der Prediction ist.
 
 # In[ ]:
 
@@ -472,7 +503,7 @@ for i in range(1,6):
 #class_names=["1c", "2c", "5c", "10c", "20c", "50c", "1e", "2e"]
 
 
-# ## Explainable AI
+# ## "Explainable AI" für CNN
 
 # In[ ]:
 
@@ -481,7 +512,8 @@ img_path_colab='/content/Coins/big data set/original/2e/IMG_20190611_130947_0.jp
 img_path_local='big data set/original/2e/IMG_20190611_130947_0.jpg'
 
 
-# ### CNN Filters
+# ### Filter
+# - Die Filter vom ersten Convolutional Layer
 
 # In[ ]:
 
@@ -512,6 +544,7 @@ for c in range(3):
 
 
 # ### Feature Maps
+# - Die Feature Maps vom ersten Convolutional Layer
 
 # In[ ]:
 
@@ -605,22 +638,23 @@ print(len(shap_values[0][0]))
 # In[198]:
 
 
+#Rangfolge der Predictions
 [print(i) for i in pre_t[0:4]]
-
-
-# In[ ]:
-
-
-shap_values[0]
 
 
 # In[199]:
 
 
+#startet mit der höchsten Prediction
 shap.image_plot([shap_values[i] for i in range(8)], np_x_test[20:25])
 
 
-# ## Multiple Coins
+# ## Mehrer Münzen
+# 
+# - `loadImage` und `findCoins` von ["kaa"](https://github.com/kaa/coins-dataset)
+# - `findCoins` findet Kreise im Bild
+# - `adjust_gamma` kann je nach Bild bei der Identifizierung der Kreise helfen.
+# - `for i,(x,y,r) in enumerate(coins)` iteriert durch die gefunden Kreise und kategorisiert jede Münze (ausgeschnittenen Kreis)
 
 # In[ ]:
 
