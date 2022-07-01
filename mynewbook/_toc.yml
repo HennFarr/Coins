@@ -4,15 +4,4 @@
 format: jb-book
 root: intro
 chapters: 
-- file: 1 Data Exploration
-- file: 2 Model Building
-- file: 3 Explainable AI
-- file: 4 Dashboard Deployment
-- file: last_hope
-  expand_section: true
-  - title: Setup
-    file: last_hope
-    anchor: Setup
-  - title: Visualisierung 
-    file: last_hope
-    anchor: Visualisierung
+- file: last hope
