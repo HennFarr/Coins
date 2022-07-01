@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>lasthope &#8212; Coin-Recognition</title>
+    <title>Daten, Modelling und Evaluierung &#8212; Für europäische Münzen</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -50,7 +50,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Welcome to your Jupyter Book" href="intro.html" />
+    <link rel="prev" title="Unser Projekt" href="intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -79,7 +79,7 @@ const thebe_selector_output = ".output, .cell_output"
       <img src="_static/logo.png" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">Coin-Recognition</h1>
+      <h1 class="site-logo" id="site-title">Für europäische Münzen</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
@@ -90,22 +90,15 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="intro.html">
-   Welcome to your Jupyter Book
+   Unser Projekt
   </a>
  </li>
 </ul>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active has-children">
+ <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   lasthope
+   Daten, Modelling und Evaluierung
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-  </ul>
  </li>
 </ul>
 
@@ -343,7 +336,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>lasthope</h1>
+                <h1>Daten, Modelling und Evaluierung</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -484,107 +477,16 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="lasthope">
-<h1>lasthope<a class="headerlink" href="#lasthope" title="Permalink to this headline">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="daten-modelling-und-evaluierung">
+<h1>Daten, Modelling und Evaluierung<a class="headerlink" href="#daten-modelling-und-evaluierung" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="setup">
 <h2>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Für Colab</span>
-<span class="o">!</span>git clone -b master https://github.com/HennFarr/Coins.git
-<span class="o">!</span>pip install keras_tuner
-<span class="o">!</span>pip install shap
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>fatal: destination path &#39;Coins&#39; already exists and is not an empty directory.
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: keras_tuner in c:\users\henni\anaconda3\envs\j_books\lib\site-packages (1.1.2)
-Requirement already satisfied: requests in c:\users\henni\anaconda3\envs\j_books\lib\site-packages (from keras_tuner) (2.27.1)
-Requirement already satisfied: kt-legacy in c:\users\henni\anaconda3\envs\j_books\lib\site-packages (from keras_tuner) (1.0.4)
-Requirement already satisfied: tensorboard in c:\users\henni\anaconda3\envs\j_books\lib\site-packages (from keras_tuner) (2.9.1)
-Requirement already satisfied: numpy in c:\users\henni\anaconda3\envs\j_books\lib\site-packages (from keras_tuner) (1.22.4)
-Requirement already satisfied: packaging in c:\users\henni\anaconda3\envs\j_books\lib\site-packages (from keras_tuner) (21.3)
-Requirement already satisfied: ipython in c:\users\henni\anaconda3\envs\j_books\lib\site-packages (from keras_tuner) (8.1.1)
-Requirement already satisfied: pickleshare in c:\users\henni\anaconda3\envs\j_books\lib\site-packages (from ipython-&gt;keras_tuner) (0.7.5)
-Requirement already satisfied: backcall in c:\users\henni\anaconda3\envs\j_books\lib\site-packages (from ipython-&gt;keras_tuner) (0.2.0)
-Requirement already satisfied: jedi&gt;=0.16 in c:\users\henni\anaconda3\envs\j_books\lib\site-packages (from ipython-&gt;keras_tuner) (0.18.1)
-Requirement already satisfied: prompt-toolkit!=3.0.0,!=3.0.1,&lt;3.1.0,&gt;=2.0.0 in c:\users\henni\anaconda3\envs\j_books\lib\site-packages (from ipython-&gt;keras_tuner) (3.0.27)
-Requirement already satisfied: pygments&gt;=2.4.0 in c:\users\henni\anaconda3\envs\j_books\lib\site-packages (from ipython-&gt;keras_tuner) (2.11.2)
-Requirement already satisfied: decorator in c:\users\henni\anaconda3\envs\j_books\lib\site-packages (from ipython-&gt;keras_tuner) (5.1.1)
-Requirement already satisfied: traitlets&gt;=5 in c:\users\henni\anaconda3\envs\j_books\lib\site-packages (from ipython-&gt;keras_tuner) (5.1.1)
-Requirement already satisfied: stack-data in c:\users\henni\anaconda3\envs\j_books\lib\site-packages (from ipython-&gt;keras_tuner) (0.2.0)
-Requirement already satisfied: setuptools&gt;=18.5 in c:\users\henni\anaconda3\envs\j_books\lib\site-packages (from ipython-&gt;keras_tuner) (58.0.4)
-Requirement already satisfied: matplotlib-inline in c:\users\henni\anaconda3\envs\j_books\lib\site-packages (from ipython-&gt;keras_tuner) (0.1.3)
-Requirement already satisfied: colorama in c:\users\henni\anaconda3\envs\j_books\lib\site-packages (from ipython-&gt;keras_tuner) (0.4.4)
-Requirement already satisfied: parso&lt;0.9.0,&gt;=0.8.0 in c:\users\henni\anaconda3\envs\j_books\lib\site-packages (from jedi&gt;=0.16-&gt;ipython-&gt;keras_tuner) (0.8.3)
-Requirement already satisfied: wcwidth in c:\users\henni\anaconda3\envs\j_books\lib\site-packages (from prompt-toolkit!=3.0.0,!=3.0.1,&lt;3.1.0,&gt;=2.0.0-&gt;ipython-&gt;keras_tuner) (0.2.5)
-Requirement already satisfied: pyparsing!=3.0.5,&gt;=2.0.2 in c:\users\henni\anaconda3\envs\j_books\lib\site-packages (from packaging-&gt;keras_tuner) (3.0.7)
-Requirement already satisfied: charset-normalizer~=2.0.0 in c:\users\henni\anaconda3\envs\j_books\lib\site-packages (from requests-&gt;keras_tuner) (2.0.12)
-Requirement already satisfied: idna&lt;4,&gt;=2.5 in c:\users\henni\anaconda3\envs\j_books\lib\site-packages (from requests-&gt;keras_tuner) (3.3)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: certifi&gt;=2017.4.17 in c:\users\henni\anaconda3\envs\j_books\lib\site-packages (from requests-&gt;keras_tuner) (2021.10.8)
-Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in c:\users\henni\anaconda3\envs\j_books\lib\site-packages (from requests-&gt;keras_tuner) (1.26.9)
-Requirement already satisfied: pure-eval in c:\users\henni\anaconda3\envs\j_books\lib\site-packages (from stack-data-&gt;ipython-&gt;keras_tuner) (0.2.2)
-Requirement already satisfied: executing in c:\users\henni\anaconda3\envs\j_books\lib\site-packages (from stack-data-&gt;ipython-&gt;keras_tuner) (0.8.3)
-Requirement already satisfied: asttokens in c:\users\henni\anaconda3\envs\j_books\lib\site-packages (from stack-data-&gt;ipython-&gt;keras_tuner) (2.0.5)
-Requirement already satisfied: six in c:\users\henni\anaconda3\envs\j_books\lib\site-packages (from asttokens-&gt;stack-data-&gt;ipython-&gt;keras_tuner) (1.16.0)
-Requirement already satisfied: google-auth&lt;3,&gt;=1.6.3 in c:\users\henni\anaconda3\envs\j_books\lib\site-packages (from tensorboard-&gt;keras_tuner) (2.9.0)
-Requirement already satisfied: absl-py&gt;=0.4 in c:\users\henni\anaconda3\envs\j_books\lib\site-packages (from tensorboard-&gt;keras_tuner) (1.1.0)
-Requirement already satisfied: protobuf&lt;3.20,&gt;=3.9.2 in c:\users\henni\anaconda3\envs\j_books\lib\site-packages (from tensorboard-&gt;keras_tuner) (3.19.4)
-Requirement already satisfied: grpcio&gt;=1.24.3 in c:\users\henni\anaconda3\envs\j_books\lib\site-packages (from tensorboard-&gt;keras_tuner) (1.47.0)
-Requirement already satisfied: tensorboard-data-server&lt;0.7.0,&gt;=0.6.0 in c:\users\henni\anaconda3\envs\j_books\lib\site-packages (from tensorboard-&gt;keras_tuner) (0.6.1)
-Requirement already satisfied: tensorboard-plugin-wit&gt;=1.6.0 in c:\users\henni\anaconda3\envs\j_books\lib\site-packages (from tensorboard-&gt;keras_tuner) (1.8.1)
-Requirement already satisfied: werkzeug&gt;=1.0.1 in c:\users\henni\anaconda3\envs\j_books\lib\site-packages (from tensorboard-&gt;keras_tuner) (2.1.2)
-Requirement already satisfied: google-auth-oauthlib&lt;0.5,&gt;=0.4.1 in c:\users\henni\anaconda3\envs\j_books\lib\site-packages (from tensorboard-&gt;keras_tuner) (0.4.6)
-Requirement already satisfied: markdown&gt;=2.6.8 in c:\users\henni\anaconda3\envs\j_books\lib\site-packages (from tensorboard-&gt;keras_tuner) (3.3.7)
-Requirement already satisfied: wheel&gt;=0.26 in c:\users\henni\anaconda3\envs\j_books\lib\site-packages (from tensorboard-&gt;keras_tuner) (0.37.1)
-Requirement already satisfied: rsa&lt;5,&gt;=3.1.4 in c:\users\henni\anaconda3\envs\j_books\lib\site-packages (from google-auth&lt;3,&gt;=1.6.3-&gt;tensorboard-&gt;keras_tuner) (4.8)
-Requirement already satisfied: cachetools&lt;6.0,&gt;=2.0.0 in c:\users\henni\anaconda3\envs\j_books\lib\site-packages (from google-auth&lt;3,&gt;=1.6.3-&gt;tensorboard-&gt;keras_tuner) (5.2.0)
-Requirement already satisfied: pyasn1-modules&gt;=0.2.1 in c:\users\henni\anaconda3\envs\j_books\lib\site-packages (from google-auth&lt;3,&gt;=1.6.3-&gt;tensorboard-&gt;keras_tuner) (0.2.8)
-Requirement already satisfied: requests-oauthlib&gt;=0.7.0 in c:\users\henni\anaconda3\envs\j_books\lib\site-packages (from google-auth-oauthlib&lt;0.5,&gt;=0.4.1-&gt;tensorboard-&gt;keras_tuner) (1.3.1)
-Requirement already satisfied: importlib-metadata&gt;=4.4 in c:\users\henni\anaconda3\envs\j_books\lib\site-packages (from markdown&gt;=2.6.8-&gt;tensorboard-&gt;keras_tuner) (4.11.3)
-Requirement already satisfied: zipp&gt;=0.5 in c:\users\henni\anaconda3\envs\j_books\lib\site-packages (from importlib-metadata&gt;=4.4-&gt;markdown&gt;=2.6.8-&gt;tensorboard-&gt;keras_tuner) (3.7.0)
-Requirement already satisfied: pyasn1&lt;0.5.0,&gt;=0.4.6 in c:\users\henni\anaconda3\envs\j_books\lib\site-packages (from pyasn1-modules&gt;=0.2.1-&gt;google-auth&lt;3,&gt;=1.6.3-&gt;tensorboard-&gt;keras_tuner) (0.4.8)
-Requirement already satisfied: oauthlib&gt;=3.0.0 in c:\users\henni\anaconda3\envs\j_books\lib\site-packages (from requests-oauthlib&gt;=0.7.0-&gt;google-auth-oauthlib&lt;0.5,&gt;=0.4.1-&gt;tensorboard-&gt;keras_tuner) (3.2.0)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>^C
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting shap
-  Using cached shap-0.41.0-cp38-cp38-win_amd64.whl (435 kB)
-Requirement already satisfied: numpy in c:\users\henni\anaconda3\envs\j_books\lib\site-packages (from shap) (1.22.4)
-Collecting scipy
-  Using cached scipy-1.8.1-cp38-cp38-win_amd64.whl (36.9 MB)
-Requirement already satisfied: packaging&gt;20.9 in c:\users\henni\anaconda3\envs\j_books\lib\site-packages (from shap) (21.3)
-Collecting pandas
-  Using cached pandas-1.4.3-cp38-cp38-win_amd64.whl (10.6 MB)
-Collecting cloudpickle
-  Using cached cloudpickle-2.1.0-py3-none-any.whl (25 kB)
-Collecting tqdm&gt;4.25.0
-  Using cached tqdm-4.64.0-py2.py3-none-any.whl (78 kB)
-Collecting scikit-learn
-  Using cached scikit_learn-1.1.1-cp38-cp38-win_amd64.whl (7.3 MB)
-Collecting numba
-  Using cached numba-0.55.2-cp38-cp38-win_amd64.whl (2.4 MB)
-Collecting slicer==0.0.7
-  Using cached slicer-0.0.7-py3-none-any.whl (14 kB)
-Requirement already satisfied: pyparsing!=3.0.5,&gt;=2.0.2 in c:\users\henni\anaconda3\envs\j_books\lib\site-packages (from packaging&gt;20.9-&gt;shap) (3.0.7)
-Requirement already satisfied: colorama in c:\users\henni\anaconda3\envs\j_books\lib\site-packages (from tqdm&gt;4.25.0-&gt;shap) (0.4.4)
-Requirement already satisfied: setuptools in c:\users\henni\anaconda3\envs\j_books\lib\site-packages (from numba-&gt;shap) (58.0.4)
-Collecting llvmlite&lt;0.39,&gt;=0.38.0rc1
-  Using cached llvmlite-0.38.1-cp38-cp38-win_amd64.whl (23.2 MB)
-Requirement already satisfied: pytz&gt;=2020.1 in c:\users\henni\anaconda3\envs\j_books\lib\site-packages (from pandas-&gt;shap) (2021.3)
-Requirement already satisfied: python-dateutil&gt;=2.8.1 in c:\users\henni\anaconda3\envs\j_books\lib\site-packages (from pandas-&gt;shap) (2.8.2)
-Requirement already satisfied: six&gt;=1.5 in c:\users\henni\anaconda3\envs\j_books\lib\site-packages (from python-dateutil&gt;=2.8.1-&gt;pandas-&gt;shap) (1.16.0)
-Collecting joblib&gt;=1.0.0
-  Using cached joblib-1.1.0-py2.py3-none-any.whl (306 kB)
-Requirement already satisfied: threadpoolctl&gt;=2.0.0 in c:\users\henni\anaconda3\envs\j_books\lib\site-packages (from scikit-learn-&gt;shap) (3.1.0)
-Installing collected packages: scipy, llvmlite, joblib, tqdm, slicer, scikit-learn, pandas, numba, cloudpickle, shap
+<span class="c1">#!git clone -b master https://github.com/HennFarr/Coins.git</span>
+<span class="c1">#!pip install keras_tuner</span>
+<span class="c1">#!pip install shap</span>
 </pre></div>
 </div>
 </div>
@@ -608,6 +510,18 @@ Installing collected packages: scipy, llvmlite, joblib, tqdm, slicer, scikit-lea
 <span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">shap</span>
 <span class="kn">import</span> <span class="nn">cv2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="nn">Input In [2],</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">tensorflow_datasets</span> <span class="k">as</span> <span class="nn">tfds</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">from</span> <span class="nn">tensorboard.plugins.hparams</span> <span class="kn">import</span> <span class="n">api</span> <span class="k">as</span> <span class="n">hp</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;tensorflow&#39;
 </pre></div>
 </div>
 </div>
@@ -1742,8 +1656,6 @@ Red
 </div>
 </div>
 </div>
-<div class="toctree-wrapper compound">
-</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -1775,7 +1687,7 @@ Red
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Welcome to your Jupyter Book</p>
+            <p class="prev-next-title">Unser Projekt</p>
         </div>
     </a>
 </div>
