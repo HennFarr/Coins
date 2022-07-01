@@ -3,11 +3,12 @@
 
 format: jb-book
 root: intro
-- file: last hope
-  expand_section: true
-  - title: Setup
-    file: last hope
+chapters:
+- url: last hope
+  sections:
+  - url: last hope
+    title: Setup
     anchor: Setup
-  - title: Visualisierung 
-    file: last hope
-    anchor: Visualisierung 
+  - url: last hope
+    title: Visualisierung
+    anchor: Visualisierung
