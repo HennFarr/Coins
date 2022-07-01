@@ -6,9 +6,7 @@ root: intro
 chapters:
 - file: last hope
   sections:
-  - url: last%20hope.html#setup
+  - file: last hope/Setup
     title: Setup
-    anchor: Setup
-  - url: last%20hope.html#Visualisierung
+  - file: last hope/Visualisierung
     title: Visualisierung
-    anchor: Visualisierung
