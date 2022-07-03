@@ -1,3 +1,4 @@
+# Welcome Page
 import streamlit as slit
 
 slit.set_page_config(
@@ -22,15 +23,3 @@ slit.markdown(
 
 """
 )
-
-# import app1
-# import app2
-# import streamlit as slit
-# PAGES = {
-#     "App1": app1,
-#     "App2": app2
-# }
-# slit.sidebar.title('Navigation')
-# selection = slit.sidebar.radio("Go to", list(PAGES.keys()))
-# page = PAGES[selection]
-# page.app()
