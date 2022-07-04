@@ -3,15 +3,15 @@
 
 # # Apache Airflow
 
-# 1. Installieren und Inzialisieren von Airflow nach Tutorial in der Vorlesung.
+# 1. Installieren und Inizialisieren von Airflow nach [Tutorial in der Vorlesung](https://kirenz.github.io/codelabs/codelabs/airflow-setup/#0).
 # 2. Erstellen einer DAG-Datei
-# 3. Erstellen einzelnen Schritte
+# 3. Erstellen einzelner Schritte
 
-# In unserem Fall haben wir Apache Airflow dazu genutzt, das Abspeichern von neuen Bildern zur Verbesserung unseres Modells, zu Automatisieren.
+# In unserem Fall haben wir Apache Airflow dazu genutzt, das Abspeichern von neuen Bildern (zur Erweiterung unseres Datensatzes), zu Automatisieren.
 
 # ## DAG-Datei
 
-# In unserem Fall läuft das Funktion täglich einmal. Optimal wäre es wenn die Funktion immer dann ausgeführt wird, wenn unser Modell zu oft schlecht ausfällt
+# In unserem Fall läuft die Funktion einmal täglich. Optimal wäre es wenn die Funktion immer dann ausgeführt wird, wenn unser Modell zu oft schlecht ausfällt.
 
 # In[1]:
 
@@ -62,7 +62,7 @@ with DAG(
     t1
 
 
-# ## Funktion zum Speichern der Bilder
+# ## Funktion zum speichern der Bilder
 
 # In[ ]:
 

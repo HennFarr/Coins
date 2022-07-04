@@ -3,7 +3,7 @@
 
 # # Streamlit App
 
-# Die Streamlit App ist in verschiedene Unterseiten aufgeteilt. Auf der Seite "One Coin" kann man die Prediction für eine Münze bekommen und auf der "Multiple Coin" kann man die Predicition für mehrere Münze bekommen. 
+# Die Streamlit App ist in verschiedene Unterseiten aufgeteilt. Auf der Seite "One Coin" kann man die Prediction für eine Münze anfordern und auf der "Multiple Coin" kann man die Predicition für mehrere Münze anfordern. 
 
 # ## Eine Münze
 
@@ -20,7 +20,7 @@
 
 # ### Code
 
-# Das Setup/Imports
+# Setup/Imports
 
 # In[1]:
 
@@ -68,8 +68,8 @@ def load_model():
 
 # Funktion für die Prediction der Münze
 # - Resizing des Fotos und umwandeln zum Array
-# - Prediction übers Modell
-# - Print Klassifikation und Prediciton der Münze
+# - Prediction durchs Modell
+# - Ausgabe Klassifikation und Prediciton der Münze
 # - Return Klassifikation
 
 # In[ ]:
@@ -133,7 +133,7 @@ if __name__ == '__main__':
 
 # ### Code
 
-# Das Setup/Imports
+# Setup/Imports
 
 # In[ ]:
 
@@ -179,7 +179,7 @@ def load_model():
     return model
 
 
-# Eine Funktion um bei der suche nach den Münzen zu helfen
+# Funktion zur Anpassung des Gamma Wertes (hilft bei der Identifizierung der Kreise)
 
 # In[ ]:
 
@@ -209,7 +209,7 @@ def findCoins(img, showCoins = False):
 # Prediciton der Münzen
 # - Preprocessing des Fotos
 # - Finden der Münzen, mit hilfe der Funktionen
-# - Prediction der einzelnen Begrenzungen(wo Münzen gefunden wurden), also Prediciton der einzelnen Münzen
+# - Bestimmung der einzelnen Begrenzungen (wo Münzen gefunden wurden) + Prediciton der einzelnen Münzen
 # - Output der Prediction auf dem Foto
 # - Speichern des Plots zur Darstellung in Streamlit
 

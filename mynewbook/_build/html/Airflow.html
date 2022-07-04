@@ -50,6 +50,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Modell Visualisierung" href="Archiv/modell.html" />
     <link rel="prev" title="Streamlit App" href="Streamlit.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -113,6 +114,28 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Apache Airflow
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Archiv
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Archiv/modell.html">
+   Modell Visualisierung
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Archiv/object_detection_try1.html">
+   Object Detection try 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Archiv/object_detection_try2.html">
+   Object Detection try 2
   </a>
  </li>
 </ul>
@@ -226,7 +249,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#funktion-zum-speichern-der-bilder">
-   Funktion zum Speichern der Bilder
+   Funktion zum speichern der Bilder
   </a>
  </li>
 </ul>
@@ -256,7 +279,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#funktion-zum-speichern-der-bilder">
-   Funktion zum Speichern der Bilder
+   Funktion zum speichern der Bilder
   </a>
  </li>
 </ul>
@@ -271,14 +294,14 @@ const thebe_selector_output = ".output, .cell_output"
   <div class="tex2jax_ignore mathjax_ignore section" id="apache-airflow">
 <h1>Apache Airflow<a class="headerlink" href="#apache-airflow" title="Permalink to this headline">¶</a></h1>
 <ol class="simple">
-<li><p>Installieren und Inzialisieren von Airflow nach Tutorial in der Vorlesung.</p></li>
+<li><p>Installieren und Inizialisieren von Airflow nach <a class="reference external" href="https://kirenz.github.io/codelabs/codelabs/airflow-setup/#0">Tutorial in der Vorlesung</a>.</p></li>
 <li><p>Erstellen einer DAG-Datei</p></li>
-<li><p>Erstellen einzelnen Schritte</p></li>
+<li><p>Erstellen einzelner Schritte</p></li>
 </ol>
-<p>In unserem Fall haben wir Apache Airflow dazu genutzt, das Abspeichern von neuen Bildern zur Verbesserung unseres Modells, zu Automatisieren.</p>
+<p>In unserem Fall haben wir Apache Airflow dazu genutzt, das Abspeichern von neuen Bildern (zur Erweiterung unseres Datensatzes), zu Automatisieren.</p>
 <div class="section" id="dag-datei">
 <h2>DAG-Datei<a class="headerlink" href="#dag-datei" title="Permalink to this headline">¶</a></h2>
-<p>In unserem Fall läuft das Funktion täglich einmal. Optimal wäre es wenn die Funktion immer dann ausgeführt wird, wenn unser Modell zu oft schlecht ausfällt</p>
+<p>In unserem Fall läuft die Funktion einmal täglich. Optimal wäre es wenn die Funktion immer dann ausgeführt wird, wenn unser Modell zu oft schlecht ausfällt.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#---------------------------------------</span>
@@ -345,7 +368,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="funktion-zum-speichern-der-bilder">
-<h2>Funktion zum Speichern der Bilder<a class="headerlink" href="#funktion-zum-speichern-der-bilder" title="Permalink to this headline">¶</a></h2>
+<h2>Funktion zum speichern der Bilder<a class="headerlink" href="#funktion-zum-speichern-der-bilder" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#---------------------------------------</span>
@@ -409,6 +432,13 @@ const thebe_selector_output = ".output, .cell_output"
             <p class="prev-next-subtitle">previous</p>
             <p class="prev-next-title">Streamlit App</p>
         </div>
+    </a>
+    <a class='right-next' id="next-link" href="Archiv/modell.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Modell Visualisierung</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
     </a>
 </div>
             

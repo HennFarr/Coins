@@ -296,7 +296,7 @@ build_model(kt.HyperParameters())
 
 # ### Callback
 # 
-# Es wird immer nur das am besten abschneidende Modell gespeichert. "Early Stopping" hat sich leider nicht als Hilfreich herausgestellt, da es immer wieder Einbrüch in "val_loss" gab (s. [History](#history)) und wir daher "patience" so hoch einstellen hätten müssen, dass es auch keinen Effekt mehr gehabt hätte.
+# Es wird immer nur das am besten abschneidende Modell gespeichert. "Early Stopping" hat sich leider nicht als Hilfreich herausgestellt, da es immer wieder Einbrüche in "val_loss" gab (s. [History](#history)) und wir daher "patience" so hoch einstellen hätten müssen, dass es auch keinen Effekt mehr gehabt hätte.
 
 # In[13]:
 

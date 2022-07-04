@@ -117,6 +117,28 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
 </ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Archiv
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Archiv/modell.html">
+   Modell Visualisierung
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Archiv/object_detection_try1.html">
+   Object Detection try 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Archiv/object_detection_try2.html">
+   Object Detection try 2
+  </a>
+ </li>
+</ul>
 
     </div>
 </nav> <!-- To handle the deprecated key -->
@@ -319,7 +341,7 @@ const thebe_selector_output = ".output, .cell_output"
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="streamlit-app">
 <h1>Streamlit App<a class="headerlink" href="#streamlit-app" title="Permalink to this headline">¶</a></h1>
-<p>Die Streamlit App ist in verschiedene Unterseiten aufgeteilt. Auf der Seite “One Coin” kann man die Prediction für eine Münze bekommen und auf der “Multiple Coin” kann man die Predicition für mehrere Münze bekommen.</p>
+<p>Die Streamlit App ist in verschiedene Unterseiten aufgeteilt. Auf der Seite “One Coin” kann man die Prediction für eine Münze anfordern und auf der “Multiple Coin” kann man die Predicition für mehrere Münze anfordern.</p>
 <div class="section" id="eine-munze">
 <h2>Eine Münze<a class="headerlink" href="#eine-munze" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="darstellung">
@@ -335,7 +357,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="section" id="code">
 <h3>Code<a class="headerlink" href="#code" title="Permalink to this headline">¶</a></h3>
-<p>Das Setup/Imports</p>
+<p>Setup/Imports</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">streamlit</span> <span class="k">as</span> <span class="nn">slit</span>
@@ -396,8 +418,8 @@ const thebe_selector_output = ".output, .cell_output"
 <p>Funktion für die Prediction der Münze</p>
 <ul class="simple">
 <li><p>Resizing des Fotos und umwandeln zum Array</p></li>
-<li><p>Prediction übers Modell</p></li>
-<li><p>Print Klassifikation und Prediciton der Münze</p></li>
+<li><p>Prediction durchs Modell</p></li>
+<li><p>Ausgabe Klassifikation und Prediciton der Münze</p></li>
 <li><p>Return Klassifikation</p></li>
 </ul>
 <div class="cell docutils container">
@@ -467,7 +489,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="section" id="id2">
 <h3>Code<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
-<p>Das Setup/Imports</p>
+<p>Setup/Imports</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">streamlit</span> <span class="k">as</span> <span class="nn">slit</span>
@@ -513,7 +535,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<p>Eine Funktion um bei der suche nach den Münzen zu helfen</p>
+<p>Funktion zur Anpassung des Gamma Wertes (hilft bei der Identifizierung der Kreise)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">adjust_gamma</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">gamma</span><span class="o">=</span><span class="mf">1.0</span><span class="p">):</span>
@@ -544,7 +566,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="simple">
 <li><p>Preprocessing des Fotos</p></li>
 <li><p>Finden der Münzen, mit hilfe der Funktionen</p></li>
-<li><p>Prediction der einzelnen Begrenzungen(wo Münzen gefunden wurden), also Prediciton der einzelnen Münzen</p></li>
+<li><p>Bestimmung der einzelnen Begrenzungen (wo Münzen gefunden wurden) + Prediciton der einzelnen Münzen</p></li>
 <li><p>Output der Prediction auf dem Foto</p></li>
 <li><p>Speichern des Plots zur Darstellung in Streamlit</p></li>
 </ul>
