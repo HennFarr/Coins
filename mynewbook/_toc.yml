@@ -9,7 +9,6 @@ parts:
     - file: Daten, Modelling und Evaluierung
     - file: Streamlit
     - file: Airflow
-  - caption: Archiv 
 
 
 
