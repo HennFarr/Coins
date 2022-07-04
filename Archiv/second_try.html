@@ -1,0 +1,987 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>First Try &#8212; Für europäische Münzen</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Für europäische Münzen</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Dieses Buch durchsuchen ..." aria-label="Dieses Buch durchsuchen ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Unser%20Projekt.html">
+   Unser Projekt
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Abgabe
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Daten%2C%20Modelling%20und%20Evaluierung.html">
+   Daten, Modelling und Evaluierung
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Streamlit.html">
+   Streamlit App
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Airflow.html">
+   Apache Airflow
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Archiv
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="modell.html">
+   Modell Visualisierung
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="object_detection_try1.html">
+   Object Detection try 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="object_detection_try2.html">
+   Object Detection try 2
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Navigation umschalten" aria-controls="site-navigation"
+                title="Navigation umschalten" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Laden Sie diese Seite herunter"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/Archiv/second_try.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Quelldatei herunterladen" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="In PDF drucken"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/HennFarr/Coins/tree/main/mynewbook"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Quell-Repository"><i
+                    class="fab fa-github"></i>Repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/HennFarr/Coins/tree/main/mynewbook/issues/new?title=Issue%20on%20page%20%2FArchiv/second_try.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Öffnen Sie ein Problem"><i class="fas fa-lightbulb"></i>offenes Thema</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Vollbildmodus"
+        title="Vollbildmodus"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/HennFarr/Coins/main?urlpath=tree/mynewbook/Archiv/second_try.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Starten Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>First Try</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="first-try">
+<h1>First Try<a class="headerlink" href="#first-try" title="Permalink to this headline">¶</a></h1>
+<p>Data From</p>
+<p><a class="reference external" href="https://github.com/kaa/coins-dataset">https://github.com/kaa/coins-dataset</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
+<span class="kn">from</span> <span class="nn">tensorflow</span> <span class="kn">import</span> <span class="n">keras</span>
+<span class="kn">from</span> <span class="nn">keras</span> <span class="kn">import</span> <span class="n">layers</span>
+<span class="kn">from</span> <span class="nn">keras.preprocessing.image</span> <span class="kn">import</span> <span class="n">ImageDataGenerator</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="nn">Input In [1],</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">from</span> <span class="nn">tensorflow</span> <span class="kn">import</span> <span class="n">keras</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">from</span> <span class="nn">keras</span> <span class="kn">import</span> <span class="n">layers</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;tensorflow&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Create Train and Test Data</p>
+<p>explanation: <a class="reference external" href="https://machinelearningmastery.com/how-to-load-large-datasets-from-directories-for-deep-learning-with-keras/">https://machinelearningmastery.com/how-to-load-large-datasets-from-directories-for-deep-learning-with-keras/</a></p>
+<p>?Größe von Train und Test Data nachfragen?</p>
+<p>s. Dog_Cats</p>
+<p><a class="reference external" href="https://stackoverflow.com/questions/42443936/keras-split-train-test-set-when-using-imagedatagenerator">https://stackoverflow.com/questions/42443936/keras-split-train-test-set-when-using-imagedatagenerator</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datagen</span><span class="o">=</span><span class="n">ImageDataGenerator</span><span class="p">(</span><span class="n">rescale</span><span class="o">=</span><span class="mf">1.</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span>
+    <span class="n">validation_split</span><span class="o">=</span><span class="mf">0.20</span><span class="p">)</span>
+
+<span class="n">batch_size</span><span class="o">=</span><span class="mi">64</span>   
+<span class="n">data_dir</span> <span class="o">=</span> <span class="s1">&#39;new_extended_dataset/original&#39;</span>
+<span class="n">target_size</span> <span class="o">=</span> <span class="mi">200</span>
+
+<span class="n">train_data</span> <span class="o">=</span> <span class="n">datagen</span><span class="o">.</span><span class="n">flow_from_directory</span><span class="p">(</span><span class="n">data_dir</span><span class="p">,</span>
+    <span class="n">target_size</span><span class="o">=</span><span class="p">(</span><span class="n">target_size</span><span class="p">,</span><span class="n">target_size</span><span class="p">),</span>
+    <span class="n">class_mode</span><span class="o">=</span><span class="s2">&quot;categorical&quot;</span><span class="p">,</span> 
+    <span class="n">batch_size</span><span class="o">=</span><span class="n">batch_size</span><span class="p">,</span> 
+    <span class="n">subset</span><span class="o">=</span><span class="s2">&quot;training&quot;</span><span class="p">)</span>
+
+<span class="n">val_data</span> <span class="o">=</span> <span class="n">datagen</span><span class="o">.</span><span class="n">flow_from_directory</span><span class="p">(</span><span class="n">data_dir</span><span class="p">,</span>
+    <span class="n">target_size</span><span class="o">=</span><span class="p">(</span><span class="n">target_size</span><span class="p">,</span><span class="n">target_size</span><span class="p">),</span>
+    <span class="n">class_mode</span><span class="o">=</span><span class="s2">&quot;categorical&quot;</span><span class="p">,</span> 
+    <span class="n">batch_size</span><span class="o">=</span><span class="n">batch_size</span><span class="p">,</span> 
+    <span class="n">subset</span><span class="o">=</span><span class="s2">&quot;validation&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Found 7734 images belonging to 8 classes.
+Found 1930 images belonging to 8 classes.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">train_images</span><span class="p">,</span> <span class="n">train_labels</span> <span class="o">=</span> <span class="n">train_data</span><span class="o">.</span><span class="n">next</span><span class="p">()</span>
+<span class="n">val_images</span><span class="p">,</span> <span class="n">val_labels</span> <span class="o">=</span> <span class="n">val_data</span><span class="o">.</span><span class="n">next</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">train_images</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">train_images</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">val_images</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">val_images</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
+
+<span class="n">train_labels_shaped</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([])</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">train_labels</span><span class="p">:</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">i</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">train_labels_shaped</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">train_labels_shaped</span><span class="p">],[</span><span class="n">i</span><span class="p">])</span>
+
+<span class="n">val_labels_shaped</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([])</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">val_labels</span><span class="p">:</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">i</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">val_labels_shaped</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">val_labels_shaped</span><span class="p">],[</span><span class="n">i</span><span class="p">])</span>
+
+<span class="n">train_labels_shaped</span> <span class="o">=</span> <span class="n">train_labels_shaped</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;uint8&quot;</span><span class="p">)</span>
+<span class="n">val_labels_shaped</span> <span class="o">=</span> <span class="n">val_labels_shaped</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;uint8&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">train_labels</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">val_labels</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">train_labels_shaped</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">val_labels_shaped</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">bincount</span><span class="p">(</span><span class="n">train_labels_shaped</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">bincount</span><span class="p">(</span><span class="n">val_labels_shaped</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(64, 200, 200, 3) float32
+(64, 200, 200, 3) float32
+(64, 8)
+(64, 8)
+(64,)
+(64,)
+[ 5  7  9 13  7  7  3 13]
+[10 10  9  4  9  8  5  9]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">fig1</span><span class="o">.</span><span class="n">subplots_adjust</span><span class="p">(</span><span class="n">wspace</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">hspace</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
+
+<span class="c1"># Lets show the first 32 images of a batch</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">img</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">train_images</span><span class="p">[:</span><span class="mi">32</span><span class="p">]):</span>
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">fig1</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">xticks</span><span class="o">=</span><span class="p">[],</span> <span class="n">yticks</span><span class="o">=</span><span class="p">[])</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">train_labels</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/second_try_7_0.png" src="../_images/second_try_7_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig2</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">fig2</span><span class="o">.</span><span class="n">subplots_adjust</span><span class="p">(</span><span class="n">wspace</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">hspace</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
+
+<span class="c1"># Lets show the first 32 images of a batch</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">img</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">val_images</span><span class="p">[:</span><span class="mi">32</span><span class="p">]):</span>
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">fig2</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">xticks</span><span class="o">=</span><span class="p">[],</span> <span class="n">yticks</span><span class="o">=</span><span class="p">[])</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">val_labels</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/second_try_8_0.png" src="../_images/second_try_8_0.png" />
+</div>
+</div>
+<p>Preprocessing</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">train_ds</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">Dataset</span><span class="o">.</span><span class="n">from_generator</span><span class="p">(</span>
+    <span class="k">lambda</span><span class="p">:</span> <span class="n">train_data</span><span class="p">,</span>
+    <span class="n">output_types</span> <span class="o">=</span> <span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">,</span> <span class="n">tf</span><span class="o">.</span><span class="n">uint8</span><span class="p">),</span>
+    <span class="n">output_shapes</span> <span class="o">=</span> <span class="p">([</span><span class="kc">None</span><span class="p">,</span> <span class="n">target_size</span><span class="p">,</span> <span class="n">target_size</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="mi">8</span><span class="p">]),</span>
+<span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">train_ds</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;FlatMapDataset element_spec=(TensorSpec(shape=(None, 200, 200, 3), dtype=tf.float32, name=None), TensorSpec(shape=(None, 8), dtype=tf.uint8, name=None))&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">val_ds</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">Dataset</span><span class="o">.</span><span class="n">from_generator</span><span class="p">(</span>
+    <span class="k">lambda</span><span class="p">:</span> <span class="n">val_data</span><span class="p">,</span>
+    <span class="n">output_types</span> <span class="o">=</span> <span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">,</span> <span class="n">tf</span><span class="o">.</span><span class="n">uint8</span><span class="p">),</span>
+    <span class="n">output_shapes</span> <span class="o">=</span> <span class="p">([</span><span class="kc">None</span><span class="p">,</span> <span class="n">target_size</span><span class="p">,</span> <span class="n">target_size</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="mi">8</span><span class="p">]),</span>
+<span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">val_ds</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;FlatMapDataset element_spec=(TensorSpec(shape=(None, 200, 200, 3), dtype=tf.float32, name=None), TensorSpec(shape=(None, 8), dtype=tf.uint8, name=None))&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Works sometimes (Beim ersten ausführen oder nach einem Restart)</p>
+<p>Links for data_augmentation:</p>
+<p><a class="reference external" href="https://keras.io/examples/vision/image_classification_from_scratch/#two-options-to-preprocess-the-data">https://keras.io/examples/vision/image_classification_from_scratch/#two-options-to-preprocess-the-data</a></p>
+<p><a class="reference external" href="https://www.tensorflow.org/tutorials/images/data_augmentation">https://www.tensorflow.org/tutorials/images/data_augmentation</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_augmentation</span> <span class="o">=</span> <span class="n">keras</span><span class="o">.</span><span class="n">Sequential</span><span class="p">([</span>
+  <span class="n">layers</span><span class="o">.</span><span class="n">RandomFlip</span><span class="p">(</span><span class="s2">&quot;horizontal_and_vertical&quot;</span><span class="p">),</span>
+  <span class="n">layers</span><span class="o">.</span><span class="n">RandomRotation</span><span class="p">(</span><span class="mf">0.2</span><span class="p">),</span>
+  <span class="c1">#layers.RandomContrast(factor=0.5),</span>
+<span class="p">])</span>
+    
+<span class="c1">#works sometimes (First try &amp; Restart)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">images</span><span class="p">,</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">train_ds</span><span class="o">.</span><span class="n">take</span><span class="p">(</span><span class="mi">1</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">9</span><span class="p">):</span>
+        <span class="n">augmented_images</span> <span class="o">=</span> <span class="n">data_augmentation</span><span class="p">(</span><span class="n">images</span><span class="p">)</span>
+        <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">xticks</span><span class="o">=</span><span class="p">[],</span> <span class="n">yticks</span><span class="o">=</span><span class="p">[])</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">augmented_images</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s2">&quot;off&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/second_try_13_0.png" src="../_images/second_try_13_0.png" />
+</div>
+</div>
+<p>Modelbuilding</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># provide  (image_height, image_width, image_channels)</span>
+<span class="n">inputs</span> <span class="o">=</span> <span class="n">keras</span><span class="o">.</span><span class="n">Input</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="n">target_size</span><span class="p">,</span><span class="n">target_size</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+
+<span class="c1">#Nur mit Datasets möglich (nicht mit DirectoryIterator)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">data_augmentation</span><span class="p">(</span><span class="n">inputs</span><span class="p">)</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">layers</span><span class="o">.</span><span class="n">Conv2D</span><span class="p">(</span><span class="n">filters</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s2">&quot;relu&quot;</span><span class="p">)(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">layers</span><span class="o">.</span><span class="n">MaxPooling2D</span><span class="p">(</span><span class="n">pool_size</span><span class="o">=</span><span class="mi">2</span><span class="p">)(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">layers</span><span class="o">.</span><span class="n">Conv2D</span><span class="p">(</span><span class="n">filters</span><span class="o">=</span><span class="mi">32</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s2">&quot;relu&quot;</span><span class="p">)(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">layers</span><span class="o">.</span><span class="n">MaxPooling2D</span><span class="p">(</span><span class="n">pool_size</span><span class="o">=</span><span class="mi">2</span><span class="p">)(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">layers</span><span class="o">.</span><span class="n">Conv2D</span><span class="p">(</span><span class="n">filters</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s2">&quot;relu&quot;</span><span class="p">)(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">layers</span><span class="o">.</span><span class="n">MaxPooling2D</span><span class="p">(</span><span class="n">pool_size</span><span class="o">=</span><span class="mi">2</span><span class="p">)(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">layers</span><span class="o">.</span><span class="n">Conv2D</span><span class="p">(</span><span class="n">filters</span><span class="o">=</span><span class="mi">128</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s2">&quot;relu&quot;</span><span class="p">)(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">layers</span><span class="o">.</span><span class="n">MaxPooling2D</span><span class="p">(</span><span class="n">pool_size</span><span class="o">=</span><span class="mi">2</span><span class="p">)(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">layers</span><span class="o">.</span><span class="n">Conv2D</span><span class="p">(</span><span class="n">filters</span><span class="o">=</span><span class="mi">256</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s2">&quot;relu&quot;</span><span class="p">)(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">layers</span><span class="o">.</span><span class="n">MaxPooling2D</span><span class="p">(</span><span class="n">pool_size</span><span class="o">=</span><span class="mi">2</span><span class="p">)(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">layers</span><span class="o">.</span><span class="n">Conv2D</span><span class="p">(</span><span class="n">filters</span><span class="o">=</span><span class="mi">512</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s2">&quot;relu&quot;</span><span class="p">)(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">layers</span><span class="o">.</span><span class="n">SpatialDropout2D</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="c1">#Flatten oder GlobalAveragePooling2D s. https://stackoverflow.com/questions/49295311/what-is-the-difference-between-flatten-and-globalaveragepooling2d-in-keras</span>
+<span class="c1">#GlobalAveragePooling2D gut gegen overfitting</span>
+<span class="c1">#x = layers.GlobalAveragePooling2D()(x)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">layers</span><span class="o">.</span><span class="n">Flatten</span><span class="p">()(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="c1">#x = layers.Dense(32, activation=&#39;relu&#39;)(x)</span>
+
+<span class="c1"># use softmax activation</span>
+<span class="n">outputs</span> <span class="o">=</span> <span class="n">layers</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s2">&quot;softmax&quot;</span><span class="p">)(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="c1"># define inputs and outputs</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">keras</span><span class="o">.</span><span class="n">Model</span><span class="p">(</span><span class="n">inputs</span><span class="o">=</span><span class="n">inputs</span><span class="p">,</span> <span class="n">outputs</span><span class="o">=</span><span class="n">outputs</span><span class="p">)</span>
+
+<span class="n">model</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
+
+<span class="c1">#for filter in [128,64,32]:</span>
+<span class="c1">#    x = layers.Conv2D(filters=filter, kernel_size=3, activation=&quot;relu&quot;)(x)</span>
+<span class="c1">#    x = layers.MaxPooling2D(pool_size=2)(x)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Model: &quot;model_1&quot;
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_4 (InputLayer)        [(None, 200, 200, 3)]     0         
+                                                                 
+ sequential_3 (Sequential)   (None, 200, 200, 3)       0         
+                                                                 
+ conv2d_18 (Conv2D)          (None, 198, 198, 16)      448       
+                                                                 
+ max_pooling2d_15 (MaxPoolin  (None, 99, 99, 16)       0         
+ g2D)                                                            
+                                                                 
+ conv2d_19 (Conv2D)          (None, 97, 97, 32)        4640      
+                                                                 
+ max_pooling2d_16 (MaxPoolin  (None, 48, 48, 32)       0         
+ g2D)                                                            
+                                                                 
+ conv2d_20 (Conv2D)          (None, 46, 46, 64)        18496     
+                                                                 
+ max_pooling2d_17 (MaxPoolin  (None, 23, 23, 64)       0         
+ g2D)                                                            
+                                                                 
+ conv2d_21 (Conv2D)          (None, 21, 21, 128)       73856     
+                                                                 
+ max_pooling2d_18 (MaxPoolin  (None, 10, 10, 128)      0         
+ g2D)                                                            
+                                                                 
+ conv2d_22 (Conv2D)          (None, 8, 8, 256)         295168    
+                                                                 
+ max_pooling2d_19 (MaxPoolin  (None, 4, 4, 256)        0         
+ g2D)                                                            
+                                                                 
+ conv2d_23 (Conv2D)          (None, 2, 2, 512)         1180160   
+                                                                 
+ spatial_dropout2d_1 (Spatia  (None, 2, 2, 512)        0         
+ lDropout2D)                                                     
+                                                                 
+ flatten_1 (Flatten)         (None, 2048)              0         
+                                                                 
+ dense_1 (Dense)             (None, 8)                 16392     
+                                                                 
+=================================================================
+Total params: 1,589,160
+Trainable params: 1,589,160
+Non-trainable params: 0
+_________________________________________________________________
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># use rmsprop</span>
+<span class="n">model</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">optimizer</span><span class="o">=</span><span class="s2">&quot;adam&quot;</span><span class="p">,</span>
+             <span class="n">loss</span><span class="o">=</span><span class="s2">&quot;categorical_crossentropy&quot;</span><span class="p">,</span>
+             <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;accuracy&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Model training</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Training für Dataset</span>
+<span class="n">epochs</span><span class="o">=</span><span class="mi">50</span>
+
+<span class="n">history</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">train_ds</span><span class="p">,</span>
+<span class="c1">#Steps_per_epoch nötig ansonsten n/unknown for infinity</span>
+<span class="n">steps_per_epoch</span> <span class="o">=</span> <span class="n">train_data</span><span class="o">.</span><span class="n">samples</span> <span class="o">//</span> <span class="n">batch_size</span><span class="p">,</span>
+<span class="n">validation_data</span> <span class="o">=</span> <span class="n">val_ds</span><span class="p">,</span>
+<span class="n">validation_steps</span> <span class="o">=</span> <span class="n">val_data</span><span class="o">.</span><span class="n">samples</span> <span class="o">//</span> <span class="n">batch_size</span><span class="p">,</span>
+<span class="n">epochs</span> <span class="o">=</span><span class="n">epochs</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Epoch 1/50
+120/120 [==============================] - 122s 1s/step - loss: 1.3068 - accuracy: 0.4587 - val_loss: 1.8209 - val_accuracy: 0.4025
+Epoch 2/50
+120/120 [==============================] - 116s 970ms/step - loss: 0.8143 - accuracy: 0.6385 - val_loss: 2.0356 - val_accuracy: 0.4250
+Epoch 3/50
+120/120 [==============================] - 116s 971ms/step - loss: 0.7018 - accuracy: 0.7001 - val_loss: 2.3679 - val_accuracy: 0.4930
+Epoch 4/50
+120/120 [==============================] - 116s 969ms/step - loss: 0.5895 - accuracy: 0.7524 - val_loss: 1.9564 - val_accuracy: 0.5086
+Epoch 5/50
+120/120 [==============================] - 117s 974ms/step - loss: 0.4712 - accuracy: 0.8089 - val_loss: 2.3587 - val_accuracy: 0.5011
+Epoch 6/50
+120/120 [==============================] - 125s 1s/step - loss: 0.4142 - accuracy: 0.8366 - val_loss: 2.4615 - val_accuracy: 0.5552
+Epoch 7/50
+120/120 [==============================] - 129s 1s/step - loss: 0.3596 - accuracy: 0.8649 - val_loss: 2.1556 - val_accuracy: 0.5798
+Epoch 8/50
+120/120 [==============================] - 128s 1s/step - loss: 0.2846 - accuracy: 0.8939 - val_loss: 1.6813 - val_accuracy: 0.5986
+Epoch 9/50
+120/120 [==============================] - 117s 973ms/step - loss: 0.2644 - accuracy: 0.9040 - val_loss: 2.5497 - val_accuracy: 0.5970
+Epoch 10/50
+120/120 [==============================] - 117s 977ms/step - loss: 0.2465 - accuracy: 0.9100 - val_loss: 1.3506 - val_accuracy: 0.6238
+Epoch 11/50
+120/120 [==============================] - 117s 972ms/step - loss: 0.2192 - accuracy: 0.9216 - val_loss: 2.5347 - val_accuracy: 0.6415
+Epoch 12/50
+120/120 [==============================] - 117s 975ms/step - loss: 0.1910 - accuracy: 0.9323 - val_loss: 2.7942 - val_accuracy: 0.6442
+Epoch 13/50
+120/120 [==============================] - 116s 969ms/step - loss: 0.1573 - accuracy: 0.9435 - val_loss: 2.4702 - val_accuracy: 0.6356
+Epoch 14/50
+120/120 [==============================] - 116s 970ms/step - loss: 0.1382 - accuracy: 0.9519 - val_loss: 2.5732 - val_accuracy: 0.6742
+Epoch 15/50
+120/120 [==============================] - 138s 1s/step - loss: 0.1565 - accuracy: 0.9447 - val_loss: 3.1435 - val_accuracy: 0.6141
+Epoch 16/50
+120/120 [==============================] - 177s 1s/step - loss: 0.1451 - accuracy: 0.9498 - val_loss: 1.6904 - val_accuracy: 0.6484
+Epoch 17/50
+120/120 [==============================] - 213s 2s/step - loss: 0.1225 - accuracy: 0.9533 - val_loss: 3.0541 - val_accuracy: 0.6447
+Epoch 18/50
+120/120 [==============================] - 190s 2s/step - loss: 0.1005 - accuracy: 0.9654 - val_loss: 2.9586 - val_accuracy: 0.6308
+Epoch 19/50
+120/120 [==============================] - 171s 1s/step - loss: 0.1152 - accuracy: 0.9587 - val_loss: 2.0037 - val_accuracy: 0.7117
+Epoch 20/50
+120/120 [==============================] - 169s 1s/step - loss: 0.0901 - accuracy: 0.9708 - val_loss: 3.1737 - val_accuracy: 0.6533
+Epoch 21/50
+120/120 [==============================] - 165s 1s/step - loss: 0.0815 - accuracy: 0.9704 - val_loss: 2.5034 - val_accuracy: 0.6924
+Epoch 22/50
+120/120 [==============================] - 170s 1s/step - loss: 0.0795 - accuracy: 0.9711 - val_loss: 2.0979 - val_accuracy: 0.7042
+Epoch 23/50
+120/120 [==============================] - 160s 1s/step - loss: 0.0926 - accuracy: 0.9695 - val_loss: 1.9297 - val_accuracy: 0.6844
+Epoch 24/50
+120/120 [==============================] - 159s 1s/step - loss: 0.0912 - accuracy: 0.9677 - val_loss: 1.5182 - val_accuracy: 0.7192
+Epoch 25/50
+120/120 [==============================] - 162s 1s/step - loss: 0.0687 - accuracy: 0.9772 - val_loss: 2.5771 - val_accuracy: 0.7133
+Epoch 26/50
+120/120 [==============================] - 153s 1s/step - loss: 0.1005 - accuracy: 0.9653 - val_loss: 2.8010 - val_accuracy: 0.6779
+Epoch 27/50
+120/120 [==============================] - 162s 1s/step - loss: 0.0659 - accuracy: 0.9773 - val_loss: 3.1146 - val_accuracy: 0.6913
+Epoch 28/50
+120/120 [==============================] - 179s 1s/step - loss: 0.0621 - accuracy: 0.9797 - val_loss: 2.3412 - val_accuracy: 0.6929
+Epoch 29/50
+120/120 [==============================] - 174s 1s/step - loss: 0.0697 - accuracy: 0.9754 - val_loss: 2.3214 - val_accuracy: 0.6902
+Epoch 30/50
+120/120 [==============================] - 182s 2s/step - loss: 0.0628 - accuracy: 0.9793 - val_loss: 1.5242 - val_accuracy: 0.7358
+Epoch 31/50
+120/120 [==============================] - 173s 1s/step - loss: 0.0557 - accuracy: 0.9793 - val_loss: 3.2074 - val_accuracy: 0.7219
+Epoch 32/50
+120/120 [==============================] - 175s 1s/step - loss: 0.1537 - accuracy: 0.9546 - val_loss: 2.1585 - val_accuracy: 0.7106
+Epoch 33/50
+120/120 [==============================] - 148s 1s/step - loss: 0.0550 - accuracy: 0.9820 - val_loss: 1.7797 - val_accuracy: 0.7411
+Epoch 34/50
+120/120 [==============================] - 117s 971ms/step - loss: 0.0422 - accuracy: 0.9867 - val_loss: 2.3391 - val_accuracy: 0.7197
+Epoch 35/50
+120/120 [==============================] - 117s 972ms/step - loss: 0.0551 - accuracy: 0.9824 - val_loss: 1.7453 - val_accuracy: 0.7106
+Epoch 36/50
+120/120 [==============================] - 117s 973ms/step - loss: 0.0505 - accuracy: 0.9817 - val_loss: 1.6285 - val_accuracy: 0.7294
+Epoch 37/50
+120/120 [==============================] - 117s 973ms/step - loss: 0.0643 - accuracy: 0.9763 - val_loss: 1.7254 - val_accuracy: 0.7262
+Epoch 38/50
+120/120 [==============================] - 117s 973ms/step - loss: 0.0497 - accuracy: 0.9823 - val_loss: 2.5981 - val_accuracy: 0.7288
+Epoch 39/50
+120/120 [==============================] - 116s 971ms/step - loss: 0.0581 - accuracy: 0.9828 - val_loss: 1.6257 - val_accuracy: 0.7251
+Epoch 40/50
+120/120 [==============================] - 116s 971ms/step - loss: 0.0414 - accuracy: 0.9860 - val_loss: 1.7904 - val_accuracy: 0.7406
+Epoch 41/50
+120/120 [==============================] - 117s 972ms/step - loss: 0.0591 - accuracy: 0.9795 - val_loss: 2.4993 - val_accuracy: 0.7149
+Epoch 42/50
+120/120 [==============================] - 116s 970ms/step - loss: 0.0516 - accuracy: 0.9806 - val_loss: 1.6724 - val_accuracy: 0.7353
+Epoch 43/50
+120/120 [==============================] - 116s 968ms/step - loss: 0.0464 - accuracy: 0.9829 - val_loss: 1.4208 - val_accuracy: 0.7706
+Epoch 44/50
+120/120 [==============================] - 128s 1s/step - loss: 0.0438 - accuracy: 0.9855 - val_loss: 1.6596 - val_accuracy: 0.7535
+Epoch 45/50
+120/120 [==============================] - 122s 1s/step - loss: 0.0477 - accuracy: 0.9814 - val_loss: 1.8022 - val_accuracy: 0.7438
+Epoch 46/50
+120/120 [==============================] - 122s 1s/step - loss: 0.0456 - accuracy: 0.9847 - val_loss: 1.8899 - val_accuracy: 0.7610
+Epoch 47/50
+120/120 [==============================] - 121s 1s/step - loss: 0.0432 - accuracy: 0.9864 - val_loss: 1.5732 - val_accuracy: 0.7910
+Epoch 48/50
+120/120 [==============================] - 119s 991ms/step - loss: 0.0523 - accuracy: 0.9819 - val_loss: 1.4926 - val_accuracy: 0.7712
+Epoch 49/50
+120/120 [==============================] - 116s 968ms/step - loss: 0.0415 - accuracy: 0.9868 - val_loss: 1.2650 - val_accuracy: 0.7824
+Epoch 50/50
+120/120 [==============================] - 116s 969ms/step - loss: 0.0767 - accuracy: 0.9748 - val_loss: 1.5860 - val_accuracy: 0.7567
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Training für DirectoryIterator</span>
+<span class="c1"># Ignorieren</span>
+<span class="n">epochs</span><span class="o">=</span><span class="mi">5</span>
+
+<span class="n">history2</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">train_data</span><span class="p">,</span>
+<span class="n">validation_data</span> <span class="o">=</span> <span class="n">val_data</span><span class="p">,</span>
+<span class="n">epochs</span> <span class="o">=</span> <span class="n">epochs</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">epochs_range</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="n">epochs</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">epochs_range</span><span class="p">,</span> <span class="n">history</span><span class="o">.</span><span class="n">history</span><span class="p">[</span><span class="s1">&#39;accuracy&#39;</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Training Accuracy&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">epochs_range</span><span class="p">,</span> <span class="n">history</span><span class="o">.</span><span class="n">history</span><span class="p">[</span><span class="s1">&#39;val_accuracy&#39;</span><span class="p">],</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;Validation Accuracy&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Epoch&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Accuracy&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">([</span><span class="mf">0.3</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;lower right&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x23cbc55f3a0&gt;
+</pre></div>
+</div>
+<img alt="../_images/second_try_20_1.png" src="../_images/second_try_20_1.png" />
+</div>
+</div>
+<p>Safe and Load Model</p>
+<p><a class="reference external" href="https://www.tensorflow.org/guide/keras/save_and_serialize">https://www.tensorflow.org/guide/keras/save_and_serialize</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s1">&#39;Models/maxConv2D_512_Flatten_50/extended_data_set&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:tensorflow:Assets written to: Models/maxConv2D_512_Flatten_50/extended_data_set\assets
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model_loaded</span> <span class="o">=</span> <span class="n">keras</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">load_model</span><span class="p">(</span><span class="s1">&#39;Models/maxConv2D_512_Flatten_50/Big_data_set&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Evaluation
+s. cv-extended</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">val_loss</span><span class="p">,</span> <span class="n">val_acc</span> <span class="o">=</span> <span class="n">model_loaded</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">val_images</span><span class="p">,</span>  <span class="n">val_labels</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">val_loss</span><span class="p">,</span> <span class="n">val_acc</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">val_images</span><span class="p">,</span>  <span class="n">val_labels</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2/2 - 0s - loss: 3.9234 - accuracy: 0.6250 - 304ms/epoch - 152ms/step
+2/2 - 0s - loss: 2.0927 - accuracy: 0.6406 - 281ms/epoch - 141ms/step
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">class_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;10 Cent&#39;</span><span class="p">,</span> <span class="s1">&#39;1 Cent&#39;</span><span class="p">,</span> <span class="s1">&#39;1 Euro&#39;</span><span class="p">,</span> <span class="s1">&#39;20 Cent&#39;</span><span class="p">,</span> <span class="s1">&#39;2 Cent&#39;</span><span class="p">,</span>
+               <span class="s1">&#39;2 Euro&#39;</span><span class="p">,</span> <span class="s1">&#39;50 Cent&#39;</span><span class="p">,</span> <span class="s1">&#39;5 Cent&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Prediction</span>
+<span class="n">i</span><span class="o">=</span><span class="mi">0</span>
+<span class="n">predictions</span> <span class="o">=</span> <span class="n">model_loaded</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">val_images</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">predictions</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">class_names</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">predictions</span><span class="p">[</span><span class="n">i</span><span class="p">])])</span>
+
+<span class="c1">#True</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">val_labels</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">class_names</span><span class="p">[</span><span class="n">val_labels_shaped</span><span class="p">[</span><span class="n">i</span><span class="p">]])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[8.0126082e-04 8.0513644e-01 4.0313268e-09 8.0184138e-05 1.9314525e-01
+ 1.1771840e-09 1.0912216e-05 8.2592882e-04]
+1 Cent
+[0. 1. 0. 0. 0. 0. 0. 0.]
+1 Cent
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">error_pred</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">false_pred</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">63</span><span class="p">):</span>
+    <span class="n">true_label_</span> <span class="o">=</span> <span class="n">val_labels_shaped</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    <span class="n">predicted_label_</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">predictions</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+    <span class="k">if</span> <span class="n">true_label_</span> <span class="o">!=</span> <span class="n">predicted_label_</span><span class="p">:</span>
+        <span class="n">error_pred</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">predicted_label_</span><span class="p">)</span>
+        <span class="n">false_pred</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">true_label_</span><span class="p">)</span>
+
+<span class="c1">#falsche kategoriesierung</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">error_pred</span><span class="p">))</span>
+<span class="c1">#print(np.bincount(error_pred))</span>
+<span class="c1">#falsch kategorisiert</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">false_pred</span><span class="p">))</span>
+<span class="c1">#print(np.bincount(false_pred))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-----------------&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Münzen werden fälschlicherweise für folgende Kategorien gehalten&quot;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">error_pred</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">class_names</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">bincount</span><span class="p">(</span><span class="n">error_pred</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-----------------&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Diese Münzen werden falsch erkannt&quot;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">false_pred</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">class_names</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">bincount</span><span class="p">(</span><span class="n">false_pred</span><span class="p">))</span>    
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0 3 4 6]
+[0 1 2 4 5 6 7]
+-----------------
+Münzen werden fälschlicherweise für folgende Kategorien gehalten
+10 Cent
+20 Cent
+2 Cent
+50 Cent
+[ 3  0  0  2  5  0 14]
+-----------------
+Diese Münzen werden falsch erkannt
+10 Cent
+1 Cent
+1 Euro
+2 Cent
+2 Euro
+50 Cent
+5 Cent
+[5 2 5 0 5 2 1 4]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">plot_image</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">predictions_array</span><span class="p">,</span> <span class="n">true_label</span><span class="p">,</span> <span class="n">img</span><span class="p">):</span>
+  <span class="n">true_label</span><span class="p">,</span> <span class="n">img</span> <span class="o">=</span> <span class="n">true_label</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">img</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">([])</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">([])</span>
+
+  <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">binary</span><span class="p">)</span>
+
+  <span class="n">predicted_label</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">predictions_array</span><span class="p">)</span>
+  <span class="k">if</span> <span class="n">predicted_label</span> <span class="o">==</span> <span class="n">true_label</span><span class="p">:</span>
+    <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;blue&#39;</span>
+  <span class="k">else</span><span class="p">:</span>
+    <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;red&#39;</span>
+
+  <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> </span><span class="si">{:2.0f}</span><span class="s2">% (</span><span class="si">{}</span><span class="s2">)&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">class_names</span><span class="p">[</span><span class="n">predicted_label</span><span class="p">],</span>
+                                <span class="mi">100</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">predictions_array</span><span class="p">),</span>
+                                <span class="n">class_names</span><span class="p">[</span><span class="n">true_label</span><span class="p">]),</span>
+                                <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">plot_value_array</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">predictions_array</span><span class="p">,</span> <span class="n">true_label</span><span class="p">):</span>
+  <span class="n">true_label</span> <span class="o">=</span> <span class="n">true_label</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">))</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">([])</span>
+  <span class="n">thisplot</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">),</span> <span class="n">predictions_array</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#777777&quot;</span><span class="p">)</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+  <span class="n">predicted_label</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">predictions_array</span><span class="p">)</span>
+
+  <span class="n">thisplot</span><span class="p">[</span><span class="n">predicted_label</span><span class="p">]</span><span class="o">.</span><span class="n">set_color</span><span class="p">(</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+  <span class="n">thisplot</span><span class="p">[</span><span class="n">true_label</span><span class="p">]</span><span class="o">.</span><span class="n">set_color</span><span class="p">(</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">i</span> <span class="o">=</span> <span class="mi">58</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">plot_image</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">predictions</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">val_labels_shaped</span><span class="p">,</span> <span class="n">val_images</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">plot_value_array</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">predictions</span><span class="p">[</span><span class="n">i</span><span class="p">],</span>  <span class="n">val_labels_shaped</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/second_try_30_0.png" src="../_images/second_try_30_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">i</span> <span class="o">=</span> <span class="mi">11</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">plot_image</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">predictions</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">val_labels_shaped</span><span class="p">,</span> <span class="n">val_images</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">plot_value_array</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">predictions</span><span class="p">[</span><span class="n">i</span><span class="p">],</span>  <span class="n">val_labels_shaped</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/second_try_31_0.png" src="../_images/second_try_31_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Plot the first X test images, their predicted labels, and the true labels.</span>
+<span class="c1"># Color correct predictions in blue and incorrect predictions in red.</span>
+<span class="n">num_rows</span> <span class="o">=</span> <span class="mi">8</span>
+<span class="n">num_cols</span> <span class="o">=</span> <span class="mi">8</span>
+<span class="n">num_images</span> <span class="o">=</span> <span class="n">num_rows</span><span class="o">*</span><span class="n">num_cols</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="mi">2</span><span class="o">*</span><span class="n">num_cols</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">num_rows</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_images</span><span class="p">):</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="n">num_rows</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">num_cols</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+  <span class="n">plot_image</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">predictions</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">val_labels_shaped</span><span class="p">,</span> <span class="n">val_images</span><span class="p">)</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="n">num_rows</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">num_cols</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">)</span>
+  <span class="n">plot_value_array</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">predictions</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">val_labels_shaped</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/second_try_32_0.png" src="../_images/second_try_32_0.png" />
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./Archiv"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      Durch Henning Farren (hf019) & Kim Rautenberg (kr056)<br/>
+    
+        &copy; Urheberrechte © 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

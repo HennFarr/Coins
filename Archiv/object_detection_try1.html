@@ -1,0 +1,1402 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object Detection try 1 &#8212; Für europäische Münzen</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Object Detection try 2" href="object_detection_try2.html" />
+    <link rel="prev" title="Modell Visualisierung" href="modell.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Für europäische Münzen</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Dieses Buch durchsuchen ..." aria-label="Dieses Buch durchsuchen ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Unser%20Projekt.html">
+   Unser Projekt
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Abgabe
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Daten%2C%20Modelling%20und%20Evaluierung.html">
+   Daten, Modelling und Evaluierung
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Streamlit.html">
+   Streamlit App
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Airflow.html">
+   Apache Airflow
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Archiv
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="modell.html">
+   Modell Visualisierung
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Object Detection try 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="object_detection_try2.html">
+   Object Detection try 2
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Navigation umschalten" aria-controls="site-navigation"
+                title="Navigation umschalten" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Laden Sie diese Seite herunter"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/Archiv/object_detection_try1.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Quelldatei herunterladen" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="In PDF drucken"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/HennFarr/Coins/tree/main/mynewbook"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Quell-Repository"><i
+                    class="fab fa-github"></i>Repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/HennFarr/Coins/tree/main/mynewbook/issues/new?title=Issue%20on%20page%20%2FArchiv/object_detection_try1.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Öffnen Sie ein Problem"><i class="fas fa-lightbulb"></i>offenes Thema</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Vollbildmodus"
+        title="Vollbildmodus"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/HennFarr/Coins/main?urlpath=tree/mynewbook/Archiv/object_detection_try1.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Starten Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Object Detection try 1</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="object-detection-try-1">
+<h1>Object Detection try 1<a class="headerlink" href="#object-detection-try-1" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div><p>Quelle: <a class="reference external" href="https://pyimagesearch.com/2020/06/22/turning-any-cnn-image-classifier-into-an-object-detector-with-keras-tensorflow-and-opencv/#pyis-cta-modal">https://pyimagesearch.com/2020/06/22/turning-any-cnn-image-classifier-into-an-object-detector-with-keras-tensorflow-and-opencv/#pyis-cta-modal</a></p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Für Colab</span>
+<span class="c1">#!git clone -b master https://github.com/HennFarr/Coins.git</span>
+<span class="c1">#!pip install keras_tuner</span>
+<span class="c1">#!pip install shap</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
+<span class="kn">import</span> <span class="nn">tensorflow_datasets</span> <span class="k">as</span> <span class="nn">tfds</span>
+<span class="kn">from</span> <span class="nn">tensorboard.plugins.hparams</span> <span class="kn">import</span> <span class="n">api</span> <span class="k">as</span> <span class="n">hp</span>
+<span class="kn">from</span> <span class="nn">tensorflow</span> <span class="kn">import</span> <span class="n">keras</span>
+
+
+<span class="kn">from</span> <span class="nn">keras</span> <span class="kn">import</span> <span class="n">layers</span>
+<span class="kn">import</span> <span class="nn">keras_tuner</span> <span class="k">as</span> <span class="nn">kt</span>
+<span class="kn">from</span> <span class="nn">keras.preprocessing.image</span> <span class="kn">import</span> <span class="n">ImageDataGenerator</span><span class="p">,</span> <span class="n">img_to_array</span><span class="p">,</span><span class="n">load_img</span>
+<span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
+
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">matplotlib.gridspec</span> <span class="k">as</span> <span class="nn">gridspec</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">shap</span>
+
+<span class="kn">import</span> <span class="nn">imutils</span>
+<span class="kn">import</span> <span class="nn">argparse</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">import</span> <span class="nn">cv2</span>
+<span class="kn">from</span> <span class="nn">keras.applications.resnet</span> <span class="kn">import</span> <span class="n">preprocess_input</span>
+<span class="kn">from</span> <span class="nn">keras.applications</span> <span class="kn">import</span> <span class="n">imagenet_utils</span>
+<span class="kn">from</span> <span class="nn">imutils.object_detection</span> <span class="kn">import</span> <span class="n">non_max_suppression</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="nn">Input In [2],</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">tensorflow_datasets</span> <span class="k">as</span> <span class="nn">tfds</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">from</span> <span class="nn">tensorboard.plugins.hparams</span> <span class="kn">import</span> <span class="n">api</span> <span class="k">as</span> <span class="n">hp</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;tensorflow&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">local_model_dir</span> <span class="o">=</span> <span class="s2">&quot;Models/Tuned/tuned_model&quot;</span>
+<span class="n">colab_model_dir</span> <span class="o">=</span> <span class="s2">&quot;/content/Coins/Models/Tuned/tuned_model&quot;</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">keras</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">load_model</span><span class="p">(</span><span class="n">local_model_dir</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sliding_window</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">step</span><span class="p">,</span> <span class="n">ws</span><span class="p">):</span>
+	<span class="c1"># slide a window across the image</span>
+	<span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">image</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">ws</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">step</span><span class="p">):</span>
+		<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">image</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">ws</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">step</span><span class="p">):</span>
+			<span class="c1"># yield the current window</span>
+			<span class="k">yield</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">image</span><span class="p">[</span><span class="n">y</span><span class="p">:</span><span class="n">y</span> <span class="o">+</span> <span class="n">ws</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">x</span><span class="p">:</span><span class="n">x</span> <span class="o">+</span> <span class="n">ws</span><span class="p">[</span><span class="mi">0</span><span class="p">]])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">image_pyramid</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">scale</span><span class="p">,</span> <span class="n">minSize</span><span class="p">):</span>
+	<span class="c1"># yield the original image</span>
+	<span class="k">yield</span> <span class="n">image</span>
+	<span class="c1"># keep looping over the image pyramid</span>
+	<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+		<span class="c1"># compute the dimensions of the next image in the pyramid</span>
+		<span class="n">w</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">image</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">/</span> <span class="n">scale</span><span class="p">)</span>
+		<span class="n">image</span> <span class="o">=</span> <span class="n">imutils</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="n">w</span><span class="p">)</span>
+		<span class="c1"># if the resized image does not meet the supplied minimum</span>
+		<span class="c1"># size, then stop constructing the pyramid</span>
+		<span class="k">if</span> <span class="n">image</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">minSize</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ow">or</span> <span class="n">image</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">minSize</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
+			<span class="k">break</span>
+		<span class="c1"># yield the next image in the pyramid</span>
+		<span class="k">yield</span> <span class="n">image</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># initialize variables used for the object detection procedure</span>
+<span class="n">WIDTH</span> <span class="o">=</span> <span class="mi">500</span>
+<span class="n">PYR_SCALE</span> <span class="o">=</span> <span class="mf">1.5</span>
+<span class="n">WIN_STEP</span> <span class="o">=</span> <span class="mi">16</span>
+<span class="n">ROI_SIZE</span> <span class="o">=</span> <span class="p">(</span><span class="mi">50</span><span class="p">,</span><span class="mi">50</span><span class="p">)</span> <span class="c1">#eval(args[&quot;size&quot;])</span>
+<span class="n">INPUT_SIZE</span> <span class="o">=</span> <span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">local_img</span><span class="o">=</span><span class="s2">&quot;real_test_data/multi/IMG_20220620_105307.jpg&quot;</span>
+<span class="n">colab_img</span><span class="o">=</span><span class="s2">&quot;/content/Coins/real_test_data/multi/IMG_20220620_105307.jpg&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># load the input image from disk, resize it such that it has the</span>
+<span class="c1"># has the supplied width, and then grab its dimensions</span>
+<span class="n">orig</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="n">local_img</span><span class="p">)</span> <span class="c1">#args[&quot;image&quot;]</span>
+<span class="n">orig</span> <span class="o">=</span> <span class="n">imutils</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="n">orig</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="n">WIDTH</span><span class="p">)</span>
+<span class="p">(</span><span class="n">H</span><span class="p">,</span> <span class="n">W</span><span class="p">)</span> <span class="o">=</span> <span class="n">orig</span><span class="o">.</span><span class="n">shape</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># initialize the image pyramid</span>
+<span class="n">pyramid</span> <span class="o">=</span> <span class="n">image_pyramid</span><span class="p">(</span><span class="n">orig</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="n">PYR_SCALE</span><span class="p">,</span> <span class="n">minSize</span><span class="o">=</span><span class="n">ROI_SIZE</span><span class="p">)</span>
+<span class="c1"># initialize two lists, one to hold the ROIs generated from the image</span>
+<span class="c1"># pyramid and sliding window, and another list used to store the</span>
+<span class="c1"># (x, y)-coordinates of where the ROI was in the original image</span>
+<span class="n">rois</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">locs</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="c1"># time how long it takes to loop over the image pyramid layers and</span>
+<span class="c1"># sliding window locations</span>
+<span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># loop over the image pyramid</span>
+<span class="k">for</span> <span class="n">image</span> <span class="ow">in</span> <span class="n">pyramid</span><span class="p">:</span>
+	<span class="c1"># determine the scale factor between the *original* image</span>
+	<span class="c1"># dimensions and the *current* layer of the pyramid</span>
+	<span class="n">scale</span> <span class="o">=</span> <span class="n">W</span> <span class="o">/</span> <span class="nb">float</span><span class="p">(</span><span class="n">image</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+	<span class="c1"># for each layer of the image pyramid, loop over the sliding</span>
+	<span class="c1"># window locations</span>
+	<span class="k">for</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">roiOrig</span><span class="p">)</span> <span class="ow">in</span> <span class="n">sliding_window</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">WIN_STEP</span><span class="p">,</span> <span class="n">ROI_SIZE</span><span class="p">):</span>
+		<span class="c1"># scale the (x, y)-coordinates of the ROI with respect to the</span>
+		<span class="c1"># *original* image dimensions</span>
+		<span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">x</span> <span class="o">*</span> <span class="n">scale</span><span class="p">)</span>
+		<span class="n">y</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">y</span> <span class="o">*</span> <span class="n">scale</span><span class="p">)</span>
+		<span class="n">w</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">ROI_SIZE</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">scale</span><span class="p">)</span>
+		<span class="n">h</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">ROI_SIZE</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">scale</span><span class="p">)</span>
+		<span class="c1"># take the ROI and preprocess it so we can later classify</span>
+		<span class="c1"># the region using Keras/TensorFlow</span>
+		<span class="n">roi</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="n">roiOrig</span><span class="p">,</span> <span class="n">INPUT_SIZE</span><span class="p">)</span>
+		<span class="n">roi</span> <span class="o">=</span> <span class="n">img_to_array</span><span class="p">(</span><span class="n">roi</span><span class="p">)</span>
+		<span class="n">roi</span> <span class="o">=</span> <span class="n">preprocess_input</span><span class="p">(</span><span class="n">roi</span><span class="p">)</span>
+		<span class="c1"># update our list of ROIs and associated coordinates</span>
+		<span class="n">rois</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">roi</span><span class="p">)</span>
+		<span class="n">locs</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">x</span> <span class="o">+</span> <span class="n">w</span><span class="p">,</span> <span class="n">y</span> <span class="o">+</span> <span class="n">h</span><span class="p">))</span>
+		<span class="c1"># check to see if we are visualizing each of the sliding</span>
+		<span class="c1"># windows in the image pyramid</span>
+		<span class="k">if</span> <span class="mi">0</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>			<span class="c1">#args[&quot;visualize&quot;] # Dauert ewig</span>
+			<span class="c1"># clone the original image and then draw a bounding box</span>
+			<span class="c1"># surrounding the current region</span>
+			<span class="n">clone</span> <span class="o">=</span> <span class="n">orig</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+			<span class="n">cv2</span><span class="o">.</span><span class="n">rectangle</span><span class="p">(</span><span class="n">clone</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span> <span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">w</span><span class="p">,</span> <span class="n">y</span> <span class="o">+</span> <span class="n">h</span><span class="p">),</span>
+				<span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="mi">2</span><span class="p">)</span>
+			<span class="c1"># show the visualization and current ROI</span>
+			<span class="n">cv2</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="s2">&quot;Visualization&quot;</span><span class="p">,</span> <span class="n">clone</span><span class="p">)</span>
+			<span class="n">cv2</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="s2">&quot;ROI&quot;</span><span class="p">,</span> <span class="n">roiOrig</span><span class="p">)</span>
+			<span class="n">cv2</span><span class="o">.</span><span class="n">waitKey</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>		
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># show how long it took to loop over the image pyramid layers and</span>
+<span class="c1"># sliding window locations</span>
+<span class="n">end</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;[INFO] looping over pyramid/windows took </span><span class="si">{:.5f}</span><span class="s2"> seconds&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+	<span class="n">end</span> <span class="o">-</span> <span class="n">start</span><span class="p">))</span>
+<span class="c1"># convert the ROIs to a NumPy array</span>
+<span class="n">rois</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">rois</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s2">&quot;float32&quot;</span><span class="p">)</span>
+<span class="c1"># classify each of the proposal ROIs using ResNet and then show how</span>
+<span class="c1"># long the classifications took</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;[INFO] classifying ROIs...&quot;</span><span class="p">)</span>
+<span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="n">preds</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">rois</span><span class="p">)</span>
+<span class="n">end</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;[INFO] classifying ROIs took </span><span class="si">{:.5f}</span><span class="s2"> seconds&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+	<span class="n">end</span> <span class="o">-</span> <span class="n">start</span><span class="p">))</span>
+<span class="c1"># decode the predictions and initialize a dictionary which maps class</span>
+<span class="c1"># labels (keys) to any ROIs associated with that label (values)</span>
+<span class="c1">#preds = imagenet_utils.decode_predictions(preds, top=1)</span>
+<span class="n">labels</span> <span class="o">=</span> <span class="p">{}</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[INFO] looping over pyramid/windows took 1.09816 seconds
+[INFO] classifying ROIs...
+[INFO] classifying ROIs took 54.96503 seconds
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">class_names</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;1c&quot;</span><span class="p">,</span> <span class="s2">&quot;2c&quot;</span><span class="p">,</span> <span class="s2">&quot;5c&quot;</span><span class="p">,</span> <span class="s2">&quot;10c&quot;</span><span class="p">,</span> <span class="s2">&quot;20c&quot;</span><span class="p">,</span> <span class="s2">&quot;50c&quot;</span><span class="p">,</span> <span class="s2">&quot;1e&quot;</span><span class="p">,</span> <span class="s2">&quot;2e&quot;</span><span class="p">]</span>
+<span class="n">preds2</span><span class="o">=</span><span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">preds</span><span class="p">:</span>
+    <span class="n">preds2</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="n">class_names</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">i</span><span class="p">)],</span><span class="nb">list</span><span class="p">(</span><span class="n">i</span><span class="p">)])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">preds2</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">20</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[2,
+  &#39;5c&#39;,
+  [0.40225473,
+   0.00089046743,
+   0.59685487,
+   8.3097075e-17,
+   4.8150882e-18,
+   9.795338e-17,
+   1.012653e-17,
+   1.1025343e-16]],
+ [0,
+  &#39;1c&#39;,
+  [0.5109173,
+   0.0011257161,
+   0.487957,
+   8.0330103e-17,
+   6.0127957e-18,
+   8.796223e-17,
+   1.0351557e-17,
+   1.3595924e-16]],
+ [0,
+  &#39;1c&#39;,
+  [0.696897,
+   0.0019846584,
+   0.30111834,
+   1.0046117e-15,
+   5.433796e-17,
+   4.0005993e-16,
+   7.812765e-17,
+   9.940028e-16]],
+ [0,
+  &#39;1c&#39;,
+  [0.68576133,
+   0.0019393746,
+   0.31229928,
+   1.431197e-15,
+   5.0966677e-17,
+   3.7300128e-16,
+   8.632993e-17,
+   1.0590328e-15]],
+ [0,
+  &#39;1c&#39;,
+  [0.71015054,
+   0.0015397576,
+   0.28830975,
+   4.2290007e-16,
+   1.3213907e-17,
+   9.496808e-17,
+   1.8760484e-17,
+   2.5251167e-16]],
+ [0,
+  &#39;1c&#39;,
+  [0.6186105,
+   0.0008883867,
+   0.3805011,
+   3.78019e-17,
+   1.1797191e-18,
+   8.587728e-18,
+   2.1940482e-18,
+   2.898682e-17]],
+ [0,
+  &#39;1c&#39;,
+  [0.6718991,
+   0.000908189,
+   0.32719272,
+   2.875154e-17,
+   5.9129455e-19,
+   6.3552936e-18,
+   1.0384511e-18,
+   1.4306587e-17]],
+ [0,
+  &#39;1c&#39;,
+  [0.70815164,
+   0.0009978337,
+   0.29085055,
+   2.3917994e-17,
+   5.181968e-19,
+   4.166039e-18,
+   7.46303e-19,
+   1.1778997e-17]],
+ [0,
+  &#39;1c&#39;,
+  [0.56321216,
+   0.0004249834,
+   0.43636286,
+   7.7633e-19,
+   2.59114e-20,
+   4.1100865e-19,
+   5.877887e-20,
+   1.0036613e-18]],
+ [2,
+  &#39;5c&#39;,
+  [0.40644622,
+   0.00023692439,
+   0.5933168,
+   4.6361095e-19,
+   9.958093e-21,
+   2.1922667e-19,
+   1.8039622e-20,
+   4.4152425e-19]],
+ [2,
+  &#39;5c&#39;,
+  [0.25844628,
+   0.00012146987,
+   0.7414323,
+   1.8534136e-19,
+   4.7658076e-21,
+   2.4476494e-19,
+   5.7589554e-21,
+   1.610286e-19]],
+ [2,
+  &#39;5c&#39;,
+  [0.39650196,
+   0.00036749922,
+   0.6031305,
+   1.4737039e-18,
+   3.9919197e-20,
+   1.3689195e-18,
+   6.961149e-20,
+   1.3077029e-18]],
+ [0,
+  &#39;1c&#39;,
+  [0.580519,
+   0.0015425337,
+   0.4179384,
+   6.636614e-17,
+   2.242063e-18,
+   4.2469064e-17,
+   3.473423e-18,
+   5.596974e-17]],
+ [0,
+  &#39;1c&#39;,
+  [0.5732195,
+   0.0005886786,
+   0.42619187,
+   5.327459e-18,
+   1.7742859e-19,
+   3.3148672e-18,
+   3.1337024e-19,
+   4.8850226e-18]],
+ [2,
+  &#39;5c&#39;,
+  [0.40454808,
+   0.00034126727,
+   0.59511065,
+   2.7264733e-18,
+   1.0788173e-19,
+   3.0854004e-18,
+   1.5407374e-19,
+   2.8450836e-18]],
+ [2,
+  &#39;5c&#39;,
+  [0.3359203,
+   0.00029896825,
+   0.6637808,
+   1.6188448e-18,
+   5.3430462e-20,
+   1.3487106e-18,
+   7.09688e-20,
+   1.335726e-18]],
+ [2,
+  &#39;5c&#39;,
+  [0.4270659,
+   0.00022697494,
+   0.5727071,
+   8.4951676e-19,
+   3.5234834e-20,
+   9.681046e-19,
+   5.3640695e-20,
+   1.0093034e-18]],
+ [2,
+  &#39;5c&#39;,
+  [0.42839405,
+   0.00023112514,
+   0.57137483,
+   2.0524765e-19,
+   7.721353e-21,
+   1.4691629e-19,
+   1.3507116e-20,
+   2.648231e-19]],
+ [2,
+  &#39;5c&#39;,
+  [0.4389767,
+   0.00036078,
+   0.5606625,
+   1.907578e-18,
+   6.3941914e-20,
+   1.5346367e-18,
+   1.0585438e-19,
+   2.1254608e-18]],
+ [2,
+  &#39;5c&#39;,
+  [0.40008315,
+   0.00041045705,
+   0.5995064,
+   6.1473954e-18,
+   2.367898e-19,
+   6.1601422e-18,
+   3.616003e-19,
+   6.3585477e-18]]]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># loop over the predictions</span>
+<span class="k">for</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">p</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">preds2</span><span class="p">):</span>
+	<span class="c1"># grab the prediction information for the current ROI</span>
+	<span class="p">(</span><span class="n">coinID</span><span class="p">,</span> <span class="n">label</span><span class="p">,</span> <span class="n">prob</span><span class="p">)</span> <span class="o">=</span> <span class="n">p</span>
+	<span class="c1"># filter out weak detections by ensuring the predicted probability</span>
+	<span class="c1"># is greater than the minimum probability</span>
+	<span class="k">if</span> <span class="mf">0.85</span> <span class="o">&gt;=</span> <span class="n">prob</span><span class="p">[</span><span class="n">coinID</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mf">0.65</span><span class="p">:</span>	<span class="c1">#args[&quot;min_conf&quot;]</span>
+		<span class="c1"># grab the bounding box associated with the prediction and</span>
+		<span class="c1"># convert the coordinates</span>
+		<span class="n">box</span> <span class="o">=</span> <span class="n">locs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+		<span class="c1"># grab the list of predictions for the label and add the</span>
+		<span class="c1"># bounding box and probability to the list</span>
+		<span class="n">L</span> <span class="o">=</span> <span class="n">labels</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">label</span><span class="p">,</span> <span class="p">[])</span>
+		<span class="n">L</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">box</span><span class="p">,</span> <span class="n">prob</span><span class="p">[</span><span class="n">coinID</span><span class="p">]))</span>
+		<span class="n">labels</span><span class="p">[</span><span class="n">label</span><span class="p">]</span> <span class="o">=</span> <span class="n">L</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">labels</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;1c&#39;: [((32, 0, 82, 50), 0.696897),
+  ((48, 0, 98, 50), 0.68576133),
+  ((64, 0, 114, 50), 0.71015054),
+  ((96, 0, 146, 50), 0.6718991),
+  ((112, 0, 162, 50), 0.70815164),
+  ((32, 16, 82, 66), 0.7026341),
+  ((48, 16, 98, 66), 0.66148716),
+  ((64, 16, 114, 66), 0.6808007),
+  ((368, 16, 418, 66), 0.7275032),
+  ((384, 16, 434, 66), 0.75697714),
+  ((400, 16, 450, 66), 0.6791092),
+  ((336, 32, 386, 82), 0.6906383),
+  ((384, 32, 434, 82), 0.7966067),
+  ((400, 32, 450, 82), 0.67031187),
+  ((320, 48, 370, 98), 0.7731719),
+  ((400, 48, 450, 98), 0.79258806),
+  ((416, 48, 466, 98), 0.6842703),
+  ((80, 64, 130, 114), 0.756634),
+  ((128, 64, 178, 114), 0.7713942),
+  ((240, 64, 290, 114), 0.73247385),
+  ((272, 64, 322, 114), 0.82488275),
+  ((288, 64, 338, 114), 0.7893904),
+  ((304, 64, 354, 114), 0.8153429),
+  ((352, 64, 402, 114), 0.8124173),
+  ((416, 64, 466, 114), 0.78305155),
+  ((432, 64, 482, 114), 0.75394726),
+  ((448, 64, 498, 114), 0.6775296),
+  ((224, 80, 274, 130), 0.7315781),
+  ((384, 80, 434, 130), 0.7473806),
+  ((432, 80, 482, 130), 0.76895225),
+  ((448, 80, 498, 130), 0.7543501),
+  ((64, 96, 114, 146), 0.8277733),
+  ((224, 96, 274, 146), 0.74167013),
+  ((432, 96, 482, 146), 0.80118525),
+  ((448, 96, 498, 146), 0.77264124),
+  ((128, 112, 178, 162), 0.81974727),
+  ((144, 112, 194, 162), 0.7138756),
+  ((288, 112, 338, 162), 0.79397154),
+  ((448, 112, 498, 162), 0.8178623),
+  ((128, 128, 178, 178), 0.8339172),
+  ((144, 128, 194, 178), 0.8473404),
+  ((448, 128, 498, 178), 0.805628),
+  ((128, 144, 178, 194), 0.7301676),
+  ((144, 144, 194, 194), 0.8329512),
+  ((400, 144, 450, 194), 0.741106),
+  ((448, 144, 498, 194), 0.8410339),
+  ((208, 160, 258, 210), 0.8223382),
+  ((224, 160, 274, 210), 0.8290496),
+  ((240, 160, 290, 210), 0.8460054),
+  ((256, 160, 306, 210), 0.6551433),
+  ((304, 160, 354, 210), 0.6729348),
+  ((400, 160, 450, 210), 0.6859735),
+  ((192, 176, 242, 226), 0.67302597),
+  ((368, 176, 418, 226), 0.84318143),
+  ((384, 176, 434, 226), 0.80213827),
+  ((176, 192, 226, 242), 0.8243111),
+  ((304, 192, 354, 242), 0.73084867),
+  ((128, 208, 178, 258), 0.7621111),
+  ((208, 208, 258, 258), 0.74871397),
+  ((224, 208, 274, 258), 0.79489803),
+  ((240, 208, 290, 258), 0.8159999),
+  ((352, 208, 402, 258), 0.78971344),
+  ((400, 208, 450, 258), 0.6656747),
+  ((448, 208, 498, 258), 0.71733534),
+  ((224, 224, 274, 274), 0.769706),
+  ((240, 224, 290, 274), 0.7993208),
+  ((48, 240, 98, 290), 0.68899035),
+  ((224, 240, 274, 290), 0.67324525),
+  ((240, 240, 290, 290), 0.80149066),
+  ((288, 256, 338, 306), 0.69127727),
+  ((368, 256, 418, 306), 0.6936692),
+  ((432, 256, 482, 306), 0.7707172),
+  ((64, 272, 114, 322), 0.7973925),
+  ((160, 272, 210, 322), 0.8345433),
+  ((320, 272, 370, 322), 0.8359049),
+  ((336, 272, 386, 322), 0.8487706),
+  ((400, 272, 450, 322), 0.6541893),
+  ((16, 288, 66, 338), 0.75264347),
+  ((32, 288, 82, 338), 0.6830872),
+  ((320, 288, 370, 338), 0.76991063),
+  ((320, 304, 370, 354), 0.7288768),
+  ((400, 304, 450, 354), 0.79817146),
+  ((448, 304, 498, 354), 0.6900406),
+  ((288, 320, 338, 370), 0.7112982),
+  ((336, 320, 386, 370), 0.6750893),
+  ((400, 320, 450, 370), 0.66811144),
+  ((416, 320, 466, 370), 0.6778535),
+  ((256, 336, 306, 386), 0.6572331),
+  ((304, 336, 354, 386), 0.7556427),
+  ((448, 336, 498, 386), 0.76661825),
+  ((448, 368, 498, 418), 0.7835706),
+  ((448, 384, 498, 434), 0.8409969),
+  ((384, 400, 434, 450), 0.77745396),
+  ((448, 400, 498, 450), 0.79601634),
+  ((176, 416, 226, 466), 0.7300922),
+  ((448, 416, 498, 466), 0.84643006),
+  ((400, 432, 450, 482), 0.76114374),
+  ((416, 432, 466, 482), 0.7050387),
+  ((272, 448, 322, 498), 0.74553394),
+  ((288, 448, 338, 498), 0.6659368),
+  ((272, 464, 322, 514), 0.7126841),
+  ((288, 464, 338, 514), 0.82746494),
+  ((352, 464, 402, 514), 0.7045465),
+  ((272, 480, 322, 530), 0.71319497),
+  ((304, 480, 354, 530), 0.7911844),
+  ((272, 496, 322, 546), 0.684044),
+  ((288, 496, 338, 546), 0.82188195),
+  ((336, 496, 386, 546), 0.78371865),
+  ((400, 496, 450, 546), 0.6537146),
+  ((448, 496, 498, 546), 0.75354546),
+  ((272, 512, 322, 562), 0.8024686),
+  ((400, 512, 450, 562), 0.83385533),
+  ((272, 528, 322, 578), 0.695584),
+  ((416, 544, 466, 594), 0.8033137),
+  ((288, 560, 338, 610), 0.8049864),
+  ((352, 560, 402, 610), 0.6529497),
+  ((368, 560, 418, 610), 0.71001875),
+  ((384, 560, 434, 610), 0.82510483),
+  ((272, 576, 322, 626), 0.7304829),
+  ((288, 576, 338, 626), 0.82413006),
+  ((288, 592, 338, 642), 0.8147095),
+  ((352, 592, 402, 642), 0.676709),
+  ((272, 608, 322, 658), 0.7146305),
+  ((360, 24, 435, 99), 0.83857393),
+  ((384, 24, 459, 99), 0.6547399),
+  ((96, 48, 171, 123), 0.7584922),
+  ((264, 48, 339, 123), 0.69002825),
+  ((288, 48, 363, 123), 0.71821624),
+  ((336, 48, 411, 123), 0.7487457),
+  ((360, 48, 435, 123), 0.6542414),
+  ((384, 48, 459, 123), 0.6887296),
+  ((72, 72, 147, 147), 0.7930591),
+  ((96, 72, 171, 147), 0.8284993),
+  ((408, 72, 483, 147), 0.7851935),
+  ((120, 96, 195, 171), 0.79914904),
+  ((216, 120, 291, 195), 0.7711062),
+  ((48, 144, 123, 219), 0.6597577),
+  ((192, 144, 267, 219), 0.72530514),
+  ((312, 144, 387, 219), 0.84716195),
+  ((24, 168, 99, 243), 0.6587324),
+  ((48, 168, 123, 243), 0.7592247),
+  ((360, 168, 435, 243), 0.69587195),
+  ((192, 192, 267, 267), 0.8478503),
+  ((360, 192, 435, 267), 0.8057785),
+  ((384, 192, 459, 267), 0.7611795),
+  ((312, 240, 387, 315), 0.83290356),
+  ((288, 288, 363, 363), 0.73972523),
+  ((312, 312, 387, 387), 0.76729983),
+  ((288, 336, 363, 411), 0.76814455),
+  ((336, 408, 411, 483), 0.8214999),
+  ((384, 408, 459, 483), 0.7509198),
+  ((408, 432, 483, 507), 0.7542615),
+  ((408, 456, 483, 531), 0.75253046),
+  ((264, 480, 339, 555), 0.6713936),
+  ((312, 480, 387, 555), 0.7842251),
+  ((384, 480, 459, 555), 0.7278668),
+  ((384, 504, 459, 579), 0.7858826),
+  ((288, 552, 363, 627), 0.6963264),
+  ((336, 552, 411, 627), 0.84698755),
+  ((264, 576, 339, 651), 0.73522884),
+  ((288, 576, 363, 651), 0.8391034),
+  ((336, 576, 411, 651), 0.8044672),
+  ((252, 36, 364, 148), 0.73868537),
+  ((288, 36, 400, 148), 0.69942826),
+  ((108, 144, 220, 256), 0.6520625),
+  ((180, 144, 292, 256), 0.72107255),
+  ((180, 180, 292, 292), 0.6973204),
+  ((360, 180, 472, 292), 0.7334203),
+  ((324, 216, 436, 328), 0.74039865),
+  ((324, 396, 436, 508), 0.6659147),
+  ((360, 396, 472, 508), 0.74026495),
+  ((324, 432, 436, 544), 0.6930266),
+  ((360, 432, 472, 544), 0.7870393),
+  ((252, 468, 364, 580), 0.71867836),
+  ((288, 468, 400, 580), 0.78421247),
+  ((324, 468, 436, 580), 0.7964527),
+  ((324, 504, 436, 616), 0.699362),
+  ((252, 540, 364, 652), 0.677513),
+  ((324, 540, 436, 652), 0.7853502),
+  ((270, 432, 438, 600), 0.80373764)],
+ &#39;5c&#39;: [((160, 0, 210, 50), 0.7414323),
+  ((240, 0, 290, 50), 0.6637808),
+  ((448, 0, 498, 50), 0.6811455),
+  ((144, 16, 194, 66), 0.69584894),
+  ((160, 16, 210, 66), 0.70666975),
+  ((288, 16, 338, 66), 0.6505929),
+  ((160, 32, 210, 82), 0.6765434),
+  ((176, 32, 226, 82), 0.68725836),
+  ((208, 32, 258, 82), 0.74078095),
+  ((224, 32, 274, 82), 0.7913356),
+  ((240, 32, 290, 82), 0.721866),
+  ((80, 48, 130, 98), 0.6741464),
+  ((144, 48, 194, 98), 0.72468907),
+  ((160, 48, 210, 98), 0.70596576),
+  ((176, 48, 226, 98), 0.7288463),
+  ((208, 48, 258, 98), 0.71106684),
+  ((224, 48, 274, 98), 0.7694242),
+  ((240, 48, 290, 98), 0.76989883),
+  ((0, 64, 50, 114), 0.7985982),
+  ((16, 64, 66, 114), 0.6963958),
+  ((160, 64, 210, 114), 0.70365256),
+  ((176, 64, 226, 114), 0.82888377),
+  ((192, 64, 242, 114), 0.7438091),
+  ((208, 64, 258, 114), 0.72398484),
+  ((16, 80, 66, 130), 0.8019964),
+  ((32, 80, 82, 130), 0.7203782),
+  ((160, 80, 210, 130), 0.70465314),
+  ((176, 80, 226, 130), 0.82853633),
+  ((192, 80, 242, 130), 0.78139675),
+  ((16, 96, 66, 146), 0.8166134),
+  ((32, 96, 82, 146), 0.74715996),
+  ((160, 96, 210, 146), 0.8115876),
+  ((208, 96, 258, 146), 0.693687),
+  ((368, 96, 418, 146), 0.7088166),
+  ((16, 112, 66, 162), 0.70801455),
+  ((32, 112, 82, 162), 0.70286787),
+  ((208, 112, 258, 162), 0.8092266),
+  ((16, 128, 66, 178), 0.696802),
+  ((32, 128, 82, 178), 0.72012615),
+  ((208, 128, 258, 178), 0.8316005),
+  ((0, 144, 50, 194), 0.74145937),
+  ((16, 144, 66, 194), 0.7795151),
+  ((0, 160, 50, 210), 0.6875269),
+  ((16, 160, 66, 210), 0.74504745),
+  ((32, 160, 82, 210), 0.7050626),
+  ((0, 176, 50, 226), 0.8050838),
+  ((16, 176, 66, 226), 0.6734256),
+  ((144, 176, 194, 226), 0.6731524),
+  ((0, 192, 50, 242), 0.7557217),
+  ((128, 192, 178, 242), 0.66190785),
+  ((240, 496, 290, 546), 0.7150227),
+  ((256, 496, 306, 546), 0.6522601),
+  ((256, 512, 306, 562), 0.6682881),
+  ((208, 528, 258, 578), 0.75490606),
+  ((240, 544, 290, 594), 0.6665615),
+  ((176, 560, 226, 610), 0.80351573),
+  ((256, 608, 306, 658), 0.72012913),
+  ((24, 0, 99, 75), 0.83801323),
+  ((48, 0, 123, 75), 0.82396024),
+  ((72, 0, 147, 75), 0.7761755),
+  ((96, 0, 171, 75), 0.736708),
+  ((120, 0, 195, 75), 0.7561485),
+  ((264, 0, 339, 75), 0.84298265),
+  ((312, 0, 387, 75), 0.7701002),
+  ((408, 0, 483, 75), 0.77440655),
+  ((72, 24, 147, 99), 0.76761985),
+  ((96, 24, 171, 99), 0.7405079),
+  ((120, 24, 195, 99), 0.77558064),
+  ((264, 24, 339, 99), 0.7688071),
+  ((288, 24, 363, 99), 0.70097613),
+  ((48, 48, 123, 123), 0.8057587),
+  ((120, 48, 195, 123), 0.7338099),
+  ((216, 48, 291, 123), 0.83102846),
+  ((360, 72, 435, 147), 0.702375),
+  ((144, 120, 219, 195), 0.69430304),
+  ((192, 120, 267, 195), 0.83334756),
+  ((24, 144, 99, 219), 0.80073285),
+  ((144, 144, 219, 219), 0.8148953),
+  ((240, 216, 315, 291), 0.6834755),
+  ((0, 336, 75, 411), 0.83482075),
+  ((312, 408, 387, 483), 0.7663169),
+  ((216, 456, 291, 531), 0.78211856),
+  ((264, 504, 339, 579), 0.72220594),
+  ((168, 528, 243, 603), 0.8155316),
+  ((240, 528, 315, 603), 0.8002505),
+  ((240, 552, 315, 627), 0.7770754),
+  ((240, 576, 315, 651), 0.75868875),
+  ((72, 0, 184, 112), 0.8355025),
+  ((252, 0, 364, 112), 0.7110313),
+  ((288, 0, 400, 112), 0.7014302),
+  ((360, 0, 472, 112), 0.682957),
+  ((36, 36, 148, 148), 0.7431943),
+  ((36, 108, 148, 220), 0.73030347),
+  ((144, 144, 256, 256), 0.72241455),
+  ((0, 396, 112, 508), 0.84491646),
+  ((252, 396, 364, 508), 0.6996571),
+  ((180, 432, 292, 544), 0.7715405),
+  ((252, 432, 364, 544), 0.69942033),
+  ((216, 468, 328, 580), 0.82877856),
+  ((144, 540, 256, 652), 0.81516457),
+  ((324, 0, 492, 168), 0.67843264),
+  ((54, 54, 222, 222), 0.69453675),
+  ((108, 54, 276, 222), 0.6671323),
+  ((0, 108, 168, 276), 0.7509619),
+  ((216, 378, 384, 546), 0.66615725),
+  ((162, 486, 330, 654), 0.7863656)],
+ &#39;2c&#39;: [((96, 96, 146, 146), 0.6892559),
+  ((256, 96, 306, 146), 0.6612221),
+  ((80, 112, 130, 162), 0.83774024),
+  ((256, 112, 306, 162), 0.7988733),
+  ((304, 112, 354, 162), 0.65099984),
+  ((320, 112, 370, 162), 0.7357451),
+  ((272, 128, 322, 178), 0.82584035),
+  ((304, 128, 354, 178), 0.76512706),
+  ((64, 144, 114, 194), 0.6973839),
+  ((80, 144, 130, 194), 0.69674444),
+  ((224, 144, 274, 194), 0.8127828),
+  ((304, 144, 354, 194), 0.65070933),
+  ((368, 160, 418, 210), 0.7975815),
+  ((64, 176, 114, 226), 0.6653462),
+  ((80, 176, 130, 226), 0.73159915),
+  ((256, 176, 306, 226), 0.8094332),
+  ((64, 192, 114, 242), 0.83939934),
+  ((256, 192, 306, 242), 0.8184958),
+  ((32, 208, 82, 258), 0.7081535),
+  ((48, 208, 98, 258), 0.7541341),
+  ((176, 208, 226, 258), 0.7967623),
+  ((192, 208, 242, 258), 0.73598915),
+  ((256, 208, 306, 258), 0.71247476),
+  ((272, 208, 322, 258), 0.8190194),
+  ((288, 208, 338, 258), 0.6571022),
+  ((416, 208, 466, 258), 0.8458887),
+  ((432, 208, 482, 258), 0.6986574),
+  ((0, 224, 50, 274), 0.7821814),
+  ((48, 224, 98, 274), 0.77977484),
+  ((64, 224, 114, 274), 0.8059536),
+  ((432, 224, 482, 274), 0.7009663),
+  ((16, 240, 66, 290), 0.82977676),
+  ((112, 240, 162, 290), 0.75116986),
+  ((144, 240, 194, 290), 0.8026178),
+  ((384, 240, 434, 290), 0.78257626),
+  ((80, 256, 130, 306), 0.7878448),
+  ((128, 256, 178, 306), 0.75979716),
+  ((384, 256, 434, 306), 0.8279399),
+  ((128, 272, 178, 322), 0.82847387),
+  ((192, 272, 242, 322), 0.661937),
+  ((208, 272, 258, 322), 0.71051866),
+  ((288, 272, 338, 322), 0.77088064),
+  ((304, 272, 354, 322), 0.8360732),
+  ((352, 272, 402, 322), 0.7289605),
+  ((368, 272, 418, 322), 0.7704303),
+  ((384, 272, 434, 322), 0.66119874),
+  ((48, 288, 98, 338), 0.69790137),
+  ((64, 288, 114, 338), 0.8342279),
+  ((240, 288, 290, 338), 0.7058432),
+  ((304, 288, 354, 338), 0.6576591),
+  ((416, 288, 466, 338), 0.77723765),
+  ((432, 288, 482, 338), 0.71635246),
+  ((0, 304, 50, 354), 0.6641678),
+  ((48, 304, 98, 354), 0.7405781),
+  ((64, 304, 114, 354), 0.79936635),
+  ((144, 304, 194, 354), 0.65369713),
+  ((432, 304, 482, 354), 0.65395385),
+  ((64, 320, 114, 370), 0.83569837),
+  ((80, 320, 130, 370), 0.7315055),
+  ((112, 320, 162, 370), 0.7853487),
+  ((128, 320, 178, 370), 0.71529317),
+  ((144, 320, 194, 370), 0.78723687),
+  ((160, 320, 210, 370), 0.713323),
+  ((32, 336, 82, 386), 0.82007974),
+  ((112, 336, 162, 386), 0.7020936),
+  ((160, 336, 210, 386), 0.8468441),
+  ((176, 336, 226, 386), 0.7108813),
+  ((336, 336, 386, 386), 0.66445863),
+  ((384, 336, 434, 386), 0.71760154),
+  ((400, 336, 450, 386), 0.7193181),
+  ((416, 336, 466, 386), 0.74825495),
+  ((432, 336, 482, 386), 0.7836549),
+  ((32, 352, 82, 402), 0.76288235),
+  ((48, 352, 98, 402), 0.72677344),
+  ((80, 352, 130, 402), 0.79108554),
+  ((112, 352, 162, 402), 0.8386585),
+  ((144, 352, 194, 402), 0.7543095),
+  ((176, 352, 226, 402), 0.76884997),
+  ((224, 352, 274, 402), 0.8402928),
+  ((416, 352, 466, 402), 0.65651226),
+  ((192, 368, 242, 418), 0.8418988),
+  ((304, 368, 354, 418), 0.8469078),
+  ((320, 368, 370, 418), 0.6554159),
+  ((336, 368, 386, 418), 0.74238056),
+  ((400, 368, 450, 418), 0.81865245),
+  ((160, 384, 210, 434), 0.67347497),
+  ((176, 384, 226, 434), 0.6841919),
+  ((208, 384, 258, 434), 0.7978674),
+  ((320, 384, 370, 434), 0.7747712),
+  ((336, 384, 386, 434), 0.83117515),
+  ((368, 384, 418, 434), 0.6667911),
+  ((224, 416, 274, 466), 0.70348793),
+  ((288, 416, 338, 466), 0.6564851),
+  ((400, 416, 450, 466), 0.84939843),
+  ((416, 416, 466, 466), 0.8464205),
+  ((160, 432, 210, 482), 0.6948397),
+  ((112, 448, 162, 498), 0.6914811),
+  ((128, 448, 178, 498), 0.82682717),
+  ((192, 448, 242, 498), 0.66941196),
+  ((112, 464, 162, 514), 0.80245787),
+  ((192, 464, 242, 514), 0.8144432),
+  ((320, 464, 370, 514), 0.65137756),
+  ((160, 480, 210, 530), 0.66544795),
+  ((224, 480, 274, 530), 0.76785535),
+  ((240, 480, 290, 530), 0.814955),
+  ((320, 480, 370, 530), 0.8294413),
+  ((336, 480, 386, 530), 0.78182775),
+  ((432, 496, 482, 546), 0.817302),
+  ((416, 512, 466, 562), 0.6695337),
+  ((448, 512, 498, 562), 0.7945883),
+  ((432, 560, 482, 610), 0.8142397),
+  ((224, 576, 274, 626), 0.7534997),
+  ((352, 576, 402, 626), 0.78247744),
+  ((368, 592, 418, 642), 0.7783634),
+  ((72, 96, 147, 171), 0.76304716),
+  ((96, 96, 171, 171), 0.77605927),
+  ((288, 96, 363, 171), 0.6907114),
+  ((312, 96, 387, 171), 0.76730007),
+  ((288, 120, 363, 195), 0.78736657),
+  ((72, 144, 147, 219), 0.8375431),
+  ((96, 144, 171, 219), 0.6867205),
+  ((240, 144, 315, 219), 0.7365464),
+  ((360, 144, 435, 219), 0.757012),
+  ((240, 168, 315, 243), 0.7032605),
+  ((48, 192, 123, 267), 0.7538277),
+  ((240, 192, 315, 267), 0.8169755),
+  ((288, 192, 363, 267), 0.8433669),
+  ((0, 216, 75, 291), 0.7250926),
+  ((24, 216, 99, 291), 0.81977576),
+  ((48, 216, 123, 291), 0.72238916),
+  ((120, 216, 195, 291), 0.81630045),
+  ((144, 216, 219, 291), 0.6740628),
+  ((384, 216, 459, 291), 0.8449942),
+  ((408, 216, 483, 291), 0.71305317),
+  ((216, 240, 291, 315), 0.6831476),
+  ((240, 240, 315, 315), 0.7077378),
+  ((360, 240, 435, 315), 0.72362334),
+  ((120, 264, 195, 339), 0.67659223),
+  ((216, 264, 291, 339), 0.7476342),
+  ((264, 264, 339, 339), 0.73629206),
+  ((24, 288, 99, 363), 0.83535147),
+  ((48, 288, 123, 363), 0.68120694),
+  ((96, 288, 171, 363), 0.6602027),
+  ((240, 288, 315, 363), 0.6909197),
+  ((336, 288, 411, 363), 0.7893102),
+  ((360, 288, 435, 363), 0.74046296),
+  ((384, 288, 459, 363), 0.7799731),
+  ((24, 312, 99, 387), 0.8061649),
+  ((120, 312, 195, 387), 0.7414834),
+  ((144, 312, 219, 387), 0.651122),
+  ((336, 312, 411, 387), 0.7902465),
+  ((408, 312, 483, 387), 0.8233629),
+  ((120, 336, 195, 411), 0.7960993),
+  ((168, 336, 243, 411), 0.7291185),
+  ((120, 360, 195, 435), 0.78252417),
+  ((168, 360, 243, 435), 0.7314449),
+  ((192, 360, 267, 435), 0.6649703),
+  ((312, 360, 387, 435), 0.7039061),
+  ((336, 360, 411, 435), 0.7329499),
+  ((48, 384, 123, 459), 0.6935551),
+  ((144, 384, 219, 459), 0.70936346),
+  ((216, 384, 291, 459), 0.7899564),
+  ((264, 384, 339, 459), 0.8207665),
+  ((288, 384, 363, 459), 0.74919385),
+  ((312, 384, 387, 459), 0.6604526),
+  ((384, 384, 459, 459), 0.8039527),
+  ((96, 408, 171, 483), 0.7792503),
+  ((168, 408, 243, 483), 0.81110924),
+  ((240, 408, 315, 483), 0.8145599),
+  ((96, 432, 171, 507), 0.78369653),
+  ((120, 432, 195, 507), 0.7716524),
+  ((240, 432, 315, 507), 0.8207922),
+  ((288, 432, 363, 507), 0.8150304),
+  ((120, 456, 195, 531), 0.6836905),
+  ((144, 456, 219, 531), 0.7336477),
+  ((312, 456, 387, 531), 0.7737469),
+  ((408, 480, 483, 555), 0.7404326),
+  ((408, 528, 483, 603), 0.7895256),
+  ((384, 552, 459, 627), 0.8284194),
+  ((72, 108, 184, 220), 0.80292284),
+  ((72, 144, 184, 256), 0.6584981),
+  ((108, 180, 220, 292), 0.69797254),
+  ((216, 180, 328, 292), 0.7829984),
+  ((0, 216, 112, 328), 0.8044495),
+  ((108, 216, 220, 328), 0.76170784),
+  ((360, 216, 472, 328), 0.7942023),
+  ((108, 252, 220, 364), 0.78403145),
+  ((180, 252, 292, 364), 0.78800994),
+  ((108, 324, 220, 436), 0.80481565),
+  ((144, 360, 256, 472), 0.80743587),
+  ((324, 360, 436, 472), 0.8336726),
+  ((180, 396, 292, 508), 0.82056236),
+  ((216, 396, 328, 508), 0.81529266),
+  ((270, 216, 438, 384), 0.77922994),
+  ((324, 324, 492, 492), 0.8182947),
+  ((108, 378, 276, 546), 0.6945204),
+  ((324, 378, 492, 546), 0.81336814),
+  ((108, 432, 276, 600), 0.77176756)],
+ &#39;20c&#39;: [((80, 208, 130, 258), 0.8282796),
+  ((80, 224, 130, 274), 0.74944663),
+  ((176, 240, 226, 290), 0.8204711),
+  ((192, 240, 242, 290), 0.84878486),
+  ((272, 256, 322, 306), 0.81034327),
+  ((16, 272, 66, 322), 0.8495215),
+  ((32, 272, 82, 322), 0.848256),
+  ((368, 288, 418, 338), 0.8148629),
+  ((128, 304, 178, 354), 0.75105035),
+  ((352, 320, 402, 370), 0.6761212),
+  ((368, 320, 418, 370), 0.7181574),
+  ((384, 320, 434, 370), 0.6983238),
+  ((32, 384, 82, 434), 0.7107409),
+  ((64, 384, 114, 434), 0.7827819),
+  ((80, 384, 130, 434), 0.8293907),
+  ((48, 400, 98, 450), 0.84529376),
+  ((80, 400, 130, 450), 0.65053844),
+  ((304, 416, 354, 466), 0.75772196),
+  ((224, 432, 274, 482), 0.6693373),
+  ((320, 432, 370, 482), 0.7534269),
+  ((112, 512, 162, 562), 0.82818884),
+  ((144, 512, 194, 562), 0.8458678),
+  ((48, 456, 123, 531), 0.7490489),
+  ((96, 528, 171, 603), 0.70678836),
+  ((0, 552, 75, 627), 0.78816324),
+  ((0, 432, 112, 544), 0.7812952),
+  ((36, 468, 148, 580), 0.6798127),
+  ((72, 504, 184, 616), 0.7542596),
+  ((0, 486, 168, 654), 0.71507466)],
+ &#39;10c&#39;: [((176, 224, 226, 274), 0.7089998),
+  ((256, 288, 306, 338), 0.65722656),
+  ((112, 368, 162, 418), 0.7137257),
+  ((128, 368, 178, 418), 0.7435237),
+  ((112, 384, 162, 434), 0.68742776),
+  ((144, 384, 194, 434), 0.6746232),
+  ((224, 400, 274, 450), 0.7120897),
+  ((240, 400, 290, 450), 0.74109477),
+  ((32, 480, 82, 530), 0.74318707),
+  ((32, 496, 82, 546), 0.83102983),
+  ((48, 496, 98, 546), 0.80987895),
+  ((176, 496, 226, 546), 0.7269263),
+  ((32, 512, 82, 562), 0.71362156),
+  ((48, 512, 98, 562), 0.8011991),
+  ((80, 544, 130, 594), 0.8175556),
+  ((64, 560, 114, 610), 0.76129866),
+  ((0, 576, 50, 626), 0.6913119),
+  ((0, 592, 50, 642), 0.7171951),
+  ((16, 592, 66, 642), 0.8006053),
+  ((112, 592, 162, 642), 0.837039),
+  ((48, 504, 123, 579), 0.7037638),
+  ((48, 528, 123, 603), 0.76135117),
+  ((72, 528, 147, 603), 0.73614645),
+  ((48, 552, 123, 627), 0.84198403),
+  ((96, 552, 171, 627), 0.69903976),
+  ((0, 576, 75, 651), 0.8198374)],
+ &#39;1e&#39;: [((0, 320, 50, 370), 0.6864677),
+  ((0, 416, 50, 466), 0.6721068),
+  ((80, 432, 130, 482), 0.6620746),
+  ((0, 448, 50, 498), 0.67869383),
+  ((16, 448, 66, 498), 0.67064255),
+  ((64, 448, 114, 498), 0.69824874),
+  ((80, 448, 130, 498), 0.7656152),
+  ((0, 464, 50, 514), 0.67533886),
+  ((16, 464, 66, 514), 0.7065994),
+  ((80, 464, 130, 514), 0.7268343),
+  ((0, 480, 50, 530), 0.6981443),
+  ((80, 480, 130, 530), 0.7122924),
+  ((80, 496, 130, 546), 0.72701585),
+  ((0, 512, 50, 562), 0.69517744),
+  ((160, 592, 210, 642), 0.6557103),
+  ((160, 608, 210, 658), 0.7308392),
+  ((0, 408, 75, 483), 0.74208194),
+  ((72, 432, 147, 507), 0.6691489),
+  ((120, 552, 195, 627), 0.6944723),
+  ((108, 504, 220, 616), 0.7941009)],
+ &#39;50c&#39;: [((0, 240, 75, 315), 0.6907835),
+  ((48, 360, 123, 435), 0.8243033),
+  ((72, 288, 184, 400), 0.6835801)]}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># loop over the labels for each of detected objects in the image</span>
+<span class="k">for</span> <span class="n">label</span> <span class="ow">in</span> <span class="n">labels</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+	<span class="c1"># clone the original image so that we can draw on it</span>
+	<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;[INFO] showing results for &#39;</span><span class="si">{}</span><span class="s2">&#39;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">label</span><span class="p">))</span>
+	<span class="n">clone</span> <span class="o">=</span> <span class="n">orig</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+	<span class="c1"># loop over all bounding boxes for the current label</span>
+	<span class="k">for</span> <span class="p">(</span><span class="n">box</span><span class="p">,</span> <span class="n">prob</span><span class="p">)</span> <span class="ow">in</span> <span class="n">labels</span><span class="p">[</span><span class="n">label</span><span class="p">]:</span>
+		<span class="c1"># draw the bounding box on the image</span>
+		<span class="p">(</span><span class="n">startX</span><span class="p">,</span> <span class="n">startY</span><span class="p">,</span> <span class="n">endX</span><span class="p">,</span> <span class="n">endY</span><span class="p">)</span> <span class="o">=</span> <span class="n">box</span>
+		<span class="n">cv2</span><span class="o">.</span><span class="n">rectangle</span><span class="p">(</span><span class="n">clone</span><span class="p">,</span> <span class="p">(</span><span class="n">startX</span><span class="p">,</span> <span class="n">startY</span><span class="p">),</span> <span class="p">(</span><span class="n">endX</span><span class="p">,</span> <span class="n">endY</span><span class="p">),</span>
+			<span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="mi">2</span><span class="p">)</span>
+	<span class="c1"># show the results *before* applying non-maxima suppression, then</span>
+	<span class="c1"># clone the image again so we can display the results *after*</span>
+	<span class="c1"># applying non-maxima suppression</span>
+	<span class="n">cv2</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="s2">&quot;Before&quot;</span><span class="p">,</span> <span class="n">clone</span><span class="p">)</span>
+	<span class="n">clone</span> <span class="o">=</span> <span class="n">orig</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="c1"># extract the bounding boxes and associated prediction</span>
+	<span class="c1"># probabilities, then apply non-maxima suppression</span>
+	<span class="n">boxes</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">labels</span><span class="p">[</span><span class="n">label</span><span class="p">]])</span>
+	<span class="n">proba</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">p</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">labels</span><span class="p">[</span><span class="n">label</span><span class="p">]])</span>
+	<span class="n">boxes</span> <span class="o">=</span> <span class="n">non_max_suppression</span><span class="p">(</span><span class="n">boxes</span><span class="p">,</span> <span class="n">proba</span><span class="p">)</span>
+	<span class="c1"># loop over all bounding boxes that were kept after applying</span>
+	<span class="c1"># non-maxima suppression</span>
+	<span class="k">for</span> <span class="p">(</span><span class="n">startX</span><span class="p">,</span> <span class="n">startY</span><span class="p">,</span> <span class="n">endX</span><span class="p">,</span> <span class="n">endY</span><span class="p">)</span> <span class="ow">in</span> <span class="n">boxes</span><span class="p">:</span>
+		<span class="c1"># draw the bounding box and label on the image</span>
+		<span class="n">cv2</span><span class="o">.</span><span class="n">rectangle</span><span class="p">(</span><span class="n">clone</span><span class="p">,</span> <span class="p">(</span><span class="n">startX</span><span class="p">,</span> <span class="n">startY</span><span class="p">),</span> <span class="p">(</span><span class="n">endX</span><span class="p">,</span> <span class="n">endY</span><span class="p">),</span>
+			<span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="mi">2</span><span class="p">)</span>
+		<span class="n">y</span> <span class="o">=</span> <span class="n">startY</span> <span class="o">-</span> <span class="mi">10</span> <span class="k">if</span> <span class="n">startY</span> <span class="o">-</span> <span class="mi">10</span> <span class="o">&gt;</span> <span class="mi">10</span> <span class="k">else</span> <span class="n">startY</span> <span class="o">+</span> <span class="mi">10</span>
+		<span class="n">cv2</span><span class="o">.</span><span class="n">putText</span><span class="p">(</span><span class="n">clone</span><span class="p">,</span> <span class="n">label</span><span class="p">,</span> <span class="p">(</span><span class="n">startX</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span>
+			<span class="n">cv2</span><span class="o">.</span><span class="n">FONT_HERSHEY_SIMPLEX</span><span class="p">,</span> <span class="mf">0.45</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="mi">2</span><span class="p">)</span>
+	<span class="c1"># show the output after apply non-maxima suppression</span>
+	<span class="n">cv2</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="s2">&quot;After&quot;</span><span class="p">,</span> <span class="n">clone</span><span class="p">)</span>
+	<span class="n">cv2</span><span class="o">.</span><span class="n">waitKey</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[INFO] showing results for &#39;1c&#39;
+[INFO] showing results for &#39;5c&#39;
+[INFO] showing results for &#39;2c&#39;
+[INFO] showing results for &#39;20c&#39;
+[INFO] showing results for &#39;10c&#39;
+[INFO] showing results for &#39;1e&#39;
+[INFO] showing results for &#39;50c&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./Archiv"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="modell.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Modell Visualisierung</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="object_detection_try2.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Object Detection try 2</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      Durch Henning Farren (hf019) & Kim Rautenberg (kr056)<br/>
+    
+        &copy; Urheberrechte © 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

@@ -117,6 +117,28 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
 </ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Archiv
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Archiv/modell.html">
+   Modell Visualisierung
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Archiv/object_detection_try1.html">
+   Object Detection try 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Archiv/object_detection_try2.html">
+   Object Detection try 2
+  </a>
+ </li>
+</ul>
 
     </div>
 </nav> <!-- To handle the deprecated key -->
@@ -897,7 +919,7 @@ Using 2416 files for validation.
 </div>
 <div class="section" id="callback">
 <h3>Callback<a class="headerlink" href="#callback" title="Permalink to this headline">¶</a></h3>
-<p>Es wird immer nur das am besten abschneidende Modell gespeichert. “Early Stopping” hat sich leider nicht als Hilfreich herausgestellt, da es immer wieder Einbrüch in “val_loss” gab (s. <a class="reference external" href="#history">History</a>) und wir daher “patience” so hoch einstellen hätten müssen, dass es auch keinen Effekt mehr gehabt hätte.</p>
+<p>Es wird immer nur das am besten abschneidende Modell gespeichert. “Early Stopping” hat sich leider nicht als Hilfreich herausgestellt, da es immer wieder Einbrüche in “val_loss” gab (s. <a class="reference external" href="#history">History</a>) und wir daher “patience” so hoch einstellen hätten müssen, dass es auch keinen Effekt mehr gehabt hätte.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">local_model_dir</span> <span class="o">=</span> <span class="s2">&quot;Models/Tuned/tuned_model&quot;</span>
