@@ -9,6 +9,12 @@ parts:
     - file: Daten, Modelling und Evaluierung
     - file: Streamlit
     - file: Airflow
+  - caption: Archiv
+    chapters:
+    - file: Archiv/modell
+    - file: Archiv/object_detection_try1
+    - file: Archiv/object_detection_try2
+    - file: Archiv/scond_try
 
 
 
