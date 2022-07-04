@@ -1,0 +1,28 @@
+[2022-06-24 12:06:29,620] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: my_dag.image_to_file manual__2022-06-24T10:06:13.999486+00:00 [queued]>
+[2022-06-24 12:06:29,633] {taskinstance.py:1160} INFO - Dependencies all met for <TaskInstance: my_dag.image_to_file manual__2022-06-24T10:06:13.999486+00:00 [queued]>
+[2022-06-24 12:06:29,633] {taskinstance.py:1357} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-24 12:06:29,634] {taskinstance.py:1358} INFO - Starting attempt 1 of 2
+[2022-06-24 12:06:29,634] {taskinstance.py:1359} INFO - 
+--------------------------------------------------------------------------------
+[2022-06-24 12:06:29,686] {taskinstance.py:1378} INFO - Executing <Task(BashOperator): image_to_file> on 2022-06-24 10:06:13.999486+00:00
+[2022-06-24 12:06:29,691] {standard_task_runner.py:52} INFO - Started process 57520 to run task
+[2022-06-24 12:06:29,700] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'my_dag', 'image_to_file', 'manual__2022-06-24T10:06:13.999486+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/my_dag.py', '--cfg-path', '/var/folders/3m/p21d_7zx7jn2v2546fkq3pqw0000gn/T/tmpnos564u0', '--error-file', '/var/folders/3m/p21d_7zx7jn2v2546fkq3pqw0000gn/T/tmp8ytthfsb']
+[2022-06-24 12:06:29,703] {standard_task_runner.py:80} INFO - Job 6: Subtask image_to_file
+[2022-06-24 12:06:29,785] {task_command.py:370} INFO - Running <TaskInstance: my_dag.image_to_file manual__2022-06-24T10:06:13.999486+00:00 [running]> on host kims-mbp.fritz.box
+[2022-06-24 12:06:29,876] {taskinstance.py:1570} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=my-email@example.com
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=my_dag
+AIRFLOW_CTX_TASK_ID=image_to_file
+AIRFLOW_CTX_EXECUTION_DATE=2022-06-24T10:06:13.999486+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-06-24T10:06:13.999486+00:00
+[2022-06-24 12:06:29,878] {subprocess.py:62} INFO - Tmp dir root location: 
+ /var/folders/3m/p21d_7zx7jn2v2546fkq3pqw0000gn/T
+[2022-06-24 12:06:29,878] {subprocess.py:74} INFO - Running command: ['bash', '-c', "python '/Users/Kim/Library/Mobile Documents/com~apple~CloudDocs/UNI/HdM/Semester6/DataScience&MLOps/airflow/dags/image_to_file.py'"]
+[2022-06-24 12:06:29,910] {subprocess.py:85} INFO - Output:
+[2022-06-24 12:06:30,062] {subprocess.py:96} INFO - Command exited with return code 0
+[2022-06-24 12:06:30,095] {taskinstance.py:1396} INFO - Marking task as SUCCESS. dag_id=my_dag, task_id=image_to_file, execution_date=20220624T100613, start_date=20220624T100629, end_date=20220624T100630
+[2022-06-24 12:06:30,148] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-06-24 12:06:30,179] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

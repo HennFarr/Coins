@@ -1,0 +1,46 @@
+[2022-06-24 11:29:02,038] {processor.py:153} INFO - Started process (PID=55574) to work on /Users/Kim/Library/Mobile Documents/com~apple~CloudDocs/UNI/HdM/Semester6/DataScience&MLOps/airflow/dags/my_dag.py
+[2022-06-24 11:29:02,039] {processor.py:641} INFO - Processing file /Users/Kim/Library/Mobile Documents/com~apple~CloudDocs/UNI/HdM/Semester6/DataScience&MLOps/airflow/dags/my_dag.py for tasks to queue
+[2022-06-24 11:29:02,040] {logging_mixin.py:115} INFO - [2022-06-24 11:29:02,040] {dagbag.py:507} INFO - Filling up the DagBag from /Users/Kim/Library/Mobile Documents/com~apple~CloudDocs/UNI/HdM/Semester6/DataScience&MLOps/airflow/dags/my_dag.py
+[2022-06-24 11:29:02,075] {processor.py:651} INFO - DAG(s) dict_keys(['my_dag']) retrieved from /Users/Kim/Library/Mobile Documents/com~apple~CloudDocs/UNI/HdM/Semester6/DataScience&MLOps/airflow/dags/my_dag.py
+[2022-06-24 11:29:11,814] {logging_mixin.py:115} INFO - [2022-06-24 11:29:11,814] {manager.py:508} INFO - Created Permission View: can delete on DAG:my_dag
+[2022-06-24 11:29:11,914] {logging_mixin.py:115} INFO - [2022-06-24 11:29:11,914] {manager.py:508} INFO - Created Permission View: can read on DAG:my_dag
+[2022-06-24 11:29:11,948] {logging_mixin.py:115} INFO - [2022-06-24 11:29:11,948] {manager.py:508} INFO - Created Permission View: can edit on DAG:my_dag
+[2022-06-24 11:29:11,948] {logging_mixin.py:115} INFO - [2022-06-24 11:29:11,948] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-24 11:29:11,970] {logging_mixin.py:115} INFO - [2022-06-24 11:29:11,970] {dag.py:2398} INFO - Creating ORM DAG for my_dag
+[2022-06-24 11:29:12,047] {logging_mixin.py:115} INFO - [2022-06-24 11:29:12,047] {dag.py:2923} INFO - Setting next_dagrun for my_dag to 2022-06-23T00:00:00+00:00, run_after=2022-06-24T00:00:00+00:00
+[2022-06-24 11:29:12,093] {processor.py:161} INFO - Processing /Users/Kim/Library/Mobile Documents/com~apple~CloudDocs/UNI/HdM/Semester6/DataScience&MLOps/airflow/dags/my_dag.py took 10.056 seconds
+[2022-06-24 11:32:57,249] {processor.py:153} INFO - Started process (PID=55665) to work on /Users/Kim/Library/Mobile Documents/com~apple~CloudDocs/UNI/HdM/Semester6/DataScience&MLOps/airflow/dags/my_dag.py
+[2022-06-24 11:32:57,250] {processor.py:641} INFO - Processing file /Users/Kim/Library/Mobile Documents/com~apple~CloudDocs/UNI/HdM/Semester6/DataScience&MLOps/airflow/dags/my_dag.py for tasks to queue
+[2022-06-24 11:32:57,251] {logging_mixin.py:115} INFO - [2022-06-24 11:32:57,251] {dagbag.py:507} INFO - Filling up the DagBag from /Users/Kim/Library/Mobile Documents/com~apple~CloudDocs/UNI/HdM/Semester6/DataScience&MLOps/airflow/dags/my_dag.py
+[2022-06-24 11:32:57,272] {processor.py:651} INFO - DAG(s) dict_keys(['my_dag']) retrieved from /Users/Kim/Library/Mobile Documents/com~apple~CloudDocs/UNI/HdM/Semester6/DataScience&MLOps/airflow/dags/my_dag.py
+[2022-06-24 11:32:57,364] {logging_mixin.py:115} INFO - [2022-06-24 11:32:57,364] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-24 11:32:57,383] {logging_mixin.py:115} INFO - [2022-06-24 11:32:57,383] {dag.py:2923} INFO - Setting next_dagrun for my_dag to 2022-06-23T00:00:00+00:00, run_after=2022-06-24T00:00:00+00:00
+[2022-06-24 11:32:57,398] {processor.py:161} INFO - Processing /Users/Kim/Library/Mobile Documents/com~apple~CloudDocs/UNI/HdM/Semester6/DataScience&MLOps/airflow/dags/my_dag.py took 0.149 seconds
+[2022-06-24 11:37:00,520] {processor.py:153} INFO - Started process (PID=55900) to work on /Users/Kim/Library/Mobile Documents/com~apple~CloudDocs/UNI/HdM/Semester6/DataScience&MLOps/airflow/dags/my_dag.py
+[2022-06-24 11:37:00,521] {processor.py:641} INFO - Processing file /Users/Kim/Library/Mobile Documents/com~apple~CloudDocs/UNI/HdM/Semester6/DataScience&MLOps/airflow/dags/my_dag.py for tasks to queue
+[2022-06-24 11:37:00,522] {logging_mixin.py:115} INFO - [2022-06-24 11:37:00,522] {dagbag.py:507} INFO - Filling up the DagBag from /Users/Kim/Library/Mobile Documents/com~apple~CloudDocs/UNI/HdM/Semester6/DataScience&MLOps/airflow/dags/my_dag.py
+[2022-06-24 11:37:00,557] {processor.py:651} INFO - DAG(s) dict_keys(['my_dag']) retrieved from /Users/Kim/Library/Mobile Documents/com~apple~CloudDocs/UNI/HdM/Semester6/DataScience&MLOps/airflow/dags/my_dag.py
+[2022-06-24 11:37:00,649] {logging_mixin.py:115} INFO - [2022-06-24 11:37:00,649] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-24 11:37:00,681] {logging_mixin.py:115} INFO - [2022-06-24 11:37:00,681] {dag.py:2923} INFO - Setting next_dagrun for my_dag to 2022-06-23T00:00:00+00:00, run_after=2022-06-24T00:00:00+00:00
+[2022-06-24 11:37:00,709] {processor.py:161} INFO - Processing /Users/Kim/Library/Mobile Documents/com~apple~CloudDocs/UNI/HdM/Semester6/DataScience&MLOps/airflow/dags/my_dag.py took 0.190 seconds
+[2022-06-24 11:40:36,816] {processor.py:153} INFO - Started process (PID=56221) to work on /Users/Kim/Library/Mobile Documents/com~apple~CloudDocs/UNI/HdM/Semester6/DataScience&MLOps/airflow/dags/my_dag.py
+[2022-06-24 11:40:36,818] {processor.py:641} INFO - Processing file /Users/Kim/Library/Mobile Documents/com~apple~CloudDocs/UNI/HdM/Semester6/DataScience&MLOps/airflow/dags/my_dag.py for tasks to queue
+[2022-06-24 11:40:36,819] {logging_mixin.py:115} INFO - [2022-06-24 11:40:36,819] {dagbag.py:507} INFO - Filling up the DagBag from /Users/Kim/Library/Mobile Documents/com~apple~CloudDocs/UNI/HdM/Semester6/DataScience&MLOps/airflow/dags/my_dag.py
+[2022-06-24 11:40:36,867] {processor.py:651} INFO - DAG(s) dict_keys(['my_dag']) retrieved from /Users/Kim/Library/Mobile Documents/com~apple~CloudDocs/UNI/HdM/Semester6/DataScience&MLOps/airflow/dags/my_dag.py
+[2022-06-24 11:40:37,098] {logging_mixin.py:115} INFO - [2022-06-24 11:40:37,098] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-24 11:40:37,130] {logging_mixin.py:115} INFO - [2022-06-24 11:40:37,130] {dag.py:2923} INFO - Setting next_dagrun for my_dag to 2022-06-24T00:00:00+00:00, run_after=2022-06-25T00:00:00+00:00
+[2022-06-24 11:40:37,150] {processor.py:161} INFO - Processing /Users/Kim/Library/Mobile Documents/com~apple~CloudDocs/UNI/HdM/Semester6/DataScience&MLOps/airflow/dags/my_dag.py took 0.335 seconds
+[2022-06-24 11:42:51,670] {processor.py:153} INFO - Started process (PID=56355) to work on /Users/Kim/Library/Mobile Documents/com~apple~CloudDocs/UNI/HdM/Semester6/DataScience&MLOps/airflow/dags/my_dag.py
+[2022-06-24 11:42:51,671] {processor.py:641} INFO - Processing file /Users/Kim/Library/Mobile Documents/com~apple~CloudDocs/UNI/HdM/Semester6/DataScience&MLOps/airflow/dags/my_dag.py for tasks to queue
+[2022-06-24 11:42:51,672] {logging_mixin.py:115} INFO - [2022-06-24 11:42:51,672] {dagbag.py:507} INFO - Filling up the DagBag from /Users/Kim/Library/Mobile Documents/com~apple~CloudDocs/UNI/HdM/Semester6/DataScience&MLOps/airflow/dags/my_dag.py
+[2022-06-24 11:42:51,689] {processor.py:651} INFO - DAG(s) dict_keys(['my_dag']) retrieved from /Users/Kim/Library/Mobile Documents/com~apple~CloudDocs/UNI/HdM/Semester6/DataScience&MLOps/airflow/dags/my_dag.py
+[2022-06-24 11:42:51,754] {logging_mixin.py:115} INFO - [2022-06-24 11:42:51,754] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-24 11:42:51,772] {logging_mixin.py:115} INFO - [2022-06-24 11:42:51,772] {dag.py:2923} INFO - Setting next_dagrun for my_dag to 2022-06-24T00:00:00+00:00, run_after=2022-06-25T00:00:00+00:00
+[2022-06-24 11:42:51,784] {processor.py:161} INFO - Processing /Users/Kim/Library/Mobile Documents/com~apple~CloudDocs/UNI/HdM/Semester6/DataScience&MLOps/airflow/dags/my_dag.py took 0.115 seconds
+[2022-06-24 12:03:45,916] {processor.py:153} INFO - Started process (PID=57375) to work on /Users/Kim/Library/Mobile Documents/com~apple~CloudDocs/UNI/HdM/Semester6/DataScience&MLOps/airflow/dags/my_dag.py
+[2022-06-24 12:03:45,919] {processor.py:641} INFO - Processing file /Users/Kim/Library/Mobile Documents/com~apple~CloudDocs/UNI/HdM/Semester6/DataScience&MLOps/airflow/dags/my_dag.py for tasks to queue
+[2022-06-24 12:03:45,920] {logging_mixin.py:115} INFO - [2022-06-24 12:03:45,920] {dagbag.py:507} INFO - Filling up the DagBag from /Users/Kim/Library/Mobile Documents/com~apple~CloudDocs/UNI/HdM/Semester6/DataScience&MLOps/airflow/dags/my_dag.py
+[2022-06-24 12:03:45,981] {processor.py:651} INFO - DAG(s) dict_keys(['my_dag']) retrieved from /Users/Kim/Library/Mobile Documents/com~apple~CloudDocs/UNI/HdM/Semester6/DataScience&MLOps/airflow/dags/my_dag.py
+[2022-06-24 12:03:46,446] {logging_mixin.py:115} INFO - [2022-06-24 12:03:46,446] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-24 12:03:46,607] {logging_mixin.py:115} INFO - [2022-06-24 12:03:46,607] {dag.py:2923} INFO - Setting next_dagrun for my_dag to 2022-06-24T00:00:00+00:00, run_after=2022-06-25T00:00:00+00:00
+[2022-06-24 12:03:46,628] {processor.py:161} INFO - Processing /Users/Kim/Library/Mobile Documents/com~apple~CloudDocs/UNI/HdM/Semester6/DataScience&MLOps/airflow/dags/my_dag.py took 0.714 seconds

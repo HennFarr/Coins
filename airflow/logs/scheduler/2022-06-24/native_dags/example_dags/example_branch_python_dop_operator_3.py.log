@@ -1,0 +1,32 @@
+[2022-06-24 11:32:06,796] {processor.py:153} INFO - Started process (PID=55646) to work on /opt/anaconda3/envs/mlops/lib/python3.9/site-packages/airflow/example_dags/example_branch_python_dop_operator_3.py
+[2022-06-24 11:32:06,796] {processor.py:641} INFO - Processing file /opt/anaconda3/envs/mlops/lib/python3.9/site-packages/airflow/example_dags/example_branch_python_dop_operator_3.py for tasks to queue
+[2022-06-24 11:32:06,797] {logging_mixin.py:115} INFO - [2022-06-24 11:32:06,797] {dagbag.py:507} INFO - Filling up the DagBag from /opt/anaconda3/envs/mlops/lib/python3.9/site-packages/airflow/example_dags/example_branch_python_dop_operator_3.py
+[2022-06-24 11:32:06,847] {processor.py:651} INFO - DAG(s) dict_keys(['example_branch_dop_operator_v3']) retrieved from /opt/anaconda3/envs/mlops/lib/python3.9/site-packages/airflow/example_dags/example_branch_python_dop_operator_3.py
+[2022-06-24 11:32:09,902] {logging_mixin.py:115} INFO - [2022-06-24 11:32:09,902] {manager.py:508} INFO - Created Permission View: can edit on DAG:example_branch_dop_operator_v3
+[2022-06-24 11:32:09,921] {logging_mixin.py:115} INFO - [2022-06-24 11:32:09,921] {manager.py:508} INFO - Created Permission View: can delete on DAG:example_branch_dop_operator_v3
+[2022-06-24 11:32:09,938] {logging_mixin.py:115} INFO - [2022-06-24 11:32:09,938] {manager.py:508} INFO - Created Permission View: can read on DAG:example_branch_dop_operator_v3
+[2022-06-24 11:32:09,938] {logging_mixin.py:115} INFO - [2022-06-24 11:32:09,938] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-24 11:32:09,962] {logging_mixin.py:115} INFO - [2022-06-24 11:32:09,962] {dag.py:2398} INFO - Creating ORM DAG for example_branch_dop_operator_v3
+[2022-06-24 11:32:10,004] {logging_mixin.py:115} INFO - [2022-06-24 11:32:10,003] {dag.py:2923} INFO - Setting next_dagrun for example_branch_dop_operator_v3 to 2022-06-24T09:31:00+00:00, run_after=2022-06-24T09:32:00+00:00
+[2022-06-24 11:32:10,024] {processor.py:161} INFO - Processing /opt/anaconda3/envs/mlops/lib/python3.9/site-packages/airflow/example_dags/example_branch_python_dop_operator_3.py took 3.228 seconds
+[2022-06-24 11:39:59,880] {processor.py:153} INFO - Started process (PID=56118) to work on /opt/anaconda3/envs/mlops/lib/python3.9/site-packages/airflow/example_dags/example_branch_python_dop_operator_3.py
+[2022-06-24 11:39:59,881] {processor.py:641} INFO - Processing file /opt/anaconda3/envs/mlops/lib/python3.9/site-packages/airflow/example_dags/example_branch_python_dop_operator_3.py for tasks to queue
+[2022-06-24 11:39:59,882] {logging_mixin.py:115} INFO - [2022-06-24 11:39:59,882] {dagbag.py:507} INFO - Filling up the DagBag from /opt/anaconda3/envs/mlops/lib/python3.9/site-packages/airflow/example_dags/example_branch_python_dop_operator_3.py
+[2022-06-24 11:39:59,980] {processor.py:651} INFO - DAG(s) dict_keys(['example_branch_dop_operator_v3']) retrieved from /opt/anaconda3/envs/mlops/lib/python3.9/site-packages/airflow/example_dags/example_branch_python_dop_operator_3.py
+[2022-06-24 11:40:00,133] {logging_mixin.py:115} INFO - [2022-06-24 11:40:00,132] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-24 11:40:00,209] {logging_mixin.py:115} INFO - [2022-06-24 11:40:00,209] {dag.py:2923} INFO - Setting next_dagrun for example_branch_dop_operator_v3 to 2022-06-24T09:39:00+00:00, run_after=2022-06-24T09:40:00+00:00
+[2022-06-24 11:40:00,232] {processor.py:161} INFO - Processing /opt/anaconda3/envs/mlops/lib/python3.9/site-packages/airflow/example_dags/example_branch_python_dop_operator_3.py took 0.353 seconds
+[2022-06-24 11:42:49,415] {processor.py:153} INFO - Started process (PID=56352) to work on /opt/anaconda3/envs/mlops/lib/python3.9/site-packages/airflow/example_dags/example_branch_python_dop_operator_3.py
+[2022-06-24 11:42:49,417] {processor.py:641} INFO - Processing file /opt/anaconda3/envs/mlops/lib/python3.9/site-packages/airflow/example_dags/example_branch_python_dop_operator_3.py for tasks to queue
+[2022-06-24 11:42:49,418] {logging_mixin.py:115} INFO - [2022-06-24 11:42:49,418] {dagbag.py:507} INFO - Filling up the DagBag from /opt/anaconda3/envs/mlops/lib/python3.9/site-packages/airflow/example_dags/example_branch_python_dop_operator_3.py
+[2022-06-24 11:42:49,468] {processor.py:651} INFO - DAG(s) dict_keys(['example_branch_dop_operator_v3']) retrieved from /opt/anaconda3/envs/mlops/lib/python3.9/site-packages/airflow/example_dags/example_branch_python_dop_operator_3.py
+[2022-06-24 11:42:49,595] {logging_mixin.py:115} INFO - [2022-06-24 11:42:49,595] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-24 11:42:49,623] {logging_mixin.py:115} INFO - [2022-06-24 11:42:49,623] {dag.py:2923} INFO - Setting next_dagrun for example_branch_dop_operator_v3 to 2022-06-24T09:41:00+00:00, run_after=2022-06-24T09:42:00+00:00
+[2022-06-24 11:42:49,647] {processor.py:161} INFO - Processing /opt/anaconda3/envs/mlops/lib/python3.9/site-packages/airflow/example_dags/example_branch_python_dop_operator_3.py took 0.233 seconds
+[2022-06-24 12:06:40,994] {processor.py:153} INFO - Started process (PID=57526) to work on /opt/anaconda3/envs/mlops/lib/python3.9/site-packages/airflow/example_dags/example_branch_python_dop_operator_3.py
+[2022-06-24 12:06:40,997] {processor.py:641} INFO - Processing file /opt/anaconda3/envs/mlops/lib/python3.9/site-packages/airflow/example_dags/example_branch_python_dop_operator_3.py for tasks to queue
+[2022-06-24 12:06:41,000] {logging_mixin.py:115} INFO - [2022-06-24 12:06:40,999] {dagbag.py:507} INFO - Filling up the DagBag from /opt/anaconda3/envs/mlops/lib/python3.9/site-packages/airflow/example_dags/example_branch_python_dop_operator_3.py
+[2022-06-24 12:06:41,228] {processor.py:651} INFO - DAG(s) dict_keys(['example_branch_dop_operator_v3']) retrieved from /opt/anaconda3/envs/mlops/lib/python3.9/site-packages/airflow/example_dags/example_branch_python_dop_operator_3.py
+[2022-06-24 12:06:41,873] {logging_mixin.py:115} INFO - [2022-06-24 12:06:41,873] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-24 12:06:42,036] {logging_mixin.py:115} INFO - [2022-06-24 12:06:42,036] {dag.py:2923} INFO - Setting next_dagrun for example_branch_dop_operator_v3 to 2022-06-24T10:05:00+00:00, run_after=2022-06-24T10:06:00+00:00
+[2022-06-24 12:06:42,207] {processor.py:161} INFO - Processing /opt/anaconda3/envs/mlops/lib/python3.9/site-packages/airflow/example_dags/example_branch_python_dop_operator_3.py took 1.198 seconds

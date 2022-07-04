@@ -1,0 +1,32 @@
+[2022-06-24 11:31:38,934] {processor.py:153} INFO - Started process (PID=55635) to work on /opt/anaconda3/envs/mlops/lib/python3.9/site-packages/airflow/example_dags/example_latest_only.py
+[2022-06-24 11:31:38,934] {processor.py:641} INFO - Processing file /opt/anaconda3/envs/mlops/lib/python3.9/site-packages/airflow/example_dags/example_latest_only.py for tasks to queue
+[2022-06-24 11:31:38,936] {logging_mixin.py:115} INFO - [2022-06-24 11:31:38,935] {dagbag.py:507} INFO - Filling up the DagBag from /opt/anaconda3/envs/mlops/lib/python3.9/site-packages/airflow/example_dags/example_latest_only.py
+[2022-06-24 11:31:38,958] {processor.py:651} INFO - DAG(s) dict_keys(['latest_only']) retrieved from /opt/anaconda3/envs/mlops/lib/python3.9/site-packages/airflow/example_dags/example_latest_only.py
+[2022-06-24 11:31:41,543] {logging_mixin.py:115} INFO - [2022-06-24 11:31:41,543] {manager.py:508} INFO - Created Permission View: can read on DAG:latest_only
+[2022-06-24 11:31:41,557] {logging_mixin.py:115} INFO - [2022-06-24 11:31:41,557] {manager.py:508} INFO - Created Permission View: can delete on DAG:latest_only
+[2022-06-24 11:31:41,569] {logging_mixin.py:115} INFO - [2022-06-24 11:31:41,569] {manager.py:508} INFO - Created Permission View: can edit on DAG:latest_only
+[2022-06-24 11:31:41,569] {logging_mixin.py:115} INFO - [2022-06-24 11:31:41,569] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-24 11:31:41,578] {logging_mixin.py:115} INFO - [2022-06-24 11:31:41,578] {dag.py:2398} INFO - Creating ORM DAG for latest_only
+[2022-06-24 11:31:41,593] {logging_mixin.py:115} INFO - [2022-06-24 11:31:41,593] {dag.py:2923} INFO - Setting next_dagrun for latest_only to 2022-06-24T05:31:41.593527+00:00, run_after=2022-06-24T09:31:41.593527+00:00
+[2022-06-24 11:31:41,612] {processor.py:161} INFO - Processing /opt/anaconda3/envs/mlops/lib/python3.9/site-packages/airflow/example_dags/example_latest_only.py took 2.683 seconds
+[2022-06-24 11:39:25,344] {processor.py:153} INFO - Started process (PID=56002) to work on /opt/anaconda3/envs/mlops/lib/python3.9/site-packages/airflow/example_dags/example_latest_only.py
+[2022-06-24 11:39:25,345] {processor.py:641} INFO - Processing file /opt/anaconda3/envs/mlops/lib/python3.9/site-packages/airflow/example_dags/example_latest_only.py for tasks to queue
+[2022-06-24 11:39:25,348] {logging_mixin.py:115} INFO - [2022-06-24 11:39:25,348] {dagbag.py:507} INFO - Filling up the DagBag from /opt/anaconda3/envs/mlops/lib/python3.9/site-packages/airflow/example_dags/example_latest_only.py
+[2022-06-24 11:39:25,382] {processor.py:651} INFO - DAG(s) dict_keys(['latest_only']) retrieved from /opt/anaconda3/envs/mlops/lib/python3.9/site-packages/airflow/example_dags/example_latest_only.py
+[2022-06-24 11:39:25,678] {logging_mixin.py:115} INFO - [2022-06-24 11:39:25,677] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-24 11:39:25,730] {logging_mixin.py:115} INFO - [2022-06-24 11:39:25,730] {dag.py:2923} INFO - Setting next_dagrun for latest_only to 2022-06-24T05:39:25.730576+00:00, run_after=2022-06-24T09:39:25.730576+00:00
+[2022-06-24 11:39:25,906] {processor.py:161} INFO - Processing /opt/anaconda3/envs/mlops/lib/python3.9/site-packages/airflow/example_dags/example_latest_only.py took 0.563 seconds
+[2022-06-24 11:42:24,532] {processor.py:153} INFO - Started process (PID=56290) to work on /opt/anaconda3/envs/mlops/lib/python3.9/site-packages/airflow/example_dags/example_latest_only.py
+[2022-06-24 11:42:24,533] {processor.py:641} INFO - Processing file /opt/anaconda3/envs/mlops/lib/python3.9/site-packages/airflow/example_dags/example_latest_only.py for tasks to queue
+[2022-06-24 11:42:24,534] {logging_mixin.py:115} INFO - [2022-06-24 11:42:24,534] {dagbag.py:507} INFO - Filling up the DagBag from /opt/anaconda3/envs/mlops/lib/python3.9/site-packages/airflow/example_dags/example_latest_only.py
+[2022-06-24 11:42:24,588] {processor.py:651} INFO - DAG(s) dict_keys(['latest_only']) retrieved from /opt/anaconda3/envs/mlops/lib/python3.9/site-packages/airflow/example_dags/example_latest_only.py
+[2022-06-24 11:42:24,841] {logging_mixin.py:115} INFO - [2022-06-24 11:42:24,841] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-24 11:42:24,895] {logging_mixin.py:115} INFO - [2022-06-24 11:42:24,895] {dag.py:2923} INFO - Setting next_dagrun for latest_only to 2022-06-24T05:42:24.895128+00:00, run_after=2022-06-24T09:42:24.895128+00:00
+[2022-06-24 11:42:24,918] {processor.py:161} INFO - Processing /opt/anaconda3/envs/mlops/lib/python3.9/site-packages/airflow/example_dags/example_latest_only.py took 0.387 seconds
+[2022-06-24 12:05:58,296] {processor.py:153} INFO - Started process (PID=57507) to work on /opt/anaconda3/envs/mlops/lib/python3.9/site-packages/airflow/example_dags/example_latest_only.py
+[2022-06-24 12:05:58,298] {processor.py:641} INFO - Processing file /opt/anaconda3/envs/mlops/lib/python3.9/site-packages/airflow/example_dags/example_latest_only.py for tasks to queue
+[2022-06-24 12:05:58,299] {logging_mixin.py:115} INFO - [2022-06-24 12:05:58,299] {dagbag.py:507} INFO - Filling up the DagBag from /opt/anaconda3/envs/mlops/lib/python3.9/site-packages/airflow/example_dags/example_latest_only.py
+[2022-06-24 12:05:58,420] {processor.py:651} INFO - DAG(s) dict_keys(['latest_only']) retrieved from /opt/anaconda3/envs/mlops/lib/python3.9/site-packages/airflow/example_dags/example_latest_only.py
+[2022-06-24 12:05:58,929] {logging_mixin.py:115} INFO - [2022-06-24 12:05:58,928] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-24 12:05:59,096] {logging_mixin.py:115} INFO - [2022-06-24 12:05:59,095] {dag.py:2923} INFO - Setting next_dagrun for latest_only to 2022-06-24T06:05:59.094806+00:00, run_after=2022-06-24T10:05:59.094806+00:00
+[2022-06-24 12:05:59,232] {processor.py:161} INFO - Processing /opt/anaconda3/envs/mlops/lib/python3.9/site-packages/airflow/example_dags/example_latest_only.py took 0.937 seconds

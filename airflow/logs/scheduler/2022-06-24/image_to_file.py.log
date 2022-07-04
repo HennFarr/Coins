@@ -1,0 +1,5 @@
+[2022-06-24 12:03:37,561] {processor.py:153} INFO - Started process (PID=57367) to work on /Users/Kim/Library/Mobile Documents/com~apple~CloudDocs/UNI/HdM/Semester6/DataScience&MLOps/airflow/dags/image_to_file.py
+[2022-06-24 12:03:37,561] {processor.py:641} INFO - Processing file /Users/Kim/Library/Mobile Documents/com~apple~CloudDocs/UNI/HdM/Semester6/DataScience&MLOps/airflow/dags/image_to_file.py for tasks to queue
+[2022-06-24 12:03:37,562] {logging_mixin.py:115} INFO - [2022-06-24 12:03:37,562] {dagbag.py:507} INFO - Filling up the DagBag from /Users/Kim/Library/Mobile Documents/com~apple~CloudDocs/UNI/HdM/Semester6/DataScience&MLOps/airflow/dags/image_to_file.py
+[2022-06-24 12:03:38,007] {processor.py:653} WARNING - No viable dags retrieved from /Users/Kim/Library/Mobile Documents/com~apple~CloudDocs/UNI/HdM/Semester6/DataScience&MLOps/airflow/dags/image_to_file.py
+[2022-06-24 12:03:38,377] {processor.py:161} INFO - Processing /Users/Kim/Library/Mobile Documents/com~apple~CloudDocs/UNI/HdM/Semester6/DataScience&MLOps/airflow/dags/image_to_file.py took 0.819 seconds

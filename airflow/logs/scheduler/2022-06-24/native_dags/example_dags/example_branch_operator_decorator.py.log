@@ -1,0 +1,32 @@
+[2022-06-24 11:32:13,622] {processor.py:153} INFO - Started process (PID=55649) to work on /opt/anaconda3/envs/mlops/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator_decorator.py
+[2022-06-24 11:32:13,622] {processor.py:641} INFO - Processing file /opt/anaconda3/envs/mlops/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator_decorator.py for tasks to queue
+[2022-06-24 11:32:13,623] {logging_mixin.py:115} INFO - [2022-06-24 11:32:13,623] {dagbag.py:507} INFO - Filling up the DagBag from /opt/anaconda3/envs/mlops/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator_decorator.py
+[2022-06-24 11:32:14,037] {processor.py:651} INFO - DAG(s) dict_keys(['example_branch_python_operator_decorator']) retrieved from /opt/anaconda3/envs/mlops/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator_decorator.py
+[2022-06-24 11:32:17,589] {logging_mixin.py:115} INFO - [2022-06-24 11:32:17,589] {manager.py:508} INFO - Created Permission View: can delete on DAG:example_branch_python_operator_decorator
+[2022-06-24 11:32:17,600] {logging_mixin.py:115} INFO - [2022-06-24 11:32:17,600] {manager.py:508} INFO - Created Permission View: can edit on DAG:example_branch_python_operator_decorator
+[2022-06-24 11:32:17,609] {logging_mixin.py:115} INFO - [2022-06-24 11:32:17,609] {manager.py:508} INFO - Created Permission View: can read on DAG:example_branch_python_operator_decorator
+[2022-06-24 11:32:17,609] {logging_mixin.py:115} INFO - [2022-06-24 11:32:17,609] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-24 11:32:17,619] {logging_mixin.py:115} INFO - [2022-06-24 11:32:17,618] {dag.py:2398} INFO - Creating ORM DAG for example_branch_python_operator_decorator
+[2022-06-24 11:32:17,632] {logging_mixin.py:115} INFO - [2022-06-24 11:32:17,632] {dag.py:2923} INFO - Setting next_dagrun for example_branch_python_operator_decorator to 2022-06-23T00:00:00+00:00, run_after=2022-06-24T00:00:00+00:00
+[2022-06-24 11:32:17,652] {processor.py:161} INFO - Processing /opt/anaconda3/envs/mlops/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator_decorator.py took 4.031 seconds
+[2022-06-24 11:40:05,135] {processor.py:153} INFO - Started process (PID=56170) to work on /opt/anaconda3/envs/mlops/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator_decorator.py
+[2022-06-24 11:40:05,136] {processor.py:641} INFO - Processing file /opt/anaconda3/envs/mlops/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator_decorator.py for tasks to queue
+[2022-06-24 11:40:05,137] {logging_mixin.py:115} INFO - [2022-06-24 11:40:05,137] {dagbag.py:507} INFO - Filling up the DagBag from /opt/anaconda3/envs/mlops/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator_decorator.py
+[2022-06-24 11:40:05,252] {processor.py:651} INFO - DAG(s) dict_keys(['example_branch_python_operator_decorator']) retrieved from /opt/anaconda3/envs/mlops/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator_decorator.py
+[2022-06-24 11:40:05,566] {logging_mixin.py:115} INFO - [2022-06-24 11:40:05,566] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-24 11:40:05,587] {logging_mixin.py:115} INFO - [2022-06-24 11:40:05,586] {dag.py:2923} INFO - Setting next_dagrun for example_branch_python_operator_decorator to 2022-06-23T00:00:00+00:00, run_after=2022-06-24T00:00:00+00:00
+[2022-06-24 11:40:05,622] {processor.py:161} INFO - Processing /opt/anaconda3/envs/mlops/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator_decorator.py took 0.487 seconds
+[2022-06-24 11:44:40,404] {processor.py:153} INFO - Started process (PID=56403) to work on /opt/anaconda3/envs/mlops/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator_decorator.py
+[2022-06-24 11:44:40,407] {processor.py:641} INFO - Processing file /opt/anaconda3/envs/mlops/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator_decorator.py for tasks to queue
+[2022-06-24 11:44:40,408] {logging_mixin.py:115} INFO - [2022-06-24 11:44:40,408] {dagbag.py:507} INFO - Filling up the DagBag from /opt/anaconda3/envs/mlops/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator_decorator.py
+[2022-06-24 11:44:40,546] {processor.py:651} INFO - DAG(s) dict_keys(['example_branch_python_operator_decorator']) retrieved from /opt/anaconda3/envs/mlops/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator_decorator.py
+[2022-06-24 11:44:41,099] {logging_mixin.py:115} INFO - [2022-06-24 11:44:41,099] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-24 11:44:41,333] {logging_mixin.py:115} INFO - [2022-06-24 11:44:41,333] {dag.py:2923} INFO - Setting next_dagrun for example_branch_python_operator_decorator to 2022-06-23T00:00:00+00:00, run_after=2022-06-24T00:00:00+00:00
+[2022-06-24 11:44:41,374] {processor.py:161} INFO - Processing /opt/anaconda3/envs/mlops/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator_decorator.py took 0.971 seconds
+[2022-06-24 12:06:47,220] {processor.py:153} INFO - Started process (PID=57534) to work on /opt/anaconda3/envs/mlops/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator_decorator.py
+[2022-06-24 12:06:47,222] {processor.py:641} INFO - Processing file /opt/anaconda3/envs/mlops/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator_decorator.py for tasks to queue
+[2022-06-24 12:06:47,225] {logging_mixin.py:115} INFO - [2022-06-24 12:06:47,224] {dagbag.py:507} INFO - Filling up the DagBag from /opt/anaconda3/envs/mlops/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator_decorator.py
+[2022-06-24 12:06:47,316] {processor.py:651} INFO - DAG(s) dict_keys(['example_branch_python_operator_decorator']) retrieved from /opt/anaconda3/envs/mlops/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator_decorator.py
+[2022-06-24 12:06:47,612] {logging_mixin.py:115} INFO - [2022-06-24 12:06:47,612] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-24 12:06:47,796] {logging_mixin.py:115} INFO - [2022-06-24 12:06:47,795] {dag.py:2923} INFO - Setting next_dagrun for example_branch_python_operator_decorator to 2022-06-23T00:00:00+00:00, run_after=2022-06-24T00:00:00+00:00
+[2022-06-24 12:06:47,827] {processor.py:161} INFO - Processing /opt/anaconda3/envs/mlops/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator_decorator.py took 0.608 seconds

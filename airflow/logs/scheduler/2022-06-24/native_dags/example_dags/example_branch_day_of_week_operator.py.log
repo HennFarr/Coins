@@ -1,0 +1,18 @@
+[2022-06-24 11:32:34,886] {processor.py:153} INFO - Started process (PID=55656) to work on /opt/anaconda3/envs/mlops/lib/python3.9/site-packages/airflow/example_dags/example_branch_day_of_week_operator.py
+[2022-06-24 11:32:34,887] {processor.py:641} INFO - Processing file /opt/anaconda3/envs/mlops/lib/python3.9/site-packages/airflow/example_dags/example_branch_day_of_week_operator.py for tasks to queue
+[2022-06-24 11:32:34,899] {logging_mixin.py:115} INFO - [2022-06-24 11:32:34,899] {dagbag.py:507} INFO - Filling up the DagBag from /opt/anaconda3/envs/mlops/lib/python3.9/site-packages/airflow/example_dags/example_branch_day_of_week_operator.py
+[2022-06-24 11:32:34,957] {processor.py:651} INFO - DAG(s) dict_keys(['example_weekday_branch_operator']) retrieved from /opt/anaconda3/envs/mlops/lib/python3.9/site-packages/airflow/example_dags/example_branch_day_of_week_operator.py
+[2022-06-24 11:32:38,034] {logging_mixin.py:115} INFO - [2022-06-24 11:32:38,034] {manager.py:508} INFO - Created Permission View: can read on DAG:example_weekday_branch_operator
+[2022-06-24 11:32:38,044] {logging_mixin.py:115} INFO - [2022-06-24 11:32:38,044] {manager.py:508} INFO - Created Permission View: can edit on DAG:example_weekday_branch_operator
+[2022-06-24 11:32:38,051] {logging_mixin.py:115} INFO - [2022-06-24 11:32:38,051] {manager.py:508} INFO - Created Permission View: can delete on DAG:example_weekday_branch_operator
+[2022-06-24 11:32:38,051] {logging_mixin.py:115} INFO - [2022-06-24 11:32:38,051] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-24 11:32:38,058] {logging_mixin.py:115} INFO - [2022-06-24 11:32:38,058] {dag.py:2398} INFO - Creating ORM DAG for example_weekday_branch_operator
+[2022-06-24 11:32:38,070] {logging_mixin.py:115} INFO - [2022-06-24 11:32:38,070] {dag.py:2923} INFO - Setting next_dagrun for example_weekday_branch_operator to 2022-06-23T00:00:00+00:00, run_after=2022-06-24T00:00:00+00:00
+[2022-06-24 11:32:38,086] {processor.py:161} INFO - Processing /opt/anaconda3/envs/mlops/lib/python3.9/site-packages/airflow/example_dags/example_branch_day_of_week_operator.py took 3.204 seconds
+[2022-06-24 11:40:23,517] {processor.py:153} INFO - Started process (PID=56214) to work on /opt/anaconda3/envs/mlops/lib/python3.9/site-packages/airflow/example_dags/example_branch_day_of_week_operator.py
+[2022-06-24 11:40:23,521] {processor.py:641} INFO - Processing file /opt/anaconda3/envs/mlops/lib/python3.9/site-packages/airflow/example_dags/example_branch_day_of_week_operator.py for tasks to queue
+[2022-06-24 11:40:23,524] {logging_mixin.py:115} INFO - [2022-06-24 11:40:23,524] {dagbag.py:507} INFO - Filling up the DagBag from /opt/anaconda3/envs/mlops/lib/python3.9/site-packages/airflow/example_dags/example_branch_day_of_week_operator.py
+[2022-06-24 11:40:23,603] {processor.py:651} INFO - DAG(s) dict_keys(['example_weekday_branch_operator']) retrieved from /opt/anaconda3/envs/mlops/lib/python3.9/site-packages/airflow/example_dags/example_branch_day_of_week_operator.py
+[2022-06-24 11:40:23,997] {logging_mixin.py:115} INFO - [2022-06-24 11:40:23,997] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-24 11:40:24,066] {logging_mixin.py:115} INFO - [2022-06-24 11:40:24,064] {dag.py:2923} INFO - Setting next_dagrun for example_weekday_branch_operator to 2022-06-23T00:00:00+00:00, run_after=2022-06-24T00:00:00+00:00
+[2022-06-24 11:40:24,103] {processor.py:161} INFO - Processing /opt/anaconda3/envs/mlops/lib/python3.9/site-packages/airflow/example_dags/example_branch_day_of_week_operator.py took 0.588 seconds
