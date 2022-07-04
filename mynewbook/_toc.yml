@@ -10,7 +10,6 @@ parts:
     - file: Streamlit
     - file: Airflow
   - caption: Archiv 
-    chapters:
 
 
 
