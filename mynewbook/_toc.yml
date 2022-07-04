@@ -14,7 +14,7 @@ parts:
     - file: Archiv/modell
     - file: Archiv/object_detection_try1
     - file: Archiv/object_detection_try2
-    - file: Archiv/scond_try
+    - file: Archiv/second_try
 
 
 
