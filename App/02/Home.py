@@ -12,7 +12,7 @@ slit.sidebar.header("Select a Page above.")
 
 slit.markdown(
     """
-    Im Rahmen unseres Studiums haben wir (Henning Pfarren und Kim Rautenberg) an dem Projekt Data Science & MLOps teilgenommen. 
+    Im Rahmen unseres Studiums haben wir (Henning Farren und Kim Rautenberg) an dem Projekt Data Science & MLOps teilgenommen. 
 
     Hier sehen Sie auf den Folgenden Seiten, das Ergebnis.
 
