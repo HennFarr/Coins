@@ -3,6 +3,14 @@
 
 format: jb-book
 root: Unser Projekt
-chapters:
-- file: Daten, Modelling und Evaluierung
+parts:
+  - caption: Abgabe
+    chapters:
+    - file: Daten, Modelling und Evaluierung
+    - file: Streamlit
+    - file: Airflow
+  - caption: Archiv 
+    chapters:
+
+
 
